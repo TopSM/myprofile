@@ -1,0 +1,59 @@
+.header {
+  background-color: #282c34;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  color: aliceblue;
+}
+.standard-fitting {
+  padding: 20px;
+  /* border: solid; */
+}
+.title-fitting {
+  margin: auto;
+  padding: 30px;
+}
+.title {
+  float: left;
+  /* clear: both; */
+  border: solid;
+}
+.profile-picture {
+  width: 30vh;
+  /* border: solid; */
+}
+.intro {
+  height: 45vh;
+}
+.Bio-text {
+  background: maroon;
+  float: left;
+  width: 68%;
+  margin-left: 30px;
+  margin-top: 60px;
+  text-align: left;
+  border: solid;
+  border-radius: 10px;
+}
+.my-info {
+  text-align: left;
+}
+.some {
+  border: solid;
+}
+.header p {
+  padding-left: 40px;
+}
+.info-list h3 {
+  color: aliceblue;
+}
+.info-list h4 {
+  color: aliceblue;
+}
+.info-list p {
+  color: aliceblue;
+}
+.info-list {
+  color: maroon;
+  border-bottom: solid;
+}

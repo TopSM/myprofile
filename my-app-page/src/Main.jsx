@@ -1,31 +1,45 @@
 import React from "react";
 import logo from "./logo.svg";
+import "./Main.css";
 
-function workExperience() {
-  return <React.Fragment></React.Fragment>;
-}
-function Volunteer() {
-  return <React.Fragment></React.Fragment>;
-}
-function Projects() {
-  return <React.Fragment></React.Fragment>;
+import WorkExperience from "./workEperience";
+import VolunteerExperience from "./volunteerExperience";
+import ProjectExperience from "./projectExperience";
+function Contact() {
+  return (
+    <React.Fragment>
+      <div className="Standard-fitting title-fitting">Contact me at:</div>
+    </React.Fragment>
+  );
 }
 function Main() {
   return (
     <React.Fragment>
       <header className="header">
         <div>
-          <div>
-            <h2>Ostavo Palacios</h2>
-            <img src={logo} alt="Ostavo"></img>
+          <div className="intro standard-fitting">
+            <div className="title standard-fitting">
+              <h2>Ostavo Palacios</h2>
+              <img
+                src={logo}
+                alt="Ostavo"
+                className="profile-picture standard-fitting "
+              ></img>
+            </div>
+            <div>
+              <div className="Bio-text standard-fitting">
+                <p>hi this is a random bio</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <p className="bio">hi</p>
+
+          <div className="my-info">
+            <Contact />
+            <WorkExperience />
+            <ProjectExperience />
+            <VolunteerExperience />
           </div>
         </div>
-        <Projects />
-        <workExperience />
-        <Volunteer />
       </header>
     </React.Fragment>
   );
