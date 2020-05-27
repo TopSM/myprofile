@@ -12,6 +12,8 @@
 .title-fitting {
   margin: auto;
   padding: 30px;
+  border-top: solid;
+  clear: both;
 }
 .title {
   float: left;
@@ -20,23 +22,33 @@
 }
 .profile-picture {
   width: 30vh;
+  height: 40vh;
+  border-radius: 300px;
   /* border: solid; */
 }
 .intro {
   height: 45vh;
 }
-.Bio-text {
+.text {
   background: maroon;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.about-text {
   float: left;
   width: 68%;
   margin-left: 30px;
   margin-top: 60px;
   text-align: left;
-  border: solid;
+  /* border: solid; */
   border-radius: 10px;
 }
 .my-info {
   text-align: left;
+  padding-top: 30px;
+  /* margin-top: 40px; */
+  /* border: solid; */
+  clear: both;
 }
 .some {
   border: solid;
@@ -55,5 +67,45 @@
 }
 .info-list {
   color: maroon;
-  border-bottom: solid;
+}
+a:link {
+  color: maroon;
+}
+a:hover {
+  color: aliceblue;
+}
+a:visited {
+  color: skyblue;
+}
+h3 {
+  text-decoration: underline;
+  font-style: italic;
+}
+h4 {
+  font-style: italic;
+}
+.title-decoration {
+  border-top: solid;
+}
+.no-bullets {
+  list-style-type: none;
+}
+.contact-list-name {
+  font-style: italic;
+  font-weight: 600;
+}
+.contact-list {
+  padding: 10px;
+  color: aliceblue;
+}
+.language {
+  clear: both;
+}
+.info-pic {
+  float: right;
+  width: 40%;
+  padding: 40px;
+}
+.bullet-list {
+  width: 60%;
 }
