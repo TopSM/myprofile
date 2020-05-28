@@ -198,7 +198,7 @@ class ProjectExperience extends Component {
             {
               id: 1,
               bullet:
-                "Used object oriented principles to tokenize characters in a string to create an array of character and organize it from mosPictures/t frequent character to least frequent"
+                "Used object oriented principles to tokenize characters in a string to create an array of character and organize it from most frequent character to least frequent"
             }
           ],
           Title: "Student",
