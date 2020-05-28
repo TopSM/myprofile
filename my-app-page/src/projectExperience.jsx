@@ -8,6 +8,7 @@ import Histogram from "./Pictures/Histogram.png";
 import Inheritance from "./Pictures/Inheritance.png";
 import CMDShell from "./Pictures/CMDShell.png";
 import Pipes from "./Pictures/Pipes.png";
+import Fruition from "./Pictures/Fruition.png";
 
 class ProjectExperience extends Component {
   constructor(props) {
@@ -65,7 +66,9 @@ class ProjectExperience extends Component {
           Title: "CTO",
           Year: "Spring 2019",
           Language: "ReactJs",
-          Link: "https://github.com/TopSM/Fruition"
+          Link: "http://www.fruitionnyc.org/",
+          Picture: Fruition,
+          Alt: "Frution"
         }
       ],
       C: [
