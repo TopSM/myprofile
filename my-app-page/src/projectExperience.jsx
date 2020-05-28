@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import MapInfo from "./mapInfo";
-// import PropTypes from "prop-types";
-// import AnchorLink from "react-anchor-link-smooth-scroll";
-import LAESA from "./Laesa.png";
-import HuffmanCode from "./HuffmanCode.png";
-import Histogram from "./Histogram.png";
-import Inheritance from "./Inheritance.png";
-import CMDShell from "./CMDShell.png";
-import Pipes from "./Pipes.png";
+// import PropTypes from "prPictures/op-types";
+// import AnchorLink from "rePictures/act-anchor-link-smooth-scroll";
+import LAESA from "./Pictures/Laesa.png";
+import HuffmanCode from "./Pictures/HuffmanCode.png";
+import Histogram from "./Pictures/Histogram.png";
+import Inheritance from "./Pictures/Inheritance.png";
+import CMDShell from "./Pictures/CMDShell.png";
+import Pipes from "./Pictures/Pipes.png";
 
 class ProjectExperience extends Component {
   constructor(props) {
@@ -17,22 +17,22 @@ class ProjectExperience extends Component {
       ReactJS: [
         {
           id: 0,
-          JobName: "LEASE-SHPE Website",
+          JobName: "LEASA-SHPE Website",
           About: [
             {
               id: 0,
               bullet:
-                "Collaborating with three programmers to create a website in React.js that increases women’s representation in the STEM fields by providing accolades for their achievements in STEM"
+                " Simulating a software engineering environment with 4 developers to create a website with React.js and materialUI that represent our SHPE chapter"
             },
             {
               id: 1,
               bullet:
-                "Designing a user profile layout using React.js components where users can view their progress"
+                "Using Taiga.io and Github to keep track of each developers workflow, and stages of development of the website            "
             },
             {
               id: 2,
               bullet:
-                "Assisted CTO with upcoming design stages and delegated tasks to team members"
+                "Implemented continuous integration/continous deployment using Heroku and Github"
             }
           ],
           Title: "Project Manager",
@@ -54,12 +54,12 @@ class ProjectExperience extends Component {
             {
               id: 1,
               bullet:
-                "Designing a user profile layout using React.js components where users can view their progress"
+                " Pitched to a panel of 3 judges and a public audience the functions of our app and financial forecasting for the startup            "
             },
             {
               id: 2,
               bullet:
-                "Assisted CTO with upcoming design stages and delegated tasks to team members"
+                "Deployed “Fruition” using heroku and presented the website to the public audience with prize of potential funding           "
             }
           ],
           Title: "CTO",
@@ -193,9 +193,9 @@ class ProjectExperience extends Component {
                 "Used Java and Javafx Scene library to output a pie chart of most frequent character in text"
             },
             {
-              id: 0,
+              id: 1,
               bullet:
-                "Used object oriented principles to tokenize characters in a string to create an array of character and organize it from most frequent character to least frequent"
+                "Used object oriented principles to tokenize characters in a string to create an array of character and organize it from mosPictures/t frequent character to least frequent"
             }
           ],
           Title: "Student",
@@ -249,6 +249,9 @@ class ProjectExperience extends Component {
           </section>
           <section id="Java">
             <MapInfo infoList={this.state.Java} key={this.state.Java.id} />
+          </section>
+          <section id="Assembly">
+            {/* <MapInfo infoList={this.state.Java} key={this.state.Java.id} /> */}
           </section>
         </div>
       </React.Fragment>

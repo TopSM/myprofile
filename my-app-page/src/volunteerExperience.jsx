@@ -35,7 +35,7 @@ class VolunteerExperience extends Component {
             {
               id: 0,
               bullet:
-                " Judged 6 Middle and Elementary school student team’s robotics project based on the Hydrodynamics theme with three programmers to create a website in React.js that increases women’s representation in the STEM fields by providing accolades for their achievements in STEM"
+                " Judged 6 Middle and Elementary school student team’s robotics project based on the Hydrodynamics theme"
             },
             {
               id: 1,

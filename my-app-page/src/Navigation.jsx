@@ -2,17 +2,8 @@ import React from "react";
 
 import { Navbar, Nav } from "react-bootstrap";
 import { NavDropdown } from "react-bootstrap";
-import { configureAnchors } from "react-scrollable-anchor";
-import { removeHash } from "react-scrollable-anchor";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-// clear URL hash
-removeHash();
-
-configureAnchors({
-  offset: 0,
-  scrollDuration: 200,
-  keepLastAnchorHash: false
-});
 function Navigation() {
   return (
     <Navbar
@@ -28,10 +19,21 @@ function Navigation() {
             Volunteer Experience
           </Nav.Link>
           <NavDropdown title="Projects" id="basic-nav-dropdown">
-            <NavDropdown.Item href={"#C/C++"}>C/C++</NavDropdown.Item>
-            <NavDropdown.Item href={"#Python"}>Python</NavDropdown.Item>
-            <NavDropdown.Item href={"#Java"}>Java</NavDropdown.Item>
-            <NavDropdown.Item href={"#ReactJS"}>React.js</NavDropdown.Item>
+            <NavDropdown.Item>
+              <AnchorLink href={"#C/C++"}>C/C++</AnchorLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <AnchorLink href={"#Python"}>Python</AnchorLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <AnchorLink href={"#Java"}>Java</AnchorLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <AnchorLink href={"#ReactJS"}>ReactJS</AnchorLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <AnchorLink href={"#Assembly"}>Assembly</AnchorLink>
+            </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href={"#Contact"}>Contact</Nav.Link>
           {/* <Nav.Link href={"#Python"}>Contact</Nav.Link> */}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MapInfo from "./mapInfo";
-import Pilacs from "./pilacs.png";
-import StemHive from "./StemHive.png";
+import Pilacs from "./Pictures/pilacs.png";
+import StemHive from "./Pictures/StemHive.png";
 
 class WorkExperience extends Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class WorkExperience extends Component {
                 "Devises social media strategy (Instagram/Facebook) to attract more patrons by 5% "
             }
           ],
-          Year: "Winter 2019 - Current"
+          Year: "Winter 2016 - Current"
         },
         {
           id: 2,

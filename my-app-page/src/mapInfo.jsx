@@ -1,12 +1,12 @@
 import React from "react";
 import "./Main.css";
 export default function mapInfo(props) {
-  function checkLanguage(Language) {
+  var checkLanguage = Language => {
     if (Language != null) {
       return <h4>Language: {Language}</h4>;
     }
-  }
-  function checkLink(Link) {
+  };
+  var checkLink = Link => {
     if (Link != null && Link !== "") {
       return (
         <p>
@@ -14,11 +14,11 @@ export default function mapInfo(props) {
         </p>
       );
     }
-  }
+  };
 
   return (
     <React.Fragment>
-      <div>
+      <div className="mobileCss">
         {props.infoList.map(il => (
           <div className="info-list title-fitting" key={il.id}>
             <div>
@@ -30,9 +30,9 @@ export default function mapInfo(props) {
             <h4>{il.Title}</h4>
             <h4>Year: {il.Year}</h4>
             {checkLanguage(il.Language)}
-
+            {/* {checklanguage()} */}
             <div className="text bullet-list standard-fitting">
-              <ul className="">
+              <ul>
                 {props.infoList[il.id].About.map(a => (
                   <li className="contact-list" key={a.id}>
                     {a.bullet}

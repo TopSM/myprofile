@@ -1,10 +1,11 @@
 import React from "react";
 
-import logo from "./Pfp.jpg";
+import logo from "./Pictures/Pfp.jpg";
+import { Button } from "@material-ui/core";
 
 import "./Main.css";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import { goToTop } from "react-scrollable-anchor";
 import WorkExperience from "./workEperience";
 import VolunteerExperience from "./volunteerExperience";
 import ProjectExperience from "./projectExperience";
@@ -16,7 +17,7 @@ function Contact() {
         <h2>Contact</h2>
         <ul className="no-bullets">
           <li className="contact-list">
-            <span className="contact-list-name">Telophone: </span> 347-320-3174
+            <span className="contact-list-name">Telophone: </span> 347-320-3164
           </li>
           <li className="contact-list">
             <span className="contact-list-name">LinkedIn: </span>
@@ -39,10 +40,11 @@ function Lists() {
       <ul className="no-bullets">
         <li className="contact-list">
           <span className="contact-list-name">Programming Languages: </span>
-          <AnchorLink href="#C/C++"> C/C++, </AnchorLink>
-          <AnchorLink href="#Python">Python, </AnchorLink>
-          <AnchorLink href="#C/C++"> ReactJs, </AnchorLink>
-          <AnchorLink href="#Java"> Java</AnchorLink>
+          <AnchorLink href="#C/C++"> C/C++</AnchorLink>,
+          <AnchorLink href="#Python"> Python</AnchorLink>,
+          <AnchorLink href="#ReactJS"> React.Js</AnchorLink>,
+          <AnchorLink href="#Java"> Java</AnchorLink>,
+          <AnchorLink href="#Assembly"> Assembly</AnchorLink>
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Design Software:</span> Matlab,
@@ -53,10 +55,13 @@ function Lists() {
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Soft Skills: </span>
+          Leadership, Communication, Creative, Persistent, Cooperative,
+          Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
+          Quick Learner
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Hobbies: </span>
-          Photography, Guitar, Chess, Hiking,
+          Photography, Guitar, Chess, Hiking
         </li>
       </ul>
     </React.Fragment>
@@ -96,9 +101,8 @@ function Main() {
               </div>
             </div>
           </div>
-
           <div className="my-info">
-            <section id="Contact">
+            <section id="contact">
               <Contact />
             </section>
             <section id="WorkExperience">
@@ -108,6 +112,15 @@ function Main() {
             <section id="VolunteerExperience">
               <VolunteerExperience />
             </section>
+            <div className="button">
+              <Button
+                color="inherit"
+                variant="outlined"
+                onClick={() => goToTop()}
+              >
+                Go to Top
+              </Button>
+            </div>
           </div>
         </div>
       </header>
