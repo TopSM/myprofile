@@ -11,6 +11,7 @@ import Inheritance from "./Pictures/Inheritance.png";
 import CMDShell from "./Pictures/CMDShell.png";
 import Pipes from "./Pictures/Pipes.png";
 import Fruition from "./Pictures/Fruition.png";
+import ImageProcessing from "./Pictures/ImageProcessing.png";
 
 class ProjectExperience extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class ProjectExperience extends Component {
             {
               id: 1,
               bullet:
-                "Using Taiga.io and Github to keep track of each developers workflow, and stages of development of the website            "
+                "Using Taiga.io and Github to manage each developers workflow and stages of the website's development "
             },
             {
               id: 2,
@@ -52,17 +53,17 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Created, “Fruition”, a website based application intended to improve college students study habits/performance by              targeting a person’s learning style and providing them with those tools.              "
+                "Created, “Fruition”, a website-based application intended to improve college students study habits/performance by understanding their learning style and provide them with the necessary resources"
             },
             {
               id: 1,
               bullet:
-                " Pitched to a panel of 3 judges and a public audience the functions of our app and financial forecasting for the startup            "
+                "Pitched to a panel of three judges and a public audience the functions of our app, and financial forecasting for the startup            "
             },
             {
               id: 2,
               bullet:
-                "Deployed “Fruition” using heroku and presented the website to the public audience with prize of potential funding           "
+                "Deployed “Fruition” using Heroku, the website was shared with the public audience with prize of potential funding           "
             }
           ],
           Title: "CTO",
@@ -81,12 +82,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Lead, directed, and organized a team of 3 to create final project 'Command Shell' "
+                "Lead, directed, and organized a team of three to create a project called 'Command Shell' "
             },
             {
               id: 1,
               bullet:
-                "Created a simple Shell and linked team memebers contributions for final product"
+                "Developed a simple Shell and linked team members contributions to final project"
             }
           ],
           Title: "Team Leader",
@@ -103,7 +104,17 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Created a program in C to create a parent and 2 child Process and have them communicate via pipe while executing the ls -F command and nl command "
+                "Learned about processes, forking, and pipes and how to create them in C"
+            },
+            {
+              id: 1,
+              bullet:
+                "Created a program that makes a parent process and forks 2 child process"
+            },
+            {
+              id: 2,
+              bullet:
+                "Implemented pipes in C to have the child process communicate and have them execute the 'ls -F' and 'nl' commands"
             }
           ],
           Title: "Student",
@@ -120,7 +131,7 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                " Used Greedy Algorithm Huffman Code in order to compress number of bits in a piece of text and encode text into binary"
+                "Used Greedy Algorithm Huffman Code to compress number of bits in a piece of text and encode it into binary"
             },
             {
               id: 1,
@@ -130,7 +141,7 @@ class ProjectExperience extends Component {
             {
               id: 2,
               bullet:
-                "Presented final product to instructor where he was able to succesfully encode a 10,000 character length file"
+                "Presented final product to the instructor who was succesfully able to encode a 10,000-character length file"
             }
           ],
           Title: "Student",
@@ -144,12 +155,40 @@ class ProjectExperience extends Component {
       Python: [
         {
           id: 0,
+          JobName:
+            "Least-square binary classifier and eigen vector analysis for image processing",
+          About: [
+            {
+              id: 0,
+              bullet:
+                "Created a least-square binary classifier in order to determine the ratio of correctly handwritten digits in 'test image set' file"
+            },
+            {
+              id: 1,
+              bullet:
+                "Used Mnist database of handwritten images to manipulate and output handwritten digit images in Python"
+            },
+            {
+              id: 2,
+              bullet:
+                "Computed the eigen value of each matrix image from 'train image set' to display the digit images as eigen vectors"
+            }
+          ],
+          Title: "Student",
+          Year: "Spring 2020",
+          Language: "Python",
+          Link: "https://github.com/TopSM/ImageProcessing",
+          Picture: ImageProcessing,
+          Alt: "Eigen Vector Image Processing"
+        },
+        {
+          id: 1,
           JobName: "Trash Detector",
           About: [
             {
               id: 0,
               bullet:
-                "Won best implementation for leveraging IBM Watson Visual Recognition (API)            "
+                "Won best implementation for leveraging IBM Watson Visual Recognition (API)"
             },
             {
               id: 1,
@@ -176,12 +215,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Created a simple UI in Java to ouput, and manipulate user information"
+                "Created a simple UI in Java to output, and manipulate user information"
             },
             {
               id: 1,
               bullet:
-                "Use MySQL WorkBench to create a Database of user information"
+                "Use MySQL WorkBench to create a database of user information"
             }
           ],
           Title: "Student",
@@ -195,12 +234,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Used Java and Javafx Scene library to output a pie chart of most frequent character in text"
+                "Used Java and Javafx Scene library to output a pie chart of most frequently used characters in text"
             },
             {
               id: 1,
               bullet:
-                "Used object oriented principles to tokenize characters in a string to create an array of character and organize it from most frequent character to least frequent"
+                "Used object-oriented principles to tokenize characters in a string to create an array of characters and organize it from most frequent character to least frequent"
             }
           ],
           Title: "Student",
@@ -217,12 +256,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Used Java and Javafx Scene library and mathematical geometry to perfectly fit polygons witihin other polygons on a Javafx canvas"
+                "Used Java, Javafx Scene library, and mathematical geometry to perfectly fit polygons within other polygons on a Javafx canvas"
             },
             {
               id: 1,
               bullet:
-                "Used Polymorphism and Inheritance concepts to create polygon classes to inherit methods and attributes for other child Classes"
+                "Used Polymorphism and Inheritance concepts to create polygon classes that inherit methods and attributes for other child Classes"
             }
           ],
           Title: "Student",

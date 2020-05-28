@@ -67,7 +67,7 @@ function Lists() {
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Soft Skills</span>
-          :Leadership, Communication, Creative, Persistent, Cooperative,
+          :&ensp;Leadership, Communication, Creative, Persistent, Cooperative,
           Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
           Quick Learner
         </li>
@@ -98,15 +98,16 @@ function Main() {
                 <div className="text standard-fitting">
                   <p>
                     Ostavo Palacios is a 4th year Computer Engineering Student
-                    at the GSOE at City Colege of New York. He is a 22yr old
-                    Mexican Ameirican, first generation student, born and raised
-                    in NYC. In addition to being proficient in multiple
-                    programming languages, he also has experience as a project
-                    manager in web development managing a team of 4 members. A
-                    lot of the projects and work that he has contributed to are
-                    related to education, and engaging students in the 6th-12th
-                    grade to promote a higher education in STEM. He values
-                    education, curiosity, innovation, and passion.
+                    at the Grove School of Engineering at City College of New
+                    York. He is a 22 year old Mexican American, first generation
+                    student, that was born and raised in NYC. Along with being
+                    proficient in multiple programming languages, he has had
+                    experience working as a project manager. He worked on web
+                    development while managing a team of four. A lot of the
+                    projects and work that he has done are related to education;
+                    engaging students in the 6th-12th grade to pursue a higher
+                    education in STEM. Ostavo core values are education,
+                    curiosity, innovation, and motivation.
                   </p>
                 </div>
                 <Lists></Lists>

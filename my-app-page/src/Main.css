@@ -67,7 +67,7 @@
   color: maroon;
 }
 a:link {
-  color: maroon;
+  color: skyblue;
 }
 a:hover {
   color: aliceblue;
@@ -218,7 +218,7 @@ h4 {
   .info-pic {
     float: right;
     width: 40%;
-    padding: 40px;
+    padding: 20px;
   }
   .bullet-list {
     width: 60%;
@@ -230,7 +230,7 @@ h4 {
 }
 
 @media screen and (max-width: 1088px) {
-  /* Large phone and table size */
+  /* Large phone and tablet */
   .header {
     margin: auto;
     padding: 10px;

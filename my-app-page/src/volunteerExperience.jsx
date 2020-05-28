@@ -15,7 +15,7 @@ class VolunteerExperience extends Component {
             {
               id: 0,
               bullet:
-                "Recruited 6 high schools to attend event that exposes the students to fields of engineering"
+                "Recruited six high schools to attend an event that exposes their students to different fields of engineering"
             },
             {
               id: 1,
@@ -23,7 +23,8 @@ class VolunteerExperience extends Component {
             },
             {
               id: 2,
-              bullet: "Guided and mentored ~250 students on engineering project"
+              bullet:
+                "Guided and mentored ~250 students on an engineering project"
             }
           ],
           Title: "Mentor | ScoreKeeper",
@@ -36,12 +37,12 @@ class VolunteerExperience extends Component {
             {
               id: 0,
               bullet:
-                " Judged 6 Middle and Elementary school student team’s robotics project based on the Hydrodynamics theme"
+                " Judged six Middle and Elementary school robotics team’s research project based on Hydrodynamics theme"
             },
             {
               id: 1,
               bullet:
-                "Presented and represented the top 3 teams to other judges to assist teams to the next round"
+                "Represented and pitched the top 3 teams to other judges that were seleceted by me in order to assist teams to the next round"
             }
           ],
           Title: "Judge",

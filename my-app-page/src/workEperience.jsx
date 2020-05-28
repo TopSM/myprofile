@@ -18,17 +18,17 @@ class WorkExperience extends Component {
             {
               id: 0,
               bullet:
-                "Develop Scratch prototype projects to inspire students to create similar projects based on the topics that they are learning."
+                "Develop Scratch prototype projects to inspire students to create similar projects based on the topics that they are learning"
             },
             {
               id: 1,
               bullet:
-                "Analyze and take notes on the students and classroom to see how they interact with the lesson prepared for that day."
+                "Analyze and take notes on the students and classroom to see how they interact with the lesson prepared for that day"
             },
             {
               id: 2,
               bullet:
-                "Assisted 16 students in the classroom to engage them in the classroom activities and help them further develop ideasfor their projects. "
+                "Assisted 16 students in the classroom to engage them in the classroom activities and help them further develop ideas for their projects"
             }
           ],
           Year: "Fall 2019 - Current",
