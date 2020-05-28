@@ -1,5 +1,6 @@
 import React from "react";
 
+import Resume from "./Ostavo_Palacios_Resume.pdf";
 import logo from "./Pictures/Pfp.jpg";
 import { Button } from "@material-ui/core";
 
@@ -17,16 +18,16 @@ function Contact() {
         <h2>Contact</h2>
         <ul className="no-bullets">
           <li className="contact-list">
-            <span className="contact-list-name">Telophone: </span> 347-320-3164
+            <span className="contact-list-name">Telophone</span>: 347-320-3164
           </li>
           <li className="contact-list">
-            <span className="contact-list-name">LinkedIn: </span>
+            <span className="contact-list-name">LinkedIn</span>:&ensp;
             <a href="https://www.linkedin.com/in/ostavo-palacios/">
-              https://www.linkedin.com/in/ostavo-palacios/
+              https://www.linkedin.com/ostavo-palacios/
             </a>
           </li>
           <li className="contact-list">
-            <span className="contact-list-name">Email: </span>
+            <span className="contact-list-name">Email</span>:
             Ostavo.palacios@gmail.com
           </li>
         </ul>
@@ -39,7 +40,11 @@ function Lists() {
     <React.Fragment>
       <ul className="no-bullets">
         <li className="contact-list">
-          <span className="contact-list-name">Programming Languages: </span>
+          <span className="contact-list-name">My Resume</span>:
+          <a href={Resume}> Ostavo Palacios </a>
+        </li>
+        <li className="contact-list">
+          <span className="contact-list-name">Programming Languages</span>:
           <AnchorLink href="#C/C++"> C/C++</AnchorLink>,
           <AnchorLink href="#Python"> Python</AnchorLink>,
           <AnchorLink href="#ReactJS"> React.Js</AnchorLink>,
@@ -47,21 +52,21 @@ function Lists() {
           <AnchorLink href="#Assembly"> Assembly</AnchorLink>
         </li>
         <li className="contact-list">
-          <span className="contact-list-name">Design Software:</span> Matlab,
+          <span className="contact-list-name">Design Software</span>: Matlab,
           MultiSim, Arduino, Android Studio, React, Git
         </li>
         <li className="contact-list">
-          <span className="contact-list-name">Languages:</span> English, Spanish
+          <span className="contact-list-name">Languages</span>: English, Spanish
         </li>
         <li className="contact-list">
-          <span className="contact-list-name">Soft Skills: </span>
-          Leadership, Communication, Creative, Persistent, Cooperative,
+          <span className="contact-list-name">Soft Skills</span>
+          :Leadership, Communication, Creative, Persistent, Cooperative,
           Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
           Quick Learner
         </li>
         <li className="contact-list">
-          <span className="contact-list-name">Hobbies: </span>
-          Photography, Guitar, Chess, Hiking
+          <span className="contact-list-name">Hobbies</span>: Photography,
+          Guitar, Chess, Hiking
         </li>
       </ul>
     </React.Fragment>

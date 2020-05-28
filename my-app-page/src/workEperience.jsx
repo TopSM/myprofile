@@ -21,7 +21,7 @@ class WorkExperience extends Component {
             {
               id: 1,
               bullet:
-                "Analyze and take notes on the classroom and students to see how they interact with the lesson prepared for that day."
+                "Analyze and take notes on the students and classroom to see how they interact with the lesson prepared for that day."
             },
             {
               id: 2,
@@ -68,13 +68,13 @@ class WorkExperience extends Component {
               id: 0,
 
               bullet:
-                "Collaborating with three programmers to create a website in React.js that increases women’s representation in the STEM fields by providing accolades for their achievements in STEM"
+                "Collaborated with three programmers to create a website in React.js that increases women’s representation in the STEM fields by providing accolades for their achievements in STEM"
             },
             {
               id: 1,
 
               bullet:
-                "Designing a user profile layout using React.js components where users can view their progress"
+                "Designed a user profile layout using React.js components where users can view their progress"
             },
             {
               id: 2,
