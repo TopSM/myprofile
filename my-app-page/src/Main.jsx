@@ -89,7 +89,7 @@ function Main() {
                     at the GSOE at City Colege of New York. He is a 22yr old
                     Mexican Ameirican, first generation student, born and raised
                     in NYC. In addition to being proficient in multiple
-                    programming Languages he also has experience as a project
+                    programming languages he also has experience as a project
                     manager in web development managing a team of 4 members. A
                     lot of the projects and work that he has contributed to are
                     related to education, and engaging students in the 6th-12th
