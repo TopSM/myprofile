@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import MapInfo from "./mapInfo";
 import Pilacs from "./Pictures/pilacs.png";
 import StemHive from "./Pictures/StemHive.png";
-import Fruiont from "./Pictures/Frution.png";
 class WorkExperience extends Component {
   constructor(props) {
     super(props);
