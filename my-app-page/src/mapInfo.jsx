@@ -40,7 +40,7 @@ export default function mapInfo(props) {
                 ))}
               </ul>
             </div>
-            <h5>{checkLink(il.Link)}</h5>
+            {checkLink(il.Link)}
           </div>
         ))}
       </div>

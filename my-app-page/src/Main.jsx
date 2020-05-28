@@ -102,7 +102,7 @@ function Main() {
             </div>
           </div>
           <div className="my-info">
-            <section id="contact">
+            <section id="Contact">
               <Contact />
             </section>
             <section id="WorkExperience">
