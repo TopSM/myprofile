@@ -1,36 +1,43 @@
 import React from "react";
-
+//PDF
 import Resume from "./Ostavo_Palacios_Resume.pdf";
+//Images
 import logo from "./Pictures/Pfp.jpg";
 import { Button } from "@material-ui/core";
 
-import "./Main.css";
+//Installed Components
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { goToTop } from "react-scrollable-anchor";
+
+//My Components
 import WorkExperience from "./workEperience";
 import VolunteerExperience from "./volunteerExperience";
 import ProjectExperience from "./projectExperience";
 
+//CSS
+import "./Main.css";
 function Contact() {
   return (
     <React.Fragment>
-      <div className="Standard-fitting title-fitting">
+      <div className=" title-fitting">
         <h2>Contact</h2>
-        <ul className="no-bullets">
-          <li className="contact-list">
-            <span className="contact-list-name">Telophone</span>: 347-320-3164
-          </li>
-          <li className="contact-list">
-            <span className="contact-list-name">LinkedIn</span>:&ensp;
-            <a href="https://www.linkedin.com/in/ostavo-palacios/">
-              https://www.linkedin.com/ostavo-palacios/
-            </a>
-          </li>
-          <li className="contact-list">
-            <span className="contact-list-name">Email</span>:
-            Ostavo.palacios@gmail.com
-          </li>
-        </ul>
+        <div className="info-list title-fitting">
+          <ul className="no-bullets">
+            <li className="contact-list">
+              <span className="contact-list-name">Telophone</span>: 347-320-3164
+            </li>
+            <li className="contact-list">
+              <span className="contact-list-name">LinkedIn</span>:&ensp;
+              <a href="https://www.linkedin.com/in/ostavo-palacios/">
+                https://www.linkedin.com/ostavo-palacios/
+              </a>
+            </li>
+            <li className="contact-list">
+              <span className="contact-list-name">Email</span>:
+              Ostavo.palacios@gmail.com
+            </li>
+          </ul>
+        </div>
       </div>
     </React.Fragment>
   );
@@ -94,7 +101,7 @@ function Main() {
                     at the GSOE at City Colege of New York. He is a 22yr old
                     Mexican Ameirican, first generation student, born and raised
                     in NYC. In addition to being proficient in multiple
-                    programming languages he also has experience as a project
+                    programming languages, he also has experience as a project
                     manager in web development managing a team of 4 members. A
                     lot of the projects and work that he has contributed to are
                     related to education, and engaging students in the 6th-12th

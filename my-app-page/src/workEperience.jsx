@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+//My Components
 import MapInfo from "./mapInfo";
+//Images
 import Pilacs from "./Pictures/pilacs.png";
 import StemHive from "./Pictures/StemHive.png";
 class WorkExperience extends Component {
@@ -117,7 +119,7 @@ class WorkExperience extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="standard-fitting title-fitting">
+        <div className=" title-fitting">
           <h2>Work Experince</h2>
           <MapInfo
             infoList={this.state.ExperienceArray}

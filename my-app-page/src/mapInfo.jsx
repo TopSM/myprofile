@@ -9,9 +9,11 @@ export default function mapInfo(props) {
   var checkLink = Link => {
     if (Link != null && Link !== "") {
       return (
-        <p>
-          Link: <a href={Link}> {Link}</a>
-        </p>
+        <React.Fragment>
+          <p>
+            Link: <a href={Link}> {Link}</a>
+          </p>
+        </React.Fragment>
       );
     }
   };

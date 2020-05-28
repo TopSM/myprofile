@@ -71,6 +71,7 @@ a:link {
 }
 a:hover {
   color: aliceblue;
+  text-decoration: none;
 }
 a:visited {
   color: skyblue;
@@ -229,6 +230,7 @@ h4 {
 }
 
 @media screen and (max-width: 1088px) {
+  /* Large phone and table size */
   .header {
     margin: auto;
     padding: 10px;
@@ -241,10 +243,7 @@ h4 {
     height: auto;
   }
   /* start of phone styles */
-  .Standard-fitting {
-    font-size: 0.9em;
-    padding: 5px;
-  }
+
   .profile-picture {
     width: 30vh;
     height: 40vh;
@@ -293,6 +292,7 @@ h4 {
   }
 }
 @media screen and (max-width: 480px) {
+  /* Smaller screen size phones */
   .contact-list {
     padding: 10px;
     color: aliceblue;

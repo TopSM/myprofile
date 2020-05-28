@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import MapInfo from "./mapInfo";
 
+//My Components
+import MapInfo from "./mapInfo";
 class VolunteerExperience extends Component {
   constructor(props) {
     super(props);

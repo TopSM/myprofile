@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+
+//My Components
 import MapInfo from "./mapInfo";
-// import PropTypes from "prPictures/op-types";
-// import AnchorLink from "rePictures/act-anchor-link-smooth-scroll";
+
+//Images
 import LAESA from "./Pictures/Laesa.png";
 import HuffmanCode from "./Pictures/HuffmanCode.png";
 import Histogram from "./Pictures/Histogram.png";
