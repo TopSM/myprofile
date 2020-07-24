@@ -1,13 +1,34 @@
 .header {
-  background-color: #282c34;
+  background-color: white;
   margin: auto;
   padding: 30px;
   text-align: center;
-  color: aliceblue;
+  color: black;
+}
+.text {
+  /* background: maroon; */
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.info-list h4 {
+  color: #008888;
+}
+.info-list h3,
+h2,
+a:link {
+  color: #800000;
 }
 .standard-fitting {
   padding: 20px;
   /* border: solid; */
+}
+
+a:hover {
+  color: lightseagreen;
+  text-decoration: none;
+}
+a:visited {
+  color: lightseagreen;
 }
 .title-fitting {
   margin: auto;
@@ -17,8 +38,6 @@
 }
 .title {
   float: left;
-  /* clear: both; */
-  /* border: solid; */
 }
 .profile-picture {
   width: 30vh;
@@ -29,16 +48,12 @@
 .intro {
   height: 45vh;
 }
-.text {
-  background: maroon;
-  border-radius: 30px;
-  margin-bottom: 30px;
-}
+
 .about-text {
   float: left;
   width: 68%;
   margin-left: 30px;
-  margin-top: 60px;
+  margin-top: 30px;
   text-align: left;
   /* border: solid; */
   border-radius: 10px;
@@ -54,28 +69,14 @@
 .header p {
   padding-left: 40px;
 }
-.info-list h3 {
-  color: aliceblue;
-}
-.info-list h4 {
-  color: aliceblue;
-}
+
 .info-list p {
-  color: aliceblue;
+  color: black;
 }
 .info-list {
-  color: maroon;
+  color: black;
 }
-a:link {
-  color: skyblue;
-}
-a:hover {
-  color: aliceblue;
-  text-decoration: none;
-}
-a:visited {
-  color: skyblue;
-}
+
 h3 {
   text-decoration: underline;
   font-style: italic;
@@ -96,7 +97,7 @@ h4 {
 }
 .contact-list {
   padding: 10px;
-  color: aliceblue;
+  color: black;
 }
 .language {
   clear: both;
@@ -110,16 +111,14 @@ h4 {
   width: 60%;
 }
 .button {
-  color: aliceblue;
+  color: black;
   text-align: center;
 }
 @media screen and (min-width: 1089px) {
   .header {
-    background-color: #282c34;
     margin: auto;
     padding: 30px;
     text-align: center;
-    color: aliceblue;
   }
   .standard-fitting {
     padding: 20px;
@@ -145,52 +144,25 @@ h4 {
   .intro {
     height: 45vh;
   }
-  .text {
-    background: maroon;
-    border-radius: 30px;
-    margin-bottom: 30px;
-  }
+
   .about-text {
     float: left;
     width: 68%;
     margin-left: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: left;
-    /* border: solid; */
     border-radius: 10px;
   }
   .my-info {
     text-align: left;
     padding-top: 30px;
-    /* margin-top: 40px; */
-    /* border: solid; */
     clear: both;
   }
 
   .header p {
     padding-left: 40px;
   }
-  .info-list h3 {
-    color: aliceblue;
-  }
-  .info-list h4 {
-    color: aliceblue;
-  }
-  .info-list p {
-    color: aliceblue;
-  }
-  .info-list {
-    color: maroon;
-  }
-  a:link {
-    color: maroon;
-  }
-  a:hover {
-    color: aliceblue;
-  }
-  a:visited {
-    color: skyblue;
-  }
+
   h3 {
     text-decoration: underline;
     font-style: italic;
@@ -210,7 +182,6 @@ h4 {
   }
   .contact-list {
     padding: 10px;
-    color: aliceblue;
   }
   .language {
     clear: both;
@@ -224,7 +195,6 @@ h4 {
     width: 60%;
   }
   .button {
-    color: aliceblue;
     text-align: center;
   }
 }
@@ -263,7 +233,7 @@ h4 {
     width: auto;
     padding: 5px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 0px;
 
     /* border: solid; */
     border-radius: 10px;
@@ -280,7 +250,6 @@ h4 {
   }
   .contact-list {
     padding: 5px;
-    color: aliceblue;
     font-size: 0.9em;
   }
   .bullet-list {
@@ -295,7 +264,6 @@ h4 {
   /* Smaller screen size phones */
   .contact-list {
     padding: 10px;
-    color: aliceblue;
     text-align: left;
   }
   .header {

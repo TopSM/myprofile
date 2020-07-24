@@ -6,12 +6,12 @@ export default function mapInfo(props) {
       return <h4>Language: {Language}</h4>;
     }
   };
-  var checkLink = Link => {
+  var checkLink = (Name = "Link", Link = "") => {
     if (Link != null && Link !== "") {
       return (
         <React.Fragment>
           <p>
-            Link: <a href={Link}> {Link}</a>
+            Link: <a href={Link}> {Name}</a>
           </p>
         </React.Fragment>
       );
@@ -42,7 +42,7 @@ export default function mapInfo(props) {
                 ))}
               </ul>
             </div>
-            {checkLink(il.Link)}
+            {checkLink(il.JobName, il.Link)}
           </div>
         ))}
       </div>

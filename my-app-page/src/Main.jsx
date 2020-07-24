@@ -19,9 +19,9 @@ import "./Main.css";
 function Contact() {
   return (
     <React.Fragment>
-      <div className=" title-fitting">
+      <div className="title-fitting">
         <h2>Contact</h2>
-        <div className="info-list title-fitting">
+        <div className="info-list">
           <ul className="no-bullets">
             <li className="contact-list">
               <span className="contact-list-name">Telophone</span>: 347-320-3164
@@ -55,8 +55,8 @@ function Lists() {
           <AnchorLink href="#C/C++"> C/C++</AnchorLink>,
           <AnchorLink href="#Python"> Python</AnchorLink>,
           <AnchorLink href="#ReactJS"> React.Js</AnchorLink>,
-          <AnchorLink href="#Java"> Java</AnchorLink>,
-          <AnchorLink href="#Assembly"> Assembly</AnchorLink>
+          <AnchorLink href="#Java"> Java</AnchorLink>
+          {/* <AnchorLink href="#Assembly"> Assembly</AnchorLink> */}
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Design Software</span>: Matlab,
@@ -97,17 +97,15 @@ function Main() {
               <div className="about-text">
                 <div className="text standard-fitting">
                   <p>
-                    Ostavo Palacios is a 4th year Computer Engineering Student
-                    at the Grove School of Engineering at City College of New
-                    York. He is a 22 year old Mexican American, first generation
-                    student, that was born and raised in NYC. Along with being
-                    proficient in multiple programming languages, he has had
-                    experience working as a project manager. He worked on web
-                    development while managing a team of four. A lot of the
-                    projects and work that he has done are related to education;
-                    engaging students in the 6th-12th grade to pursue a higher
-                    education in STEM. Ostavo core values are education,
-                    curiosity, innovation, and motivation.
+                    Ostavo Palacios is a Computer Engineering Student at the
+                    Grove School of Engineering in The City College of New York.
+                    He is a first generation student, that was born and raised
+                    in NYC. Along with being proficient in multiple programming
+                    languages, he has had experience working as a project
+                    manager, and has worked in web development while managing a
+                    team of four. One of his goals in life is to get more
+                    minority students interested in coding. Ostavo's core values
+                    are education, curiosity, innovation, and motivation.
                   </p>
                 </div>
                 <Lists></Lists>
@@ -127,7 +125,7 @@ function Main() {
             </section>
             <div className="button">
               <Button
-                color="inherit"
+                color="maroon"
                 variant="outlined"
                 onClick={() => goToTop()}
               >

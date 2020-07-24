@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 //My Components
 import MapInfo from "./mapInfo";
+
 class VolunteerExperience extends Component {
   constructor(props) {
     super(props);
@@ -10,6 +11,29 @@ class VolunteerExperience extends Component {
       VolunteerArray: [
         {
           id: 0,
+          JobName: "Intro to React Js Workshop",
+          About: [
+            {
+              id: 0,
+              bullet:
+                "Hosted a 2 day online Workshop for college undergraduates through zoom that introduced them to HTML/CSS, Javascript, and ReactJs, and basic website designs"
+            },
+            {
+              id: 1,
+              bullet:
+                "Prepared and organized lesson plans, and presented them to an audience of 17 people"
+            },
+            {
+              id: 2,
+              bullet:
+                "Increased member registritation for LAESA-SHPE a student organization that helped sponsor my workshop"
+            }
+          ],
+          Title: "Host/Speaker",
+          Year: "Summer 2020"
+        },
+        {
+          id: 1,
           JobName: "Pre College Engineering Day",
           About: [
             {
@@ -28,16 +52,16 @@ class VolunteerExperience extends Component {
             }
           ],
           Title: "Mentor | ScoreKeeper",
-          Year: "Year"
+          Year: "March 2019"
         },
         {
-          id: 1,
+          id: 2,
           JobName: "First Lego League",
           About: [
             {
               id: 0,
               bullet:
-                " Judged six Middle and Elementary school robotics team’s research project based on Hydrodynamics theme"
+                "Judged six Middle and Elementary school robotics team’s research project based on Hydrodynamics theme"
             },
             {
               id: 1,
@@ -46,7 +70,7 @@ class VolunteerExperience extends Component {
             }
           ],
           Title: "Judge",
-          Year: "Year"
+          Year: "March 2018"
         }
       ]
     };

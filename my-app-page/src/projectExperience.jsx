@@ -26,21 +26,21 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                " Simulating a software engineering environment with 4 developers to create a website with React.js and materialUI that represent our SHPE chapter"
+                " Managing and creating a website with Webflow, ReactJs, and Bootstrap that represent our SHPE chapter "
             },
             {
               id: 1,
               bullet:
-                "Using Taiga.io and Github to manage each developers workflow and stages of the website's development "
+                "Facilitated weekly online meetings with teammates to review and discuss progress done throughout the week"
             },
             {
               id: 2,
               bullet:
-                "Implemented continuous integration/continous deployment using Heroku and Github"
+                "Motivated and encouraged team to explore different technologies and designs to better improve the website’s user journey and experience "
             }
           ],
           Title: "Project Manager",
-          Year: "Fall 2019-Spring 2020",
+          Year: "Fall 2019 - Current",
           Language: "ReactJs",
           Link: "https://aqueous-hamlet-89351.herokuapp.com/",
           Picture: LAESA,
@@ -82,12 +82,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Lead, directed, and organized a team of three to create a project called 'Command Shell' "
+                "Directed, and organized a team of three to create a project called 'Command Shell' "
             },
             {
               id: 1,
               bullet:
-                "Developed a simple Shell and linked team members contributions to final project"
+                "Developed a Command Shell in C and coordinated team members contributions to final project"
             }
           ],
           Title: "Team Leader",
@@ -156,7 +156,7 @@ class ProjectExperience extends Component {
         {
           id: 0,
           JobName:
-            "Least-square binary classifier and eigen vector analysis for image processing",
+            "Least-Square Binary Classifier and Eigen Vector Analysis for Image Processing",
           About: [
             {
               id: 0,
@@ -193,12 +193,12 @@ class ProjectExperience extends Component {
             {
               id: 1,
               bullet:
-                "Designing a user profile layout using React.js components where users can view their progress"
+                "Designed “Trash Detector”, a program that tracks garbage disposal in NYC subway tracks with python"
             },
             {
               id: 2,
               bullet:
-                "Assisted CTO with upcoming design stages and delegated tasks to team members"
+                "Presented and pitched project within seven minutes to a panel of five judges"
             }
           ],
           Title: "Marketing Director",
@@ -215,12 +215,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Created a simple UI in Java to output, and manipulate user information"
+                "Created a UI/UX in Java to output, and manipulate user information"
             },
             {
               id: 1,
               bullet:
-                "Use MySQL WorkBench to create a database of user information"
+                "Used MySQL WorkBench to create a database of user information"
             }
           ],
           Title: "Student",
@@ -234,7 +234,7 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Used Java and Javafx Scene library to output a pie chart of most frequently used characters in text"
+                "Used Javafx Scene library to output a pie chart of most frequently used characters in text"
             },
             {
               id: 1,
@@ -256,12 +256,12 @@ class ProjectExperience extends Component {
             {
               id: 0,
               bullet:
-                "Used Java, Javafx Scene library, and mathematical geometry to perfectly fit polygons within other polygons on a Javafx canvas"
+                "Geometrically derrived Algorithms to perfectly fit polygons within other polygons on a Javafx canvas"
             },
             {
               id: 1,
               bullet:
-                "Used Polymorphism and Inheritance concepts to create polygon classes that inherit methods and attributes for other child Classes"
+                "Implemented Polymorphism and Inheritance concepts to create polygon classes that inherit methods and attributes for other child Classes"
             }
           ],
           Title: "Student",

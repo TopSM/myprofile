@@ -43,19 +43,16 @@ class WorkExperience extends Component {
           About: [
             {
               id: 0,
-
               bullet:
                 "Designed and manages the website and online delivery service for the restaurant to increase revenue by 5%"
             },
             {
               id: 1,
-
               bullet:
                 "Advises owner to better improve aesthetics and services for economic growth to the business"
             },
             {
               id: 2,
-
               bullet:
                 "Devises social media strategy (Instagram/Facebook) to attract more patrons by 5% "
             }
@@ -68,19 +65,16 @@ class WorkExperience extends Component {
           About: [
             {
               id: 0,
-
               bullet:
                 "Collaborated with three programmers to create a website in React.js that increases women’s representation in the STEM fields by providing accolades for their achievements in STEM"
             },
             {
               id: 1,
-
               bullet:
                 "Designed a user profile layout using React.js components where users can view their progress"
             },
             {
               id: 2,
-
               bullet:
                 "Assisted CTO with upcoming design stages and delegated tasks to team members"
             }
