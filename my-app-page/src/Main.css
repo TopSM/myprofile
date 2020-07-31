@@ -5,6 +5,14 @@
   text-align: center;
   color: black;
 }
+.banner {
+  /* width: 100%; */
+  background-image: url("Pictures/SunsetParkBanner.jpg");
+  background-repeat: no-repeat;
+  background: yellow;
+  /* max-height: 90vh; */
+  /* margin-top: -90px; */
+}
 .text {
   /* background: maroon; */
   border-radius: 30px;

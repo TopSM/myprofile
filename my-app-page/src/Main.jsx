@@ -1,13 +1,14 @@
 import React from "react";
 //PDF
-import Resume from "./Ostavo_Palacios_Resume.pdf";
+import Resume from "./Ostavo-Palacios-Resume.pdf";
 //Images
 import logo from "./Pictures/Pfp.jpg";
-import { Button } from "@material-ui/core";
+import banner from "./Pictures/SunsetParkBanner.jpg";
 
 //Installed Components
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { goToTop } from "react-scrollable-anchor";
+import { Button } from "@material-ui/core";
 
 //My Components
 import WorkExperience from "./workEperience";
@@ -82,10 +83,15 @@ function Lists() {
 function Main() {
   return (
     <React.Fragment>
+      <div className="banner">
+        {" "}
+        <h2>Ostavo Palacios</h2>
+      </div>
       <header className="header">
         <div>
           <div className="intro standard-fitting">
             <div className="title standard-fitting">
+              <div className="banner"></div>
               <h2>Ostavo Palacios</h2>
               <img
                 src={logo}
