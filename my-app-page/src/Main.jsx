@@ -3,7 +3,7 @@ import React from "react";
 import Resume from "./Ostavo-Palacios-Resume.pdf";
 //Images
 import logo from "./Pictures/Pfp.jpg";
-import banner from "./Pictures/SunsetParkBanner.jpg";
+import SunsetParkBanner from "./Pictures/SunsetParkBanner.jpg";
 
 //Installed Components
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -17,10 +17,15 @@ import ProjectExperience from "./projectExperience";
 
 //CSS
 import "./Main.css";
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
+
+
 function Contact() {
   return (
     <React.Fragment>
-      <div className="title-fitting">
+      <div className="title-fitting" data-aos="fade-down">
         <h2>Contact</h2>
         <div className="info-list">
           <ul className="no-bullets">
@@ -81,22 +86,23 @@ function Lists() {
   );
 }
 function Main() {
+  AOS.init({
+    duration : 1200
+});
   return (
     <React.Fragment>
-      <div className="banner">
-        {" "}
-        <h2>Ostavo Palacios</h2>
+      <div className="Title">
+          <img src={SunsetParkBanner} className="banner" data-aos="zoom-out"/>  
       </div>
       <header className="header">
         <div>
           <div className="intro standard-fitting">
-            <div className="title standard-fitting">
-              <div className="banner"></div>
-              <h2>Ostavo Palacios</h2>
+            <div className="title standard-fitting">              
               <img
                 src={logo}
                 alt="Ostavo"
                 className="profile-picture standard-fitting "
+                data-aos="zoom-in"
               ></img>
             </div>
             <div>
@@ -119,7 +125,7 @@ function Main() {
             </div>
           </div>
           <div className="my-info">
-            <section id="Contact">
+            <section id="Contact" data-AOS="fade-down">
               <Contact />
             </section>
             <section id="WorkExperience">

@@ -20,19 +20,21 @@ export default function mapInfo(props) {
 
   return (
     <React.Fragment>
-      <div className="mobileCss">
+      <div className="mobileCss" >
         {props.infoList.map(il => (
-          <div className="info-list title-fitting" key={il.id}>
+          <div className="info-list title-fitting" key={il.id} data-aos="fade-down">
             <div>
               <a href={il.Link}>
-                <img className="info-pic" src={il.Picture} alt={il.Alt}></img>
+                <img className="info-pic" src={il.Picture} alt={il.Alt} data-aos="fade-left"></img>
               </a>
             </div>
-            <h3>{il.JobName}</h3>
-            <h4>{il.Title}</h4>
-            <h4>Year: {il.Year}</h4>
-            {checkLanguage(il.Language)}
+            <div data-aos="fade-right">
+              <h3>{il.JobName}</h3>
+              <h4>{il.Title}</h4>
+              <h4>Year: {il.Year}</h4>
+              {checkLanguage(il.Language)}
             {/* {checklanguage()} */}
+            </div>
             <div className="text bullet-list standard-fitting">
               <ul>
                 {props.infoList[il.id].About.map(a => (
