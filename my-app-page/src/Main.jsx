@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 //PDF
 import Resume from "./Ostavo-Palacios-Resume.pdf";
 //Images
@@ -19,7 +19,6 @@ import ProjectExperience from "./projectExperience";
 import "./Main.css";
 import AOS from 'aos';
 import "aos/dist/aos.css";
-
 
 
 function Contact() {
@@ -85,16 +84,60 @@ function Lists() {
     </React.Fragment>
   );
 }
-function Main() {
   AOS.init({
     duration : 1200
 });
-  return (
-    <React.Fragment>
-      <div className="Title">
-          <img src={SunsetParkBanner} className="banner" data-aos="zoom-out"/>  
-      </div>
-      <header className="header">
+class Main extends Component {
+  constructor(props){
+    super(props);
+
+    this.state={
+      colors:true
+    }
+    this.handleClick=this.handleClick.bind(this);
+  }
+  handleClick = ()=>{
+     console.log("hello")
+      this.setState({colors: !this.state.colors})
+  }
+  basicColors=()=>{
+      return {
+        backgroundColor:this.state.colors ? "white" : "#282c34",
+        color:this.state.colors ? "black" : "aliceblue"
+
+      }
+    }
+  buttonColor=()=>{
+    return{
+      backgroundColor:this.state.colors ? "#282c34" : "white",
+      color:this.state.colors ? "aliceblue" : "black"
+
+    }
+  }
+  changeButtontext=()=>{
+    return this.state.colors ? "Dark Mode" : "Light Mode"
+
+  }
+  render(){
+    return (
+      <React.Fragment>
+      <div style={this.basicColors()}>
+        <div className="buttonPlace">
+        <button 
+          className="buttonColor" 
+          onClick={this.handleClick} 
+          style={
+            
+            this.buttonColor()
+          }
+          >
+            {this.changeButtontext()}
+        </button>
+        </div>
+        <div className="Title" >
+          <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" />  
+        </div>
+        <header className="header">
         <div>
           <div className="intro standard-fitting">
             <div className="title standard-fitting">              
@@ -103,6 +146,7 @@ function Main() {
                 alt="Ostavo"
                 className="profile-picture standard-fitting "
                 data-aos="zoom-in"
+                // height="300px"
               ></img>
             </div>
             <div>
@@ -118,6 +162,9 @@ function Main() {
                     team of four. One of his goals in life is to get more
                     minority students interested in coding. Ostavo's core values
                     are education, curiosity, innovation, and motivation.
+                    Currently employed as an undergad research assistant at NYU for 
+                    Participating in Literacies and computer Science and working as an
+                    IT Director at LAESA-SHPE 
                   </p>
                 </div>
                 <Lists></Lists>
@@ -147,7 +194,8 @@ function Main() {
           </div>
         </div>
       </header>
+      </div>
     </React.Fragment>
-  );
+  );}
 }
 export default Main;

@@ -25,7 +25,11 @@ export default function mapInfo(props) {
           <div className="info-list title-fitting" key={il.id} data-aos="fade-down">
             <div>
               <a href={il.Link}>
-                <img className="info-pic" src={il.Picture} alt={il.Alt} data-aos="fade-left"></img>
+                <img className="info-pic" 
+                  src={il.Picture} 
+                  alt={il.Alt} 
+                  data-aos="slide-up"
+                />
               </a>
             </div>
             <div data-aos="fade-right">

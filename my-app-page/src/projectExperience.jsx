@@ -18,6 +18,29 @@ class ProjectExperience extends Component {
     super(props);
 
     this.state = {
+      JavaScript:[
+        {
+          id:0,
+          JobName:"SELENA Bot",
+          About:[
+            {
+              id:0,
+              bullet:"Developing a Slack bot in Javacsript that would improve awareness to club events, and resources provide by our SHPE Chapter for our members"
+            },
+            {
+              id:1,
+              bullet:"Creating user profiles and a database for our members in hopes that our active members increase by %10"
+            },
+           { 
+            id:2,
+            bullet:"Adding command line features to 'SELENA bot' so Eboard members can easily and update our database without needing to code "
+          }
+          ],
+          Title: "Project Manager",
+          Year: "September 2020 - Current",
+          Language: "Javascript",
+        }
+      ],
       ReactJS: [
         {
           id: 0,
@@ -42,7 +65,7 @@ class ProjectExperience extends Component {
           Title: "Project Manager",
           Year: "Fall 2019 - Current",
           Language: "ReactJs",
-          Link: "https://aqueous-hamlet-89351.herokuapp.com/",
+          Link: "http://www.laesa-shpe.com",
           Picture: LAESA,
           Alt: "LAESA"
         },
@@ -285,6 +308,9 @@ class ProjectExperience extends Component {
               key={this.state.ReactJS.id}
             />
           </section>
+          <section id="Javascript">
+            <MapInfo infoList={this.state.JavaScript} key={this.state.JavaScript.id} />
+          </section>
           <section id="C/C++">
             <MapInfo infoList={this.state.C} key={this.state.C.id} />
           </section>
@@ -294,6 +320,7 @@ class ProjectExperience extends Component {
           <section id="Java">
             <MapInfo infoList={this.state.Java} key={this.state.Java.id} />
           </section>
+          
           <section id="Assembly">
             {/* <MapInfo infoList={this.state.Java} key={this.state.Java.id} /> */}
           </section>

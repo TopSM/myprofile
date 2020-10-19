@@ -30,6 +30,7 @@ function Navigation() {
             <NavDropdown.Item href={"#Python"}>Python</NavDropdown.Item>
             <NavDropdown.Item href={"#Java"}>Java</NavDropdown.Item>
             <NavDropdown.Item href={"#ReactJS"}>ReactJS</NavDropdown.Item>
+            <NavDropdown.Item href={"#javascript"}>JavaScript</NavDropdown.Item>
             {/* <NavDropdown.Item href={"#Assembly"}>Assembly</NavDropdown.Item> */}
           </NavDropdown>
           <Nav.Link href={"#Contact"}>Contact</Nav.Link>
