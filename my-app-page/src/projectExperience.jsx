@@ -18,6 +18,7 @@ class ProjectExperience extends Component {
     super(props);
 
     this.state = {
+      project:"RJS",
       JavaScript:[
         {
           id:0,
@@ -296,34 +297,85 @@ class ProjectExperience extends Component {
         }
       ]
     };
+    this.showProject = this.showProject.bind(this);
+  }
+  showProject = () => {
+    if(this.state.project === "RJS"){
+      return ( 
+        <section id="ReactJS">
+        <MapInfo
+        infoList={this.state.ReactJS}
+        key={this.state.ReactJS.id}
+      />
+    </section>)
+    }
+    else if(this.state.project === "JS"){ 
+      return(
+      <section id="Javascript">
+      <MapInfo infoList={this.state.JavaScript} key={this.state.JavaScript.id} />
+      </section>
+      )
+    }
+    else if(this.state.project === "C"){ 
+      return(
+        <section id="C/C++">
+        <MapInfo infoList={this.state.C} key={this.state.C.id} />
+        </section>)
+    }
+    else if(this.state.project === "Py"){ 
+      return (
+        <section id="Python">
+        <MapInfo infoList={this.state.Python} key={this.state.Python.id} />
+        </section>
+      )
+    }
+    else if(this.state.project === "J"){ 
+      return(
+        <section id="Java">
+        <MapInfo infoList={this.state.Java} key={this.state.Java.id} />
+        </section>
+      )
+    }
+  }
+  projectButton=(projectType)=>{
+    this.setState({project:projectType});
   }
   render() {
     return (
       <React.Fragment>
         <div className="standard-fitting title-fitting">
-          <h2>Projects</h2>
-          <section id="ReactJS">
+          <h2 className ="sections" >Projects</h2>
+          <button 
+          onClick={() => this.projectButton("RJS")}
+          className="project-btn"
+          >ReactJS</button>
+          <button 
+          onClick={() =>this.projectButton("JS")}
+          className="project-btn"
+          >Javascript</button>
+          <button 
+          onClick={() =>this.projectButton("Py")}
+          className="project-btn"
+          >Python</button>
+          <button 
+          onClick={() =>this.projectButton("C")}
+          className="project-btn"
+          >C/C++</button>
+          <button 
+          onClick={() =>this.projectButton("J")}
+          className="project-btn"
+          >Java</button>
+          {this.showProject()}
+          {/* <section id="ReactJS">
             <MapInfo
               infoList={this.state.ReactJS}
               key={this.state.ReactJS.id}
             />
-          </section>
-          <section id="Javascript">
-            <MapInfo infoList={this.state.JavaScript} key={this.state.JavaScript.id} />
-          </section>
-          <section id="C/C++">
-            <MapInfo infoList={this.state.C} key={this.state.C.id} />
-          </section>
-          <section id="Python">
-            <MapInfo infoList={this.state.Python} key={this.state.Python.id} />
-          </section>
-          <section id="Java">
-            <MapInfo infoList={this.state.Java} key={this.state.Java.id} />
-          </section>
+          </section> */}
+         
           
-          <section id="Assembly">
-            {/* <MapInfo infoList={this.state.Java} key={this.state.Java.id} /> */}
-          </section>
+          
+          
         </div>
       </React.Fragment>
     );

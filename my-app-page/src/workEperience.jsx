@@ -114,7 +114,7 @@ class WorkExperience extends Component {
     return (
       <React.Fragment>
         <div className=" title-fitting">
-          <h2>Work Experince</h2>
+          <h2 className="sections">Work Experience</h2>
           <MapInfo
             infoList={this.state.ExperienceArray}
             key={this.state.ExperienceArray.id}

@@ -25,7 +25,7 @@ function Contact() {
   return (
     <React.Fragment>
       <div className="title-fitting" data-aos="fade-down">
-        <h2>Contact</h2>
+        <h2 className="sections">Contact</h2>
         <div className="info-list">
           <ul className="no-bullets">
             <li className="contact-list">
@@ -52,8 +52,8 @@ function Lists() {
     <React.Fragment>
       <ul className="no-bullets">
         <li className="contact-list">
-          <span className="contact-list-name">My Resume</span>:
-          <a href={Resume}> Ostavo Palacios </a>
+         <h4> <span className="contact-list-name">My Resume</span>:
+          <a href={Resume}> Ostavo Palacios </a></h4>
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Programming Languages</span>:
@@ -97,7 +97,6 @@ class Main extends Component {
     this.handleClick=this.handleClick.bind(this);
   }
   handleClick = ()=>{
-     console.log("hello")
       this.setState({colors: !this.state.colors})
   }
   basicColors=()=>{
@@ -172,19 +171,22 @@ class Main extends Component {
             </div>
           </div>
           <div className="my-info">
-            <section id="Contact" data-AOS="fade-down">
+            <section id="Contact" data-aos="fade-down">
               <Contact />
             </section>
             <section id="WorkExperience">
               <WorkExperience />
             </section>
-            <ProjectExperience />
+            <section id= "Projects">
+              <ProjectExperience />
+            </section>
+            
             <section id="VolunteerExperience">
               <VolunteerExperience />
             </section>
             <div className="button">
               <Button
-                color="maroon"
+                // color="maroon"
                 variant="outlined"
                 onClick={() => goToTop()}
               >
