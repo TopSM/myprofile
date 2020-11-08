@@ -5,16 +5,25 @@
   padding-bottom: 0px;
   text-align: center;
 }
+.footer{
+  padding: 5px;
+  border-top: solid;
+  margin: auto;
+  text-align: center;
+}
+.social-icon{
+  margin: 5px;
+}
 .project-btn{
   padding: 5px;
   margin: 3px;
-  background-color: #0f628b;
+  background-color: #008888;
   /* color: #800000; */
   font-weight: bold;
   border-radius: 10%;
 }
 .project-btn:hover{
-  color: red;
+  color: #800000;
   border: solid;
 }
 .sections {color:	#0f628b}
@@ -29,11 +38,12 @@
 .buttonColor{
   padding: 5px;
 }
-  .banner {
+.banner {
   text-align: center;
-  width: 80%;
+  width: 60%;
   max-height: 70vh;
-  min-width: 80%;
+  /* min-width: 80%; */
+  max-width: 100%;
   padding: 20px;
 }
 .Title{
@@ -61,7 +71,7 @@ a:hover {
   text-decoration: none;
 }
 a:visited {
-  color: lightseagreen;
+  color:#0f628b;
 }
 .title-fitting {
   margin: auto;
@@ -147,6 +157,7 @@ h4 {
     padding: 30px;
     text-align: center;
   }
+  /* .banner{width: 80%;} */
   .standard-fitting {
     padding: 20px;
     /* border: solid; */
@@ -229,6 +240,7 @@ h4 {
 
 @media screen and (max-width: 1233px) {
   /* Large phone and tablet */
+  .banner{width: 80%;}
   .header {
     margin: auto;
     padding: 10px;

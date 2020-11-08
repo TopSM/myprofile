@@ -14,7 +14,7 @@ import { Button } from "@material-ui/core";
 import WorkExperience from "./workEperience";
 import VolunteerExperience from "./volunteerExperience";
 import ProjectExperience from "./projectExperience";
-
+import Footer from "./footer"
 //CSS
 import "./Main.css";
 import AOS from 'aos';
@@ -26,7 +26,7 @@ function Contact() {
     <React.Fragment>
       <div className="title-fitting" data-aos="fade-down">
         <h2 className="sections">Contact</h2>
-        <div className="info-list">
+        <div className="info-list title-fitting">
           <ul className="no-bullets">
             <li className="contact-list">
               <span className="contact-list-name">Telophone</span>: 347-320-3164
@@ -125,8 +125,7 @@ class Main extends Component {
         <button 
           className="buttonColor" 
           onClick={this.handleClick} 
-          style={
-            
+          style={            
             this.buttonColor()
           }
           >
@@ -172,16 +171,20 @@ class Main extends Component {
           </div>
           <div className="my-info">
             <section id="Contact" data-aos="fade-down">
+              <br/>
               <Contact />
             </section>
             <section id="WorkExperience">
+              <br/>
               <WorkExperience />
             </section>
             <section id= "Projects">
+              <br/>
               <ProjectExperience />
             </section>
             
             <section id="VolunteerExperience">
+              <br/>
               <VolunteerExperience />
             </section>
             <div className="button">
