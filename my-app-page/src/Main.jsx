@@ -14,7 +14,7 @@ import { Button } from "@material-ui/core";
 import WorkExperience from "./workEperience";
 import VolunteerExperience from "./volunteerExperience";
 import ProjectExperience from "./projectExperience";
-import Footer from "./footer"
+// import Footer from "./footer"
 //CSS
 import "./Main.css";
 import AOS from 'aos';
@@ -57,10 +57,10 @@ function Lists() {
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Programming Languages</span>:
-          <AnchorLink href="#C/C++"> C/C++</AnchorLink>,
-          <AnchorLink href="#Python"> Python</AnchorLink>,
-          <AnchorLink href="#ReactJS"> React.Js</AnchorLink>,
-          <AnchorLink href="#Java"> Java</AnchorLink>
+          <AnchorLink href="#Projects"> C/C++</AnchorLink>,
+          <AnchorLink href="#Projects"> Python</AnchorLink>,
+          <AnchorLink href="#Projects"> React.Js</AnchorLink>,
+          <AnchorLink href="#Projects"> Java</AnchorLink>
           {/* <AnchorLink href="#Assembly"> Assembly</AnchorLink> */}
         </li>
         <li className="contact-list">
