@@ -18,6 +18,30 @@ class ProjectExperience extends Component {
     super(props);
 
     this.state = {
+      project:"RJS",
+      JavaScript:[
+        {
+          id:0,
+          JobName:"SELENA Bot",
+          About:[
+            {
+              id:0,
+              bullet:"Developing a Slack bot in Javacsript that would improve awareness to club events, and resources provide by our SHPE Chapter for our members"
+            },
+            {
+              id:1,
+              bullet:"Creating user profiles and a database for our members in hopes that our active members increase by %10"
+            },
+           { 
+            id:2,
+            bullet:"Adding command line features to 'SELENA bot' so Eboard members can easily and update our database without needing to code "
+          }
+          ],
+          Title: "Project Manager",
+          Year: "September 2020 - Current",
+          Language: "Javascript",
+        }
+      ],
       ReactJS: [
         {
           id: 0,
@@ -42,7 +66,7 @@ class ProjectExperience extends Component {
           Title: "Project Manager",
           Year: "Fall 2019 - Current",
           Language: "ReactJs",
-          Link: "https://aqueous-hamlet-89351.herokuapp.com/",
+          Link: "http://www.laesa-shpe.com",
           Picture: LAESA,
           Alt: "LAESA"
         },
@@ -273,30 +297,85 @@ class ProjectExperience extends Component {
         }
       ]
     };
+    this.showProject = this.showProject.bind(this);
+  }
+  showProject = () => {
+    if(this.state.project === "RJS"){
+      return ( 
+        <section id="ReactJS">
+        <MapInfo
+        infoList={this.state.ReactJS}
+        key={this.state.ReactJS.id}
+      />
+    </section>)
+    }
+    else if(this.state.project === "JS"){ 
+      return(
+      <section id="Javascript">
+      <MapInfo infoList={this.state.JavaScript} key={this.state.JavaScript.id} />
+      </section>
+      )
+    }
+    else if(this.state.project === "C"){ 
+      return(
+        <section id="C/C++">
+        <MapInfo infoList={this.state.C} key={this.state.C.id} />
+        </section>)
+    }
+    else if(this.state.project === "Py"){ 
+      return (
+        <section id="Python">
+        <MapInfo infoList={this.state.Python} key={this.state.Python.id} />
+        </section>
+      )
+    }
+    else if(this.state.project === "J"){ 
+      return(
+        <section id="Java">
+        <MapInfo infoList={this.state.Java} key={this.state.Java.id} />
+        </section>
+      )
+    }
+  }
+  projectButton=(projectType)=>{
+    this.setState({project:projectType});
   }
   render() {
     return (
       <React.Fragment>
         <div className="standard-fitting title-fitting">
-          <h2>Projects</h2>
-          <section id="ReactJS">
+          <h2 className ="sections" >Projects</h2>
+          <button 
+          onClick={() => this.projectButton("RJS")}
+          className="project-btn"
+          >ReactJS</button>
+          <button 
+          onClick={() =>this.projectButton("JS")}
+          className="project-btn"
+          >Javascript</button>
+          <button 
+          onClick={() =>this.projectButton("Py")}
+          className="project-btn"
+          >Python</button>
+          <button 
+          onClick={() =>this.projectButton("C")}
+          className="project-btn"
+          >C/C++</button>
+          <button 
+          onClick={() =>this.projectButton("J")}
+          className="project-btn"
+          >Java</button>
+          {this.showProject()}
+          {/* <section id="ReactJS">
             <MapInfo
               infoList={this.state.ReactJS}
               key={this.state.ReactJS.id}
             />
-          </section>
-          <section id="C/C++">
-            <MapInfo infoList={this.state.C} key={this.state.C.id} />
-          </section>
-          <section id="Python">
-            <MapInfo infoList={this.state.Python} key={this.state.Python.id} />
-          </section>
-          <section id="Java">
-            <MapInfo infoList={this.state.Java} key={this.state.Java.id} />
-          </section>
-          <section id="Assembly">
-            {/* <MapInfo infoList={this.state.Java} key={this.state.Java.id} /> */}
-          </section>
+          </section> */}
+         
+          
+          
+          
         </div>
       </React.Fragment>
     );

@@ -79,7 +79,7 @@ class VolunteerExperience extends Component {
     return (
       <React.Fragment>
         <div className="standard-fitting title-fitting">
-          <h2>Volunteer Experince</h2>
+          <h2 className="sections">Volunteer Experience</h2>
           <MapInfo
             infoList={this.state.VolunteerArray}
             key={this.state.VolunteerArray.id}

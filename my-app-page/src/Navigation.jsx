@@ -2,7 +2,7 @@ import React from "react";
 
 //Installed Components
 import { Navbar, Nav } from "react-bootstrap";
-import { NavDropdown } from "react-bootstrap";
+// import { NavDropdown } from "react-bootstrap";
 
 function Navigation() {
   return (
@@ -25,13 +25,9 @@ function Navigation() {
           <Nav.Link href={"#VolunteerExperience"}>
             Volunteer Experience
           </Nav.Link>
-          <NavDropdown title="Projects" id="basic-nav-dropdown">
-            <NavDropdown.Item href={"#C/C++"}>C/C++</NavDropdown.Item>
-            <NavDropdown.Item href={"#Python"}>Python</NavDropdown.Item>
-            <NavDropdown.Item href={"#Java"}>Java</NavDropdown.Item>
-            <NavDropdown.Item href={"#ReactJS"}>ReactJS</NavDropdown.Item>
-            {/* <NavDropdown.Item href={"#Assembly"}>Assembly</NavDropdown.Item> */}
-          </NavDropdown>
+          <Nav.Link href={"#Projects"}>
+            Projects
+          </Nav.Link>
           <Nav.Link href={"#Contact"}>Contact</Nav.Link>
           {/* <Nav.Link href={"#Python"}>Contact</Nav.Link> */}
         </Nav>

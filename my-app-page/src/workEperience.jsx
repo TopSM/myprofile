@@ -12,7 +12,7 @@ class WorkExperience extends Component {
       ExperienceArray: [
         {
           id: 0,
-          JobName: "PiLaCS",
+          JobName: "Participating in Literacies and Computer Science",
           Title: "Junior Research Assistant",
           About: [
             {
@@ -44,20 +44,20 @@ class WorkExperience extends Component {
             {
               id: 0,
               bullet:
-                "Designed and manages the website and online delivery service for the restaurant to increase revenue by 5%"
+                "Designed and managed the website and online delivery service for the restaurant to increase revenue by 15%"
             },
             {
               id: 1,
               bullet:
-                "Advises owner to better improve aesthetics and services for economic growth to the business"
+                "Advised owner to better improve aesthetics and services for economic growth to the business"
             },
             {
               id: 2,
               bullet:
-                "Devises social media strategy (Instagram/Facebook) to attract more patrons by 5% "
+                "Devised social media strategy (Instagram/Facebook) to attract more patrons by 5% "
             }
           ],
-          Year: "Winter 2016 - Current"
+          Year: "Winter 2016 - Winter 2019"
         },
         {
           id: 2,
@@ -114,7 +114,7 @@ class WorkExperience extends Component {
     return (
       <React.Fragment>
         <div className=" title-fitting">
-          <h2>Work Experince</h2>
+          <h2 className="sections">Work Experience</h2>
           <MapInfo
             infoList={this.state.ExperienceArray}
             key={this.state.ExperienceArray.id}
