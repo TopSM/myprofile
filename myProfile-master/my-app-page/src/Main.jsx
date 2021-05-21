@@ -92,7 +92,7 @@ class Main extends Component {
 
     super(props);
     this.state = {
-      colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") == "true" : true
+      colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
     }
     this.handleStateColor = this.handleStateColor.bind(this);
     this.basicColors = this.basicColors.bind(this);
