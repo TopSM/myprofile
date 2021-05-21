@@ -69,7 +69,7 @@ class VolunteerExperience extends Component {
                 "Represented and pitched the top 3 teams to other judges that were seleceted by me in order to assist teams to the next round"
             },
             {
-              id: 1,
+              id: 2,
               bullet:
                 "Represented and pitched the top 3 teams to other judges that were seleceted by me in order to assist teams to the next round"
             }

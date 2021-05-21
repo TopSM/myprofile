@@ -20,7 +20,6 @@ import "./Main.css";
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
-
 function Contact() {
   return (
     <React.Fragment>
@@ -88,18 +87,33 @@ AOS.init({
   duration: 1200
 });
 class Main extends Component {
+  _isMounted = false;
   constructor(props) {
-    super(props);
 
+    super(props);
     this.state = {
-      colors: true
+      colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") == "true" : true
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.handleStateColor = this.handleStateColor.bind(this);
+    this.basicColors = this.basicColors.bind(this);
+    this.buttonColor = this.buttonColor.bind(this);
+    this.changeButtontext = this.changeButtontext.bind(this);
+    // console.log(this.state.colors)
   }
-  handleClick = () => {
-    this.setState({ colors: !this.state.colors })
+
+  handleStateColor = () => {
+    this.setState((state) => ({ colors: !state.colors }))
+    // console.log(this.state)
   }
   basicColors = () => {
+
+    if (typeof (Storage) !== undefined) {
+      localStorage.setItem("colorState", this.state.colors)
+    }
+    else {
+
+      console.log("browser does not support")
+    }
     return {
       backgroundColor: this.state.colors ? "white" : "#282c34",
       color: this.state.colors ? "black" : "aliceblue"
@@ -118,13 +132,15 @@ class Main extends Component {
 
   }
   render() {
+    console.log(this.state.colors)
     return (
       <React.Fragment>
+
         <div style={this.basicColors()}>
           <div className="buttonPlace">
             <button
               className="buttonColor"
-              onClick={this.handleClick}
+              onClick={() => this.handleStateColor()}
               style={
                 this.buttonColor()
               }
@@ -132,6 +148,7 @@ class Main extends Component {
               {this.changeButtontext()}
             </button>
           </div>
+
           <div className="Title" >
             <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" />
           </div>
