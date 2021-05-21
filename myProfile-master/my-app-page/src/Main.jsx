@@ -94,26 +94,12 @@ class Main extends Component {
     this.state = {
       colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
     }
-    this.handleStateColor = this.handleStateColor.bind(this);
     this.basicColors = this.basicColors.bind(this);
-    this.buttonColor = this.buttonColor.bind(this);
-    this.changeButtontext = this.changeButtontext.bind(this);
-    // console.log(this.state.colors)
+
   }
 
-  handleStateColor = () => {
-    this.setState((state) => ({ colors: !state.colors }))
-    // console.log(this.state)
-  }
+
   basicColors = () => {
-
-    if (typeof (Storage) !== undefined) {
-      localStorage.setItem("colorState", this.state.colors)
-    }
-    else {
-
-      console.log("browser does not support")
-    }
     return {
       backgroundColor: this.state.colors ? "white" : "#282c34",
       color: this.state.colors ? "black" : "aliceblue"
@@ -121,32 +107,30 @@ class Main extends Component {
     }
   }
   buttonColor = () => {
+    console.log(this.state.colors)
     return {
       backgroundColor: this.state.colors ? "#282c34" : "white",
       color: this.state.colors ? "aliceblue" : "black"
 
     }
   }
-  changeButtontext = () => {
-    return this.state.colors ? "Dark Mode" : "Light Mode"
 
-  }
   render() {
-    // console.log(this.state.colors)
     return (
       <React.Fragment>
 
         <div style={this.basicColors()}>
           <div className="buttonPlace">
-            <button
+            {/* <button
               className="buttonColor"
               onClick={() => this.handleStateColor()}
               style={
                 this.buttonColor()
               }
             >
-              {this.changeButtontext()}
-            </button>
+              
+            </button> */}
+            {/* {this.changeButtontext()} */}
           </div>
 
           <div className="Title" >
