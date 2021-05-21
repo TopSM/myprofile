@@ -2,14 +2,14 @@ import React from "react";
 
 //Installed Components
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 // import { NavDropdown } from "react-bootstrap";
 
 class Navigation extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
   render() {
     const history = this.props.history
 
@@ -30,14 +30,14 @@ class Navigation extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <NavDropdown title="Resume" id='resumeDropdown' >
-              <NavDropdown.Item href={"#WorkExperience"}>Work Experience</NavDropdown.Item >
-              <NavDropdown.Item href={"#VolunteerExperience"}>
+              <NavDropdown.Item onClick={() => history.push("")} href={"#WorkExperience"}>Work Experience</NavDropdown.Item >
+              <NavDropdown.Item onClick={() => history.push("")} href={"#VolunteerExperience"}>
                 Volunteer Experience
           </NavDropdown.Item >
-              <NavDropdown.Item href={"#Projects"}>
+              <NavDropdown.Item onClick={() => history.push("")} href={"#Projects"}>
                 Projects
           </NavDropdown.Item >
-              <NavDropdown.Item href={"#Contact"}>Contact</NavDropdown.Item >
+              <NavDropdown.Item onClick={() => history.push("")} href={"#Contact"}>Contact</NavDropdown.Item >
             </NavDropdown>
             <Nav.Link
               eventKey={1}

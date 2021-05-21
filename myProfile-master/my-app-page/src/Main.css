@@ -26,7 +26,7 @@
   color: 	#ff3452;
   border: solid;
 }
-.sections {color:	#0f628b}
+.sections {color:	#00a9ea	}
 .buttonPlace{
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ a:hover {
   text-decoration: none;
 }
 a:visited {
-  color:#0f628b;
+  color:#00a9ea	;
 }
 .title-fitting {
   margin: auto;
