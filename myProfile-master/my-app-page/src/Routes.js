@@ -3,7 +3,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import Main from './Main'
-import Gallery from './Construction'
+import Gallery from './Gallery'
 
 export default () => (
     <Switch>

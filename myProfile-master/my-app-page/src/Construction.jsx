@@ -4,7 +4,7 @@ export default class Construction extends Component {
     render() {
         return (
             <div>
-                <h1>
+                <h1 id='construction'>
                     COMING SOON!
                 </h1>
             </div>
