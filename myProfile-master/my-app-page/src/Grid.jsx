@@ -11,9 +11,7 @@ AOS.init({
     duration: 1200
 });
 export default class Grid extends Component {
-    constructor(props) {
-        super(props)
-    }
+
     imageStyle = () => {
         // return {
         //     margin: 'auto',
@@ -29,7 +27,7 @@ export default class Grid extends Component {
                 <h2 className='sections' data-aos='fade-right'>{this.props.setting} Photography </h2>
                 <div className='gallery'>
                     <Container className="cont-style">
-                        <Row className="row-style" xs={1} s={2} md={3} lg={4} >
+                        <Row className="row-style" xs={1} s={1} md={1} lg={4} >
 
                             {this.props.images.map(i => (
 
@@ -39,7 +37,7 @@ export default class Grid extends Component {
                                         alt={i.alt}
                                         width={i.width}
                                         height={i.height}
-                                        style={this.imageStyle()}
+                                        // style={this.imageStyle()}
                                         className='image-style'
                                     />
                                     <br />

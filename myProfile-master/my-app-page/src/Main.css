@@ -6,13 +6,6 @@
   padding: 100px;
 }
 
-.cont-style{
-  width: auto;
-  margin: auto;
-  /* margin-left: 60px; */
-  /* margin-right: 20px; */
-
-}
 .photography-fitting{
   /* padding: 10px; */
   margin: 30px;
@@ -279,6 +272,29 @@ h4 {
   .button {
     text-align: center;
   }
+  .cont-style{
+    border: solid;
+    /* width: 130vh; */
+    margin: 0px;
+  }
+  .col-style{
+    /* width: 70px; */
+    /* padding: 50px; */
+    /* color: red; */
+    overflow: auto;
+/* text-align: left; */
+  }
+  .photography-fitting{
+    margin-left: none;
+    padding-left: none;
+
+  }
+  .image-style{
+    text-align: center;
+    border: solid;
+    /* width:60px; */
+  }
+  
 }
 
 @media screen and (max-width: 1233px) {
@@ -343,6 +359,25 @@ h4 {
     margin-bottom: 10px;
     /* margin: auto; */
   }
+   .profile-picture {
+    width: 30vh;
+    height: 35vh;
+    padding: 10px;
+    border-radius: 300px;
+  }
+  .cont-style{
+    /* border: solid; */
+    width: 130vh;
+    margin: 0px;
+  }
+
+  .photography-fitting{
+    margin-left: none;
+    padding-left: none;
+
+  }
+
+  
 }
 @media screen and (max-width: 480px) {
   /* Smaller screen size phones */
@@ -396,7 +431,6 @@ h4 {
   .about-text {
     margin-top: 0px;
     font-size: .9em;
-
   }
   .no-bullets {
     padding: 0px;
@@ -408,33 +442,22 @@ h4 {
     border-radius: 300px;
   }
   .col-style{
-    width: 350px;
+    width: 45vh;
     padding: 10px;
     margin: 5px;
-    /* color: red; */
-    /* border: solid; */
-    /* text-align: center; */
+
   }
 
   .photography-fitting{
-    /* padding: 10px; */
-    /* margin: 30px; */
-    /* border-top: none; */
-    /* margin: auto; */
+
     margin-left: none;
     padding-left: none;
-    /* padding: 30px; */
-    /* clear: both; */
-    /* color: rebeccapurple; */
-    /* border: solid; */
+
   }
   .image-style{
-    /* margin: auto; */
-    /* padding: 30px; */
-    /* padding-left: 0px ; */
+
     text-align: center;
     border: none;
-    width:50vh
-  
+    width:40vh
   }
 }

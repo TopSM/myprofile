@@ -152,18 +152,20 @@ class Main extends Component {
                   <div className="about-text">
                     <div className="text standard-fitting">
                       <p>
-                        Ostavo Palacios has a bachelors degree in Computer Engineering from the
-                        Grove School of Engineering deparment graduated from The City College of New
-                        York in June 4th 2021.He is a first generation student, that was born and raised
-                        in NYC. He is profecient in multiple programming languages like C++,
-                        Python, Javascript and many more! He is also very adaptable and ready to learn
-                        new concepts and ideas at a given time. He has taken many managerial positions
-                        for projects conducted web development projects. One of his goals in life is to
-                        get more minority students interested in coding. Ostavo's core values
-                        are education, curiosity, innovation, and motivation.
-                        Currently employed as an intern undergad research assistant at NYU for
-                        Participating in Literacies and Computer Science and is now a LAESA alumni.
-                  </p>
+                        Ostavo Palacios received his Bachelor’s of
+                        Engineer in Computer Engineering from the Grove School of
+                        Engineering at The City College of New York. Born and raised in
+                        NYC, he is a first generation college graduate and proficient in
+                        multiple programming languages such as C++, Python, Javascript,
+                        and more. He is also very adaptable and ready to learn new
+                        concepts and ideas at a given time. He has taken many managerial
+                        positions for projects and conducted many web development
+                        projects. Ostavo also aspires to get more minority students
+                        interested in coding. Ostavo's core values are education,
+                        curiosity, innovation, and motivation. He is a LAESA alumni
+                        and currently employed as an intern undergad research assistant
+                        at NYU.
+                        </p>
                     </div>
                     <Lists></Lists>
                   </div>
