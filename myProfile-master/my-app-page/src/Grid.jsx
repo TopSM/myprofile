@@ -15,12 +15,12 @@ export default class Grid extends Component {
         super(props)
     }
     imageStyle = () => {
-        return {
-            margin: 'auto',
-            padding: "30px",
-            textAlign: "center"
+        // return {
+        //     margin: 'auto',
+        //     padding: "30px",
+        //     textAlign: "center"
 
-        }
+        // }
     }
     render() {
         console.log(this.props)
@@ -40,6 +40,7 @@ export default class Grid extends Component {
                                         width={i.width}
                                         height={i.height}
                                         style={this.imageStyle()}
+                                        className='image-style'
                                     />
                                     <br />
                                     Camera Used: {i.camera}
