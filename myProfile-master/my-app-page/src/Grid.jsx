@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
+import AOS from 'aos';
+
+import "aos/dist/aos.css";
+
+AOS.init({
+    duration: 1200
+});
 export default class Grid extends Component {
     constructor(props) {
         super(props)
@@ -11,20 +19,21 @@ export default class Grid extends Component {
             margin: 'auto',
             padding: "30px",
             textAlign: "center"
+
         }
     }
     render() {
         console.log(this.props)
         return (
-            <div className="photography-fitting">
-                <h2 className='sections'>{this.props.setting} Photography </h2>
+            <div className="photography-fitting" >
+                <h2 className='sections' data-aos='fade-right'>{this.props.setting} Photography </h2>
                 <div className='gallery'>
                     <Container className="cont-style">
                         <Row className="row-style" xs={1} s={2} md={3} lg={4} >
 
                             {this.props.images.map(i => (
 
-                                < Col className="col-style" >
+                                < Col className="col-style" data-aos='flip-left'>
                                     <img
                                         src={i.src}
                                         alt={i.alt}

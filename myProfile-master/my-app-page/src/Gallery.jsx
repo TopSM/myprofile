@@ -25,12 +25,17 @@ import City3 from './Pictures/Photography/RAP_5685-min.jpg'
 import Flower2 from './Pictures/Photography/RAP_5335-min.jpg'
 import Sunset from './Pictures/Photography/RAP_5455-min.jpg'
 
-import Construction from './Construction';
 // import { Grid } from '@material-ui/core';
 import Grid from './Grid'
+import AOS from 'aos';
+
+import "aos/dist/aos.css";
+
 // import "~react-image-gallery/styles/css/image-gallery.css";
 
-
+AOS.init({
+    duration: 1200
+});
 export default class Gallery extends Component {
     constructor(props) {
         super(props);
@@ -50,7 +55,7 @@ export default class Gallery extends Component {
                             Number: 1,
                             src: Phoneix1,
                             // thumbnail: Phoneix1,
-                            Title: "Phoenix1",
+                            description: "",
                             camera: 'N/A',
                             width: "400px",
                             height: "300px"
@@ -60,7 +65,7 @@ export default class Gallery extends Component {
                             Number: 2,
                             src: Phoneix2,
                             // thumbnail: Phoneix1,
-                            Title: "Phoenix2",
+                            description: "",
                             camera: 'N/A',
                             width: "400px",
                             height: "300px"
@@ -70,7 +75,7 @@ export default class Gallery extends Component {
                             Number: 3,
                             src: ParkSlope1,
                             // thumbnail: Phoneix1,
-                            Title: "title",
+                            description: "",
                             camera: 'Galaxy s20+',
                             height: "300px"
                         },
@@ -78,7 +83,7 @@ export default class Gallery extends Component {
                             Number: 4,
                             src: ParkSlope2,
                             // thumbnail: Phoneix1,
-                            Title: "title",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -87,7 +92,7 @@ export default class Gallery extends Component {
                             Number: 5,
                             src: SunsetPark,
                             // thumbnail: Phoneix1,
-                            Title: "title",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "400px",
                             height: "300px"
@@ -96,7 +101,7 @@ export default class Gallery extends Component {
                             Number: 6,
                             src: Pier1,
                             // thumbnail: Phoneix1,
-                            Title: "title",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "400px",
                             height: "300px"
@@ -105,7 +110,7 @@ export default class Gallery extends Component {
                             Number: 7,
                             src: Pier2,
                             // thumbnail: Phoneix1,
-                            Title: "title",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "400px",
                             height: "300px"
@@ -114,7 +119,7 @@ export default class Gallery extends Component {
                             Number: 8,
                             src: Sunset,
                             // thumbnail: Phoneix1,
-                            Title: "Favorite pic so far",
+                            description: "Favorite picture so far",
                             camera: 'Nikon D7100',
                             width: "400px",
                             height: "300px"
@@ -129,7 +134,7 @@ export default class Gallery extends Component {
                             Number: 1,
                             src: NYC1,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -138,7 +143,7 @@ export default class Gallery extends Component {
                             Number: 2,
                             src: NYC2,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -147,7 +152,7 @@ export default class Gallery extends Component {
                             Number: 3,
                             src: NYC3,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "400px",
                             height: "300px"
@@ -156,7 +161,7 @@ export default class Gallery extends Component {
                             Number: 4,
                             src: NYC4,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -165,7 +170,7 @@ export default class Gallery extends Component {
                             Number: 5,
                             src: Church1,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -174,7 +179,7 @@ export default class Gallery extends Component {
                             Number: 6,
                             src: Church2,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -189,7 +194,7 @@ export default class Gallery extends Component {
                             Number: 1,
                             src: Ducks,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "400px",
                             height: "300px"
@@ -198,7 +203,7 @@ export default class Gallery extends Component {
                             Number: 2,
                             src: Trees,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -207,7 +212,7 @@ export default class Gallery extends Component {
                             Number: 3,
                             src: Nature,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "400px",
                             height: "300px"
@@ -216,7 +221,7 @@ export default class Gallery extends Component {
                             Number: 4,
                             src: Flower1,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Nikon D7100',
                             width: "400px",
                             height: "300px"
@@ -225,7 +230,7 @@ export default class Gallery extends Component {
                             Number: 5,
                             src: Flower2,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Nikon D7100',
                             width: "400px",
                             height: "300px"
@@ -234,7 +239,7 @@ export default class Gallery extends Component {
                         //     Number: 6,
                         //     src: Church2,
                         //     // thumbnail: Phoneix1,
-                        //     Title: "NYC",
+                        //     description: "NYC",
                         //     camera: '',
                         //     width: "250px",
                         //     height: "300px"
@@ -249,7 +254,7 @@ export default class Gallery extends Component {
                             Number: 1,
                             src: City1,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -258,7 +263,7 @@ export default class Gallery extends Component {
                             Number: 2,
                             src: City2,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Galaxy s20+',
                             width: "250px",
                             height: "300px"
@@ -267,7 +272,7 @@ export default class Gallery extends Component {
                             Number: 3,
                             src: City3,
                             // thumbnail: Phoneix1,
-                            Title: "NYC",
+                            description: "",
                             camera: 'Nikon D7100',
                             width: "400px",
                             height: "300px"
@@ -276,7 +281,7 @@ export default class Gallery extends Component {
                         //     Number: 4,
                         //     src: NYC4,
                         //     // thumbnail: Phoneix1,
-                        //     Title: "NYC",
+                        //     description: "NYC",
                         //     camera: '',
                         //     width: "250px",
                         //     height: "300px"
@@ -285,7 +290,7 @@ export default class Gallery extends Component {
                         //     Number: 5,
                         //     src: Church1,
                         //     // thumbnail: Phoneix1,
-                        //     Title: "NYC",
+                        //     description: "NYC",
                         //     camera: '',
                         //     width: "250px",
                         //     height: "300px"
@@ -294,7 +299,7 @@ export default class Gallery extends Component {
                         //     Number: 6,
                         //     src: Church2,
                         //     // thumbnail: Phoneix1,
-                        //     Title: "NYC",
+                        //     description: "NYC",
                         //     camera: '',
                         //     width: "250px",
                         //     height: "300px"
