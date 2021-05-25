@@ -33,7 +33,7 @@ export default class Grid extends Component {
                                         style={this.imageStyle()}
                                     />
                                     <br />
-                                    camera used:{i.camera}
+                                    Camera Used: {i.camera}
                                     {i.description != null &&
 
                                         <div>{i.description}</div>
