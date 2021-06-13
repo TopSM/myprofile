@@ -85,7 +85,12 @@ class Navigation extends React.Component {
             </NavDropdown>
             <Nav.Link
               eventKey={1}
-              onClick={() => (history.push("/Gallery"))}>My Gallery </Nav.Link>
+              onClick={() => (history.push("/Gallery"))}>My Gallery
+           </Nav.Link>
+            {/* <Nav.Link
+              eventKey={1}
+              onClick={() => (history.push("/Booking"))}>Book Now!
+           </Nav.Link> */}
 
           </Nav>
         </Navbar.Collapse>

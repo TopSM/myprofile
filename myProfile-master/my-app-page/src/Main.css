@@ -5,7 +5,28 @@
   height: 90vh;
   padding: 100px;
 }
+.booking{
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
+}
+.form-control{
+  height: 15%;
+  padding: 15px;
+  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.booking-form{
+  text-align: left;
+  border: solid;
+  /* align-content: center; */
+  padding: 30px;
+  align-self: center;
+  width: 50%;
+}
 .photography-fitting{
   /* padding: 10px; */
   margin: 30px;
@@ -277,12 +298,13 @@ h4 {
     /* width: 130vh; */
     margin: 0px;
   }
+  /* }
   .col-style{
-    /* width: 70px; */
-    /* padding: 50px; */
-    /* color: red; */
+    /* width: 70px; 
+    /* padding: 50px; 
+    /* color: red; 
     overflow: auto;
-/* text-align: left; */
+/* text-align: left; 
   }
   .photography-fitting{
     margin-left: none;
@@ -292,8 +314,8 @@ h4 {
   .image-style{
     text-align: center;
     border: solid;
-    /* width:60px; */
-  }
+    /* width:60px; 
+  } */
   
 }
 
