@@ -27,15 +27,11 @@ import Sunset from './Pictures/Photography/RAP_5455-min.jpg'
 
 // import { Grid } from '@material-ui/core';
 import Grid from './Grid'
-import AOS from 'aos';
 
-import "aos/dist/aos.css";
 
 // import "~react-image-gallery/styles/css/image-gallery.css";
 
-AOS.init({
-    duration: 1200
-});
+
 export default class Gallery extends Component {
     constructor(props) {
         super(props);
@@ -43,6 +39,7 @@ export default class Gallery extends Component {
 
         this.state = {
             colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true,
+
 
             Gallery: [
                 {
@@ -319,13 +316,7 @@ export default class Gallery extends Component {
 
         }
     }
-    // buttonColor = () => {
-    //     console.log(this.props.colors)
-    //     return {
-    //         backgroundColor: this.props.colors ? "#282c34" : "white",
-    //         color: this.props.colors ? "aliceblue" : "black"
-    //     }
-    // }
+
     render() {
         return (
             <div style={this.basicColors()}>

@@ -1,43 +1,37 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 // import Main from "./Main";
 import Navigation from "./Navigation";
 import Footer from "./footer";
 import Routes from "./Routes";
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
-    }
-  }
 
-  basicColors = () => {
-    return {
-      backgroundColor: this.state.colors ? "white" : "#282c34",
-      color: this.state.colors ? "black" : "aliceblue"
+function App() {
+  const [Color] = useState(true)
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Navigation buttonColor={buttonColor(Color)} bgColor={basicColors(Color)} />
+        <Routes buttonColor={buttonColor(Color)} bgColor={basicColors(Color)} />
+        <Footer />
+      </header>
+    </div>
+  );
+}
+const basicColors = (colors) => {
+  return {
+    backgroundColor: colors ? "white" : "#282c34",
+    color: colors ? "black" : "aliceblue"
 
-    }
-  }
-  buttonColor = () => {
-    console.log(this.state.colors)
-    return {
-      backgroundColor: this.state.colors ? "#282c34" : "white",
-      color: this.state.colors ? "aliceblue" : "black"
-
-    }
-  }
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Navigation buttonColor={this.buttonColor()} bgColor={this.basicColors()} />
-          <Routes buttonColor={this.buttonColor()} bgColor={this.basicColors()} />
-          <Footer />
-        </header>
-      </div>
-    );
   }
 }
+const buttonColor = (colors) => {
+  return {
+    backgroundColor: colors ? "#282c34" : "white",
+    color: colors ? "aliceblue" : "black"
+
+  }
+}
+
+
 export default App;

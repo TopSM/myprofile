@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 //PDF
 import Resume from "./Ostavo-Palacios-Resume.pdf";
 //Images
@@ -86,124 +86,104 @@ function Lists() {
 AOS.init({
   duration: 1200
 });
-class Main extends Component {
-  _isMounted = false;
-  constructor(props) {
+function Main() {
 
-    super(props);
-    this.state = {
-      colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
-    }
-    this.basicColors = this.basicColors.bind(this);
+  const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
+  )
+  return (
+    <React.Fragment>
 
-  }
+      <div style={basicColors(color)}>
+        <div className="buttonPlace">
+        </div>
 
-
-  basicColors = () => {
-    return {
-      backgroundColor: this.state.colors ? "white" : "#282c34",
-      color: this.state.colors ? "black" : "aliceblue"
-
-    }
-  }
-  buttonColor = () => {
-    console.log(this.state.colors)
-    return {
-      backgroundColor: this.state.colors ? "#282c34" : "white",
-      color: this.state.colors ? "aliceblue" : "black"
-
-    }
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-
-        <div style={this.basicColors()}>
-          <div className="buttonPlace">
-            {/* <button
-              className="buttonColor"
-              onClick={() => this.handleStateColor()}
-              style={
-                this.buttonColor()
-              }
-            >
-              
-            </button> */}
-            {/* {this.changeButtontext()} */}
-          </div>
-
-          <div className="Title" >
-            <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" />
-          </div>
-          <header className="header">
-            <div>
-              <div className="intro ">
-                <div className="title-pic">
-                  <img
-                    src={logo}
-                    alt="Ostavo"
-                    className="profile-picture standard-fitting "
-                    data-aos="zoom-in"
-                  // height="300px"
-                  ></img>
-                </div>
-                <div>
-                  <div className="about-text">
-                    <div className="text standard-fitting">
-                      <p>
-                        Ostavo Palacios received his Bachelor’s of
-                        Engineer in Computer Engineering from the Grove School of
-                        Engineering at The City College of New York. Born and raised in
-                        NYC, he is a first generation college graduate and proficient in
-                        multiple programming languages such as C++, Python, Javascript,
-                        and more. He is also very adaptable and ready to learn new
-                        concepts and ideas at a given time. He has taken many managerial
-                        positions for projects and conducted many web development
-                        projects. Ostavo also aspires to get more minority students
-                        interested in coding. Ostavo's core values are education,
-                        curiosity, innovation, and motivation. He is a LAESA alumni
-                        and currently employed as an intern undergad research assistant
-                        at NYU.
-                        </p>
-                    </div>
-                    <Lists></Lists>
-                  </div>
-                </div>
+        <div className="Title" >
+          <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" />
+        </div>
+        <header className="header">
+          <div>
+            <div className="intro ">
+              <div className="title-pic">
+                <img
+                  src={logo}
+                  alt="Ostavo"
+                  className="profile-picture standard-fitting "
+                  data-aos="zoom-in"
+                // height="300px"
+                ></img>
               </div>
-              <div className="my-info">
-                <section id="Contact" data-aos="fade-down">
-                  <br />
-                  <Contact />
-                </section>
-                <section id="WorkExperience">
-                  <br />
-                  <WorkExperience />
-                </section>
-                <section id="Projects">
-                  <br />
-                  <ProjectExperience />
-                </section>
-
-                <section id="VolunteerExperience">
-                  <br />
-                  <VolunteerExperience />
-                </section>
-                <div className="button" >
-                  <Button
-                    style={this.buttonColor()}
-                    variant="outlined"
-                    onClick={() => goToTop()}
-                  >
-                    Go to Top
-              </Button>
+              <div>
+                <div className="about-text">
+                  <div className="text standard-fitting">
+                    <p>
+                      Ostavo Palacios received his Bachelor’s of
+                      Engineer in Computer Engineering from the Grove School of
+                      Engineering at The City College of New York. Born and raised in
+                      NYC, he is a first generation college graduate and proficient in
+                      multiple programming languages such as C++, Python, Javascript,
+                      and more. He is also very adaptable and ready to learn new
+                      concepts and ideas at a given time. He has taken many managerial
+                      positions for projects and conducted many web development
+                      projects. Ostavo also aspires to get more minority students
+                      interested in coding. Ostavo's core values are education,
+                      curiosity, innovation, and motivation. He is a LAESA alumni
+                      and currently employed as an intern undergad research assistant
+                      at NYU.
+                      </p>
+                  </div>
+                  <Lists></Lists>
                 </div>
               </div>
             </div>
-          </header>
-        </div>
-      </React.Fragment>
-    );
+            <div className="my-info">
+              <section id="Contact" data-aos="fade-down">
+                <br />
+                <Contact />
+              </section>
+              <section id="WorkExperience">
+                <br />
+                <WorkExperience />
+              </section>
+              <section id="Projects">
+                <br />
+                <ProjectExperience />
+              </section>
+
+              <section id="VolunteerExperience">
+                <br />
+                <VolunteerExperience />
+              </section>
+              <div className="button" >
+                <Button
+                  style={buttonColor(color)}
+                  variant="outlined"
+                  onClick={() => goToTop()}
+                >
+                  Go to Top
+            </Button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </React.Fragment>
+  );
+}
+
+const basicColors = (colors) => {
+  return {
+    backgroundColor: colors ? "white" : "#282c34",
+    color: colors ? "black" : "aliceblue"
+
   }
 }
+const buttonColor = (colors) => {
+  // console.log(colors)
+  return {
+    backgroundColor: colors ? "#282c34" : "white",
+    color: colors ? "aliceblue" : "black"
+
+  }
+}
+
 export default Main;

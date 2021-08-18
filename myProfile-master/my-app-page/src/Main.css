@@ -1,3 +1,9 @@
+.booking-standard{
+  width:50%;
+  text-align: left;
+  /* border:solid; */
+  margin: auto;
+}
 #construction{
   margin: auto;
   text-align: center;
