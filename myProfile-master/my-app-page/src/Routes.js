@@ -11,6 +11,6 @@ export default () => (
         <Route exact path="/" component={Main} />
         <Route path="/Resume" component={Main} />
         <Route path="/Gallery" component={Gallery} />
-        <Route path="/Booking" component={Booking} />
+        {/* <Route path="/Booking" component={Booking} /> */}
     </Switch>
 );
