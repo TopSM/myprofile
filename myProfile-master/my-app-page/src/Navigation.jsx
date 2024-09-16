@@ -55,10 +55,10 @@ function Navigation(props) {
             eventKey={1}
             onClick={() => (history.push("/Gallery"))}>My Gallery
            </Nav.Link>
-          <Nav.Link
+          {/* <Nav.Link
             eventKey={1}
             onClick={() => (history.push("/Booking"))}>Book Now!
-           </Nav.Link>
+           </Nav.Link> */}
 
         </Nav>
       </Navbar.Collapse>
