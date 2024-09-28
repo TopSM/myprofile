@@ -12,8 +12,8 @@ import Button from "@mui/material/Button";
 
 //My Components
 import WorkExperience from "./WorkExperience";
-import VolunteerExperience from "./volunteerExperience";
-import ProjectExperience from "./projectExperience";
+import VolunteerExperience from "./VolunteerExperiences";
+import ProjectExperience from "./ProjectExperience";
 //CSS
 // import AOS from 'aos';
 // import "aos/dist/aos.css";
