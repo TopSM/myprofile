@@ -1,15 +1,17 @@
 {
-  "homepage": "http://topsm.github.io/myProfile/",
+  "homepage": "https://topsm.github.io/myProfile/",
   "name": "new-profile",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview -- port 3000"
-    
+    "preview": "vite preview -- port 3000",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
