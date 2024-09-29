@@ -213,14 +213,14 @@ h4 {
   .title-pic {
     float: left;
     padding: 10px;
-    height:100vh;
+    height:70vh;
     justify-content:center;
     align-content:center;
   }
   .profile-picture {
 
-    width: 45vh;
-    height: 60vh;
+    width: 40vh;
+    height: 50vh;
     border-radius: 300px;  
   }
   .intro {
