@@ -4,35 +4,98 @@ import MapComponents from "./Builds/MapComponents";
 //Images
 import Pilacs from "./../Pictures/pilacs.png";
 import StemHive from "./../Pictures/StemHive.png";
+import LockheedM from "./../Pictures/lockheed-martin-logo.png";
+import PSW from "./../Pictures/psw.png"
 const ExperienceArray = [
   {
     id: 0,
+    JobName: "Lockheed Martin",
+    Title: "Associate Software Engineering",
+    About: [
+      {
+        id: 0,
+        bullet:
+          "Investigated multiple proposed revisions (PR) for bugs that were reported by customers or found during maintenance or regression test shots, in both the server (Java) and calculator (C++) components of Mission Planner (MP), which efficiently economized company time and resources"
+      },
+      {
+        id: 1,
+        bullet:
+          "Managed my teammate's pull request (PR) as a delegate, by collaborating with PR coordinators from other teams and running smoke tests to ensure no critical defects were introduced by the team"
+      },
+      {
+        id: 2,
+        bullet: 
+          "Supported multiple teams cross-functionally whenever assistance was asked to expedite an investigation for a critical issue"
+      },
+      {
+        id: 3,
+        bullet: 
+          "Updated over 20 regression tests related to importing and exporting MP components to verify specifications were up to par across three baselines, identifying two previously hidden bugs and an unimplemented feature"
+      },
+      {
+        id: 4,
+        bullet: 
+          "Developed over 20 new regression tests for a new functional area, Input Server Logic, based on IBM DOOR’s specifications, to test Java server code for implementation and functionality"
+      }
+    ],
+    Year: "Summer 2022 - Current",
+    Picture: LockheedM,
+    Alt: "Lochkeed Martin"
+  },
+  {
+    id: 1,
+    JobName: "Play Study Win",
+    Title: "After School Teacher",
+    About: [
+      {
+        id: 0,
+        bullet:
+          "Managed and created engaging lesson plans, and projects relating to computer science and robotics using Legos, MicroBit, and Python to teach and motivate middle school students."
+      },
+      {
+        id: 1,
+        bullet:
+          "Managed over 20 students at a time, taught them how to problem solve and fostered their creativity while making computer science more accessible."
+      }
+    ],
+    Year: "Fall 2021 - Summer 2022",
+    Picture: PSW,
+    Alt: "PSW Logo"
+  },
+  {
+    id: 2,
     JobName: "Participating in Literacies and Computer Science",
     Title: "Junior Research Assistant",
     About: [
       {
         id: 0,
         bullet:
-          "Develop Scratch prototype projects to inspire students to create similar projects based on the topics that they are learning"
+          "Managed and created engaging lesson plans, and projects relating to computer science and robotics using Legos, MicroBit, and Python to teach and motivate middle school students."
       },
       {
         id: 1,
         bullet:
-          "Analyze and take notes on the students and classroom to see how they interact with the lesson prepared for that day"
+          "Analyzed and took notes on the students and classroom to see how they interact with the lesson prepared for that day"
       },
       {
         id: 2,
         bullet:
           "Assisted 16 students in the classroom to engage them in the classroom activities and help them further develop ideas for their projects"
+      },
+      {
+        id: 3,
+        bullet:
+          "Implemented, designed, and managed PiLaCS’s website using Squarespace's advanced HTML features."
       }
+
     ],
-    Year: "Fall 2019 - Current",
+    Year: "Fall 2019 - 2021",
     Link: "https://www.pila-cs.org/",
     Picture: Pilacs,
     Alt: "PiLaCS"
   },
   {
-    id: 1,
+    id: 3,
     JobName: "Palacios Cafe",
     Title: "Social Media Manager",
     About: [
@@ -55,7 +118,7 @@ const ExperienceArray = [
     Year: "Winter 2016 - Winter 2019"
   },
   {
-    id: 2,
+    id: 4,
     JobName: "Stem Hive",
     About: [
       {
@@ -80,7 +143,7 @@ const ExperienceArray = [
     Alt: "StemHive"
   },
   {
-    id: 3,
+    id: 5,
     JobName: "Cafe Mocha",
     About: [
       {

@@ -25,7 +25,7 @@ const VolunteerArray = [
       {
         id: 0,
         bullet:
-          "Hosted a 2 day online Workshop for college undergraduates through zoom that introduced them to HTML/CSS, Javascript, and ReactJs, and basic website designs"
+          "Administered a 2-day online workshop for college undergraduates through Zoom that introduced them to HTML/CSS, Javascript, ReactJs, and basic website designs, increasing club activity and membership"
       },
       {
         id: 1,
@@ -57,7 +57,7 @@ const VolunteerArray = [
       {
         id: 2,
         bullet:
-          "Transformed original proposal for a high school friendly competitions between ~250 students by proposing the use of virtual MicroBit and MakeCode, reducing the cost of time and resources for preparation"
+          "Transformed original proposal for a high school-friendly competition between ~250 students by proposing the use of virtual MicroBit and MakeCode, reducing the cost of time and resources for preparation"
       }
     ],
     Title: "Mentor | ScoreKeeper",

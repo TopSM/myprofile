@@ -29,7 +29,7 @@ function Contact() {
         <div className="info-list title-fitting">
           <ul className="no-bullets">
             <li className="contact-list">
-              <span className="contact-list-name">Telophone</span>: 347-320-3164
+              {/* <span className="contact-list-name">Telophone</span>: 347-320-3164 */}
             </li>
             <li className="contact-list">
               <span className="contact-list-name">LinkedIn</span>:&ensp;
@@ -52,14 +52,14 @@ function Lists() {
     <React.Fragment>
       <ul className="no-bullets">
         <li className="contact-list">
-          <h4> <span className="contact-list-name">My Resume</span>:
-          <a href={Resume}> Ostavo Palacios </a></h4>
+          <h4> <span className="contact-list-name">My Resume</span>:{" "}  
+          <a href={Resume}>Ostavo Palacios</a></h4>
         </li>
-        <li>
-          <span className="contact-list-name">Programming Languages</span>:
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>C/C++,</Link>
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Python,</Link>
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>React.Js,</Link>
+        <li>          
+          <span className="contact-list contact-list-name">Programming Languages:</span>
+          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>C/C++,</Link>{" "}
+          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Python,</Link>{" "}
+          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>React.Js,</Link>{" "}
           <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Java,</Link>
         </li>
         <li className="contact-list">
@@ -72,8 +72,7 @@ function Lists() {
         <li className="contact-list">
           <span className="contact-list-name">Soft Skills</span>
           :&ensp;Leadership, Communication, Creative, Persistent, Cooperative,
-          Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
-          Quick Learner
+          Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,          
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Hobbies</span>: Photography,
@@ -115,9 +114,9 @@ function Home() {
                   <div className="text standard-fitting">
                     <p>
                       Ostavo Palacios received his Bachelor’s of
-                      Engineer in Computer Engineering from the Grove School of
-                      Engineering at The City College of New York. Born and raised in
-                      NYC, he is a first generation college graduate and proficient in
+                      Engineering in Computer Engineering from the Grove School of
+                      Engineering at The City College of New York in 2021. Born and raised in
+                      NYC, he is a first generation college graduate who is proficient in
                       multiple programming languages such as C++, Python, Javascript,
                       and more. He is also very adaptable and ready to learn new
                       concepts and ideas at a given time. He has taken many managerial

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../StylesCSS/Main.css";
 
-export default function mapInfo(props) {
+export default function mapComponent(props) {
   var checkLanguage = Language => {
     if (Language != null) {
       return <h4>Language: {Language}</h4>;

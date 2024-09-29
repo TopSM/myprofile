@@ -20,15 +20,15 @@ const JavaScript = [
     About: [
       {
         id: 0,
-        bullet: "Developing a Slack bot in Javacsript that would improve awareness to club events, and resources provide by our SHPE Chapter for our members"
+        bullet: "Developed a Slack bot in Javacsript that would improve awareness to club events, and resources provide by our SHPE Chapter for our members"
       },
       {
         id: 1,
-        bullet: "Creating user profiles and a database for our members in hopes that our active members increase by %10"
+        bullet: "Created user profiles and a database for tp increase our the amount of active members by %10"
       },
       {
         id: 2,
-        bullet: "Adding command line features to 'SELENA bot' so Eboard members can easily and update our database without needing to code "
+        bullet: "Added command line features to 'SELENA bot' so Eboard members can easily and update our database without needing to code "
       }
     ],
     Title: "Project Manager",
@@ -39,12 +39,31 @@ const JavaScript = [
 const ReactJS = [
   {
     id: 0,
+    JobName: "JukeBerry",
+    About: [
+      {
+        id: 0,
+        bullet:
+          "Designed and deployed a website that creates private music rooms for people to join and make group playlists by studying and using React.js, Spotify’s Web API documentation, Bootstrap, and Heroku"
+      },
+      {
+        id: 1,
+        bullet:
+          "Collaborated and communicated with two other teammates under a scrum workflow to implement user interface and experience, connect teammates to Rest API, and use Git to update and produce new features promptly"
+      },
+    ],
+    Title: "Front End Developer",
+    Year: "Spring 2020 - Winter 2020",
+    Language: "ReactJs",
+  },
+  {
+    id: 1,
     JobName: "LEASA-SHPE Website",
     About: [
       {
         id: 0,
         bullet:
-          " Managing and creating a website with Webflow, ReactJs, and Bootstrap that represent our SHPE chapter "
+          " Managed and created a website with Webflow, ReactJs, and Bootstrap that represent our SHPE chapter "
       },
       {
         id: 1,
@@ -65,7 +84,7 @@ const ReactJS = [
     Alt: "LAESA"
   },
   {
-    id: 1,
+    id: 2,
     JobName: "Fruition",
     About: [
       {
