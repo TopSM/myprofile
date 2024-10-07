@@ -6,6 +6,7 @@ import Pilacs from "./../Pictures/pilacs.png";
 import StemHive from "./../Pictures/StemHive.png";
 import LockheedM from "./../Pictures/lockheed-martin-logo.png";
 import PSW from "./../Pictures/psw.png"
+import { AnimationOnScroll } from "react-animation-on-scroll";
 const ExperienceArray = [
   {
     id: 0,
@@ -169,14 +170,17 @@ const ExperienceArray = [
 function WorkExperience() {
   return (
     <React.Fragment>
-      <div className=" title-fitting">
+      <AnimationOnScroll 
+        className="title-fitting" 
+        animateIn="animate__fadeInLeft"
+      >
         <h2 className="sections">Work Experience</h2>
         <MapComponents
           infoList={ExperienceArray}
           key={ExperienceArray.id}
         // bullets={this.state.ExperienceArray.About}
         />
-      </div>
+      </AnimationOnScroll>
     </React.Fragment>
   );
 }

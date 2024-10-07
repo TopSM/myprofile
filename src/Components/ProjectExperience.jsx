@@ -12,6 +12,7 @@ import CMDShell from "./../Pictures/CMDShell.png";
 import Pipes from "./../Pictures/Pipes.png";
 import Fruition from "./../Pictures/Fruition.png";
 import ImageProcessing from "./../Pictures/ImageProcessing.png";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const JavaScript = [
   {
@@ -354,7 +355,10 @@ function ProjectExperience(props) {
   return (
 
     <React.Fragment>
-      <div className="standard-fitting title-fitting">
+      <AnimationOnScroll 
+        className="standard-fitting title-fitting"
+        animateIn="animate__fadeInLeft"
+      >
         <h2 className="sections" >Projects</h2>
         <button
           onClick={() => setLanguage("RJS")}
@@ -377,7 +381,7 @@ function ProjectExperience(props) {
           className="project-btn"
         >Java</button>
         {showProject(language)}
-      </div>
+      </AnimationOnScroll>
     </React.Fragment>
   )
 }

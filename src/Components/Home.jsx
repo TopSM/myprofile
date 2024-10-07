@@ -6,17 +6,15 @@ import logo from "./../Pictures/Pfp.jpg";
 import SunsetParkBanner from "./../Pictures/SunsetParkBanner.jpg";
 
 //Installed Components
-// import AnchorLink from "react-anchor-link-smooth-scroll";
-// import { goToTop } from "react-scrollable-anchor";
 import Button from "@mui/material/Button";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 //My Components
 import WorkExperience from "./WorkExperience";
 import VolunteerExperience from "./VolunteerExperiences";
 import ProjectExperience from "./ProjectExperience";
 //CSS
-// import AOS from 'aos';
-// import "aos/dist/aos.css";
+import "animate.css/animate.min.css";
 
 import '../StylesCSS/Main.css'
 import { Link } from "react-router-dom";
@@ -24,7 +22,10 @@ import { Link } from "react-router-dom";
 function Contact() {
   return (
     <React.Fragment>
-      <div className="title-fitting">
+      <AnimationOnScroll 
+        className="title-fitting" 
+        animateIn="animate__fadeInDown"
+      >
         <h2 className="sections">Contact</h2>
         <div className="info-list title-fitting">
           <ul className="no-bullets">
@@ -43,7 +44,7 @@ function Contact() {
             </li>
           </ul>
         </div>
-      </div>
+      </AnimationOnScroll>
     </React.Fragment>
   );
 }
@@ -52,8 +53,13 @@ function Lists() {
     <React.Fragment>
       <ul className="no-bullets">
         <li className="contact-list">
-          <h4> <span className="contact-list-name">My Resume</span>:{" "}  
-          <a href={Resume}>Ostavo Palacios</a></h4>
+          <AnimationOnScroll
+          animateIn="animate__shakeX"
+          initiallyVisible={true}
+          >          
+            <h4> <span className="contact-list-name">My Resume</span>:{" "}  
+            <a href={Resume}>Ostavo Palacios</a></h4>
+          </AnimationOnScroll>
         </li>
         <li>          
           <span className="contact-list contact-list-name">Programming Languages:</span>
@@ -76,15 +82,13 @@ function Lists() {
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Hobbies</span>: Photography,
-          Guitar, Chess, Hiking, Running, Cycling
+          Guitar, Chess, Hiking, Running, Cycling, Kickboxing, Dancing
         </li>
       </ul>
     </React.Fragment>
   );
 }
-// AOS.init({
-//   duration: 1200
-// });
+
 function Home() {
 
   const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
@@ -93,50 +97,72 @@ function Home() {
     <React.Fragment>
 
       <div style={basicColors(color)}>
-        <div className="buttonPlace">
-        </div>
+      <div className="fixed-button project-btn">
+        <Button 
+          className="buttonPlace"
+          onClick={() => document.getElementById('Title')?.scrollIntoView()}
+        >
+          Up
+      </Button>
+      </div>         
 
         <div className="Title" id="Title">
-          <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" />
+          <AnimationOnScroll 
+            animateIn="animate__zoomIn" 
+            initiallyVisible={true}
+            animateOut="animate__zoomOut"
+            duration={3}
+          >
+            <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" offset={0}/>
+          </AnimationOnScroll>
         </div>
         <header className="header">
           <div>
             <div className="intro ">
               <div className="title-pic">
-                <img
-                  src={logo}
-                  alt="Ostavo"
-                  className="profile-picture standard-fitting "
-                ></img>
+                <AnimationOnScroll duration={2} animateIn="animate__zoomIn"  >
+                  <img
+                    src={logo}
+                    alt="Ostavo"
+                    className="profile-picture standard-fitting "
+                  ></img>
+                </AnimationOnScroll>
               </div>
-              <div>
-                <div className="about-text">
+                           
+              <AnimationOnScroll 
+               className="about-text"
+               animateIn="animate__fadeInRight"
+               >
                   <div className="text standard-fitting">
                     <p>
                       Ostavo Palacios received his Bachelor’s of
-                      Engineering in Computer Engineering from the Grove School of
-                      Engineering at The City College of New York in 2021. Born and raised in
-                      NYC, he is a first generation college graduate who is proficient in
-                      multiple programming languages such as C++, Python, Javascript,
-                      and more. He is also very adaptable and ready to learn new
-                      concepts and ideas at a given time. He has taken many managerial
+                      Engineering in Computer Engineering from the The City College of New York in 2021.
+                      He is Born and raised in NYC and is a first generation college graduate who is proficient in
+                      multiple programming languages such as Javascript, C#
+                      and more. He is currently working at Lockheed Martin as an associate software engineer
+                      programming in C++, Java, and Python. In addition to his current work he has a strong interest in
+                      front end development programming primarily in React.JS  He is very adaptable and ready to learn new
+                      concepts and ideas. In college He has taken many managerial
                       positions for projects and conducted many web development
-                      projects. Ostavo also aspires to get more minority students
+                      projects. He aspires to get more minority students
                       interested in coding. Ostavo's core values are education,
-                      curiosity, innovation, and motivation. He is a LAESA alumni
-                      and currently employed as an intern undergad research assistant
-                      at NYU.
+                      curiosity, innovation, efficieny, and consistency.
                       </p>
                   </div>
                   <Lists></Lists>
-                </div>
-              </div>
+                </AnimationOnScroll>
             </div>
             <div className="my-info">
-              <section id="Contact">
-                <br />
-                <Contact />
-              </section>
+              <AnimationOnScroll  
+                duration={2}
+                animateIn="animate__fadeIn"
+                delay={4}
+              >
+                <section id="Contact">
+                  <br />
+                  <Contact />
+                </section>
+              </AnimationOnScroll>
               <section id="WorkExperience">
                 <br />
                 <WorkExperience />
@@ -157,8 +183,9 @@ function Home() {
                   onClick={() => document.getElementById('Title')?.scrollIntoView()}
                 >
                   Go to Top
-            </Button>
+              </Button>
               </div>
+              
             </div>
           </div>
         </header>

@@ -7,10 +7,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container"
 import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import {useNavigate} from 'react-router-dom';
 
 function MyNavBar(props) {
   const [Colors, setColors] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
-  const history = props.history
+  const history = useNavigate();
 
   const handleStateColor = (props) => {
     // this.setState((state) => ({ colors: !state.colors }))
@@ -29,29 +30,29 @@ function MyNavBar(props) {
         expand="sm"
         collapseOnSelect
       >
-        <Container >
+        <Container className="container">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className=" button-place">
+          <Nav className="button-place">
             <NavDropdown title="My Resume" id='resumeDropdown' >
-              <NavDropdown.Item onClick={() => history.push("")} href={"#WorkExperience"}>Work Experience</NavDropdown.Item >
-              <NavDropdown.Item onClick={() => history.push("")} href={"#VolunteerExperience"}>
+              <NavDropdown.Item onClick={() => history("")} href={"#WorkExperience"}>Work Experience</NavDropdown.Item >
+              <NavDropdown.Item onClick={() => history("")} href={"#VolunteerExperience"}>
                 Volunteer Experience
             </NavDropdown.Item >
-              <NavDropdown.Item onClick={() => history.push("")} href={"#Projects"}>
+              <NavDropdown.Item onClick={() => history("")} href={"#Projects"}>
                 Projects
             </NavDropdown.Item >
               <NavDropdown.Item
-                onClick={() => history.push("")}
+                onClick={() => history("")}
                 href={"#Contact"}
               >
                 Contact
                 </NavDropdown.Item >
             </NavDropdown>
-            {/* <Nav.Link
+            <Nav.Link
               eventKey={1}
-              onClick={() => (history.push("/Gallery"))}>My Gallery
-            </Nav.Link> */}
+              onClick={() => (history("/MyGallery"))}>My Gallery
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <button

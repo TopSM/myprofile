@@ -4,11 +4,12 @@ import NavBar from '../Components/MyNavBar'
 import Footer from '../Components/Footer';
 import "./../StylesCSS/Main.css";
 
-function MainLayout() {
+function MainLayout(props) {
     const [Color] = useState(true)
+    
   return (
     <>
-        <NavBar buttonColor={buttonColor(Color)} bgColor={basicColors(Color)}/>
+        <NavBar history={history} buttonColor={buttonColor(Color)} bgColor={basicColors(Color)}/>
         <Outlet/>
         <Footer/>
     </>

@@ -6,7 +6,7 @@ function Footer() {
             <div>
                 <p>
                     Site built and mainted by Ostavo Palacios &copy;2024 <br />
-                    Last revised 9/28/2024
+                    Last revised 10/6/2024
                 </p>
             </div>
             <div className="social-icon-footer">
