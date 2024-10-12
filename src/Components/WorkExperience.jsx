@@ -25,17 +25,17 @@ const ExperienceArray = [
       },
       {
         id: 2,
-        bullet: 
+        bullet:
           "Supported multiple teams cross-functionally whenever assistance was asked to expedite an investigation for a critical issue"
       },
       {
         id: 3,
-        bullet: 
+        bullet:
           "Updated over 20 regression tests related to importing and exporting MP components to verify specifications were up to par across three baselines, identifying two previously hidden bugs and an unimplemented feature"
       },
       {
         id: 4,
-        bullet: 
+        bullet:
           "Developed over 20 new regression tests for a new functional area, Input Server Logic, based on IBM DOOR’s specifications, to test Java server code for implementation and functionality"
       }
     ],
@@ -170,9 +170,10 @@ const ExperienceArray = [
 function WorkExperience() {
   return (
     <React.Fragment>
-      <AnimationOnScroll 
-        className="title-fitting" 
+      <AnimationOnScroll
+        className="title-fitting"
         animateIn="animate__fadeInLeft"
+        animateOnce={true}
       >
         <h2 className="sections">Work Experience</h2>
         <MapComponents

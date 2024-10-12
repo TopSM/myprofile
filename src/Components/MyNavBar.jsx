@@ -7,7 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container"
 import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function MyNavBar(props) {
   const [Colors, setColors] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
@@ -24,13 +24,13 @@ function MyNavBar(props) {
     setInterval(window.location.reload(), 5000)
   }
   return (
-      <Navbar
-        className="custom-nav"
-        sticky="top"
-        expand="sm"
-        collapseOnSelect
-      >
-        <Container className="container">
+    <Navbar
+      className="custom-nav"
+      sticky="top"
+      expand="sm"
+      collapseOnSelect
+    >
+      <Container className="container">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="button-place">
@@ -38,21 +38,21 @@ function MyNavBar(props) {
               <NavDropdown.Item onClick={() => history("")} href={"#WorkExperience"}>Work Experience</NavDropdown.Item >
               <NavDropdown.Item onClick={() => history("")} href={"#VolunteerExperience"}>
                 Volunteer Experience
-            </NavDropdown.Item >
+              </NavDropdown.Item >
               <NavDropdown.Item onClick={() => history("")} href={"#Projects"}>
                 Projects
-            </NavDropdown.Item >
+              </NavDropdown.Item >
               <NavDropdown.Item
                 onClick={() => history("")}
                 href={"#Contact"}
               >
                 Contact
-                </NavDropdown.Item >
+              </NavDropdown.Item >
             </NavDropdown>
-            <Nav.Link
+            {/* <Nav.Link
               eventKey={1}
               onClick={() => (history("/MyGallery"))}>My Gallery
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
         <button
@@ -65,8 +65,8 @@ function MyNavBar(props) {
           {changeButtontext(Colors)}
 
         </button>
-        </Container>
-      </Navbar >
+      </Container>
+    </Navbar >
   )
 }
 

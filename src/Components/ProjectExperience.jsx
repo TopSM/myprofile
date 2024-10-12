@@ -355,9 +355,10 @@ function ProjectExperience(props) {
   return (
 
     <React.Fragment>
-      <AnimationOnScroll 
+      <AnimationOnScroll
         className="standard-fitting title-fitting"
         animateIn="animate__fadeInLeft"
+        animateOnce={true}
       >
         <h2 className="sections" >Projects</h2>
         <button
