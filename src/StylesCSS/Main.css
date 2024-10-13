@@ -101,6 +101,9 @@
 .project-btn:hover {
   color: #ff3452;
 }
+.buttonPlace:hover{
+  color: #ff3452
+}
 
 .custom-nav {
   background-color: white;
