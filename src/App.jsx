@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import HomePage from './Pages/HomePage'
 import NotFound from './Pages/PageNotFound'
 import MainLayouts from './Layouts/MainLayout'
-// import GalleryPage from './Pages/GalleryPage'
+import GalleryPage from './Pages/GalleryPage'
 import './StylesCSS/Main.css'
 import PoemsPage from './Pages/PoemsPage'
 
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path='/MyPoems' element={<PoemsPage />} />
       <Route path='*' element={<NotFound />} />
-      {/* <Route path='/MyGallery' element={<GalleryPage />} /> */}
+      <Route path='/MyGallery' element={<GalleryPage />} />
     </Route>
 
   ),
