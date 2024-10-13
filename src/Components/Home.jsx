@@ -67,7 +67,7 @@ function Lists() {
           <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>C/C++,</Link>{" "}
           <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Python,</Link>{" "}
           <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>React.Js,</Link>{" "}
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Java,</Link>
+          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Java</Link>
         </li>
         <li className="contact-list">
           <span className="contact-list-name">Design Software</span>: Matlab,
