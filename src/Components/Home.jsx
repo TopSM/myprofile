@@ -19,6 +19,8 @@ import "animate.css/animate.min.css";
 import '../StylesCSS/Main.css'
 import { Link } from "react-router-dom";
 
+import basicColors from "./Builds/basicColors";
+
 function Contact() {
   return (
     <React.Fragment>
@@ -31,7 +33,6 @@ function Contact() {
         <div className="info-list title-fitting">
           <ul className="no-bullets">
             <li className="contact-list">
-              {/* <span className="contact-list-name">Telophone</span>: 347-320-3164 */}
             </li>
             <li className="contact-list">
               <span className="contact-list-name">LinkedIn</span>:&ensp;
@@ -92,8 +93,7 @@ function Lists() {
 
 function Home() {
 
-  const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true
-  )
+  const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
   return (
     <React.Fragment>
 
@@ -202,13 +202,6 @@ function Home() {
   );
 }
 
-const basicColors = (colors) => {
-  return {
-    backgroundColor: colors ? "white" : "#282c34",
-    color: colors ? "black" : "aliceblue"
-
-  }
-}
 const buttonColor = (colors) => {
   // console.log(colors)
   return {

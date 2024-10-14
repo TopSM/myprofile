@@ -179,7 +179,6 @@ function WorkExperience() {
         <MapComponents
           infoList={ExperienceArray}
           key={ExperienceArray.id}
-        // bullets={this.state.ExperienceArray.About}
         />
       </AnimationOnScroll>
     </React.Fragment>

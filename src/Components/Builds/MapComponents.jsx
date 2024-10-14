@@ -3,12 +3,12 @@ import "../../StylesCSS/Main.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export default function mapComponent(props) {
-  var checkLanguage = Language => {
+  let checkLanguage = Language => {
     if (Language != null) {
       return <h4>Language: {Language}</h4>;
     }
   };
-  var checkLink = (Name = "Link", Link = "") => {
+  let checkLink = (Name = "Link", Link = "") => {
     if (Link != null && Link !== "") {
       return (
         <React.Fragment>

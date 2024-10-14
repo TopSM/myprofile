@@ -9,16 +9,13 @@ import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useNavigate } from 'react-router-dom';
 
-function MyNavBar(props) {
+function MyNavBar() {
   const [Colors, setColors] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
   const history = useNavigate();
 
-  const handleStateColor = (props) => {
-    // this.setState((state) => ({ colors: !state.colors }))
-    // console.log(this.state)
+  const handleStateColor = () => {
 
     setColors(!Colors)
-    // // window.location.reload();
     buttonColor(Colors)
     changeButtontext(Colors)
     setInterval(window.location.reload(), 5000)
@@ -53,6 +50,10 @@ function MyNavBar(props) {
               eventKey={1}
               onClick={() => (history("/MyGallery"))}>My Gallery
             </Nav.Link> */}
+            <Nav.Link
+              eventKey={1}
+              onClick={() => (history("/MyPoems"))}>Poem Of The Day
+            </Nav.Link>            
           </Nav>
         </Navbar.Collapse>
         <button

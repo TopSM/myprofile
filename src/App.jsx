@@ -5,12 +5,14 @@ import NotFound from './Pages/PageNotFound'
 import MainLayouts from './Layouts/MainLayout'
 // import GalleryPage from './Pages/GalleryPage'
 import './StylesCSS/Main.css'
+import PoemsPage from './Pages/PoemsPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<MainLayouts />}>
       <Route index element={<HomePage />} />
-      {/* <Route path='*' element={<NotFound />} /> */}
+      <Route path='/MyPoems' element={<PoemsPage />} />
+      <Route path='*' element={<NotFound />} />
       {/* <Route path='/MyGallery' element={<GalleryPage />} /> */}
     </Route>
 
