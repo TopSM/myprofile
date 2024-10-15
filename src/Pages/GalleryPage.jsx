@@ -25,11 +25,9 @@ import City3 from './../Pictures/Photography/RAP_5685-min.jpg'
 import Flower2 from './../Pictures/Photography/RAP_5335-min.jpg'
 import Sunset from './../Pictures/Photography/RAP_5455-min.jpg'
 
-// import { Grid } from '@material-ui/core';
 import Grid from '../Components/Builds/GridComponent'
 
 
-// import "~react-image-gallery/styles/css/image-gallery.css";
 
 
 export default class Gallery extends Component {
@@ -40,10 +38,10 @@ export default class Gallery extends Component {
         this.state = {
             colors: typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true,
 
-
             Gallery: [
                 {
                     setting: "Sunset",
+                    id:1,
                     images: [
                         {
 
@@ -52,8 +50,8 @@ export default class Gallery extends Component {
                             // thumbnail: Phoneix1,
                             description: "",
                             camera: 'Nikon D7100',
-                            width: "400px",
-                            height: "300px"
+                            width: "100%",
+                            height: "100%"
 
                         },
                         {
@@ -124,6 +122,7 @@ export default class Gallery extends Component {
                 },
                 {
                     setting: "Night",
+                    id:2,
                     images: [
                         {
                             Number: 1,
@@ -184,6 +183,7 @@ export default class Gallery extends Component {
                 },
                 {
                     setting: "Nature",
+                    id:3,
                     images: [
                         {
                             Number: 1,
@@ -244,6 +244,7 @@ export default class Gallery extends Component {
                 },
                 {
                     setting: "City",
+                    id:4,
                     images: [
                         {
                             Number: 1,
@@ -322,18 +323,22 @@ export default class Gallery extends Component {
                 < Grid
                     images={this.state.Gallery[0].images}
                     setting={this.state.Gallery[0].setting}
+                    id={this.state.Gallery[0].id}
                 />
                 < Grid
                     images={this.state.Gallery[1].images}
                     setting={this.state.Gallery[1].setting}
+                    id={this.state.Gallery[1].id}
                 />
                 < Grid
                     images={this.state.Gallery[2].images}
                     setting={this.state.Gallery[2].setting}
+                    id={this.state.Gallery[2].id}
                 />
                 < Grid
                     images={this.state.Gallery[3].images}
                     setting={this.state.Gallery[3].setting}
+                    id={this.state.Gallery[3].id}
                 />
             </div >
         )

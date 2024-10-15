@@ -55,7 +55,6 @@
 
 .photography-fitting {
   margin: 30px;
-  border-top: none;
   margin: auto;
   padding: 30px;
 }
@@ -65,6 +64,7 @@
   margin: 5px;
   border: solid;
   display: block;
+  text-align:center;
 }
 
 .gallery {
@@ -391,7 +391,10 @@ h4 {
     text-align: center;
     border: none;
   }
-
+  .image-style {
+    text-align: center;
+    border: none;
+  }
   .intro {
     margin: auto;
     text-align: center;
@@ -544,10 +547,9 @@ h4 {
   }
 
   .col-style {
-    width: 45vh;
+    max-width:10px;
     padding: 10px;
     margin: 5px;
-    display: block
   }
 
   .photography-fitting {
