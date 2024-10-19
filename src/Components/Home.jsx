@@ -19,8 +19,6 @@ import "animate.css/animate.min.css";
 import '../StylesCSS/Main.css'
 import { Link } from "react-router-dom";
 
-import basicColors from "./Builds/basicColors";
-
 function Contact() {
   return (
     <React.Fragment>
@@ -208,6 +206,13 @@ const buttonColor = (colors) => {
     backgroundColor: colors ? "#282c34" : "white",
     color: colors ? "aliceblue" : "black"
 
+  }
+}
+
+const basicColors = (colors) => {
+  return {
+    backgroundColor: colors ? "white" : "#282c34",
+    color: colors ? "black" : "aliceblue"
   }
 }
 

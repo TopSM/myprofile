@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container"
 import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useNavigate } from 'react-router-dom';
-import basicColors from "./Builds/basicColors";
+import { Col } from "react-bootstrap";
 
 function MyNavBar() {
   const [Colors, setColors] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
@@ -19,7 +19,7 @@ function MyNavBar() {
     setColors(!Colors)
     buttonColor(Colors)
     changeButtontext(Colors)
-    basicColors(Colors)
+    console.log("colors in Nav",Colors)
     setInterval(window.location.reload(), 5000)
   }
   return (

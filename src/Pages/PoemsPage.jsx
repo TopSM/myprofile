@@ -1,6 +1,5 @@
 import React,  { useState } from 'react'
 import MyPoems from '../Components/MyPoems'
-import basicColors from '../Components/Builds/basicColors';
 function getTodaysDay() {
 
     let today = new Date();
@@ -9,11 +8,18 @@ function getTodaysDay() {
 
     return todaysDay;
 }
+const basicColors = (colors) => {
+    return {
+      backgroundColor: colors ? "white" : "#282c34",
+      color: colors ? "black" : "aliceblue"
+    }
+  }
 
 function PoemsPage() {
     const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
+
     return (
-        <div style={basicColors(color)} className='poem-pad poem-pad2' >
+        <div  style={basicColors(color)} className='poem-pad poem-pad2' >
             <MyPoems todaysDay={getTodaysDay()} />            
             <h3 className='poem-author'>- Ostavo R. Palacios</h3>
         </div>

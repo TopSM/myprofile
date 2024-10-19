@@ -6,6 +6,7 @@ import MainLayouts from './Layouts/MainLayout'
 // import GalleryPage from './Pages/GalleryPage'
 import './StylesCSS/Main.css'
 import PoemsPage from './Pages/PoemsPage'
+// import basicColors from './Components/Builds/basicColors'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,8 +22,12 @@ const router = createBrowserRouter(
 )
 
 const App = () => {
-  const [Color] = useState(true)
-  return (<RouterProvider router={router} />)
+
+  return (
+  <div>
+    <RouterProvider router={router} />
+  </div>
+  )
 }
 
 export default App
