@@ -5,20 +5,16 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Col } from "react-bootstrap";
-import { useRef, useEffect } from 'react';
-import scrolltoHref from "./Builds/ScrolltoHref";
-import { redirect } from "react-router-dom";
+import { useEffect } from 'react';
 
 function MyNavBar() {
   const [Colors, setColors] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
-  const myElementRef = useRef(null);
   const navigate = useNavigate();
-  // const location = useLocation();
 
   const handleStateColor = () => {
 
@@ -77,9 +73,10 @@ function MyNavBar() {
                 Contact
               </NavDropdown.Item >
             </NavDropdown>
-            <Navbar.Text >
-                  <Link className="poem-link" to="mypoems">Poem Of The Day</Link>
-            </Navbar.Text>
+            <Nav.Link  
+            onClick={() => navigate("mypoems")}
+            >Poem Of The Day
+            </Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
