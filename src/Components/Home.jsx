@@ -17,7 +17,8 @@ import ProjectExperience from "./ProjectExperience";
 import "animate.css/animate.min.css";
 
 import '../StylesCSS/Main.css'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useRef, useEffect } from 'react';
 
 function Contact() {
   return (
@@ -92,6 +93,9 @@ function Lists() {
 function Home() {
 
   const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
+  
+  const myElementRef = useRef(null);
+
   return (
     <React.Fragment>
 
@@ -164,12 +168,12 @@ function Home() {
                 delay={4}
                 animateOnce={true}
               >
-                <section id="Contact">
+                <section ref={myElementRef} id="Contact">
                   <br />
                   <Contact />
                 </section>
               </AnimationOnScroll>
-              <section id="WorkExperience">
+              <section ref={myElementRef} id="WorkExperience">
                 <br />
                 <WorkExperience />
               </section>
@@ -177,8 +181,7 @@ function Home() {
                 <br />
                 <ProjectExperience ProgLang />
               </section>
-
-              <section id="VolunteerExperience">
+              <section ref={myElementRef} id="VolunteerExperience">
                 <br />
                 <VolunteerExperience />
               </section>

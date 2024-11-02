@@ -148,8 +148,12 @@
 }
 
 .info-list h3,
-h2,
-a:link, .poem-pad h3 {
+h2, a:link, .poem-pad h3 {
+  color: #ff3452;
+}
+
+.poem-link{
+  text-decoration: none;
   color: #ff3452;
 }
 
@@ -157,6 +161,13 @@ a:link, .poem-pad h3 {
   padding: 20px;
 }
 
+
+.poem-link:visited{
+  color: #ff3452;  
+}
+.poem-link:hover{
+  color:rgba(0,0,0,0.8);
+}
 a:hover {
   color: lightseagreen;
   text-decoration: none;

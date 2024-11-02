@@ -6,13 +6,15 @@ import MainLayouts from './Layouts/MainLayout'
 // import GalleryPage from './Pages/GalleryPage'
 import './StylesCSS/Main.css'
 import PoemsPage from './Pages/PoemsPage'
+import ScrolltoHref from './Components/Builds/ScrolltoHref'
+import scrollToTop from './Components/Builds/scrolltoTop'
 // import basicColors from './Components/Builds/basicColors'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<MainLayouts />}>
-      <Route index element={<HomePage />} />
-      <Route path='/MyPoems' element={<PoemsPage />} />
+    <Route path="/" element={<MainLayouts />}>
+      <Route index element={<HomePage />} />      
+      <Route path="mypoems" name="mypoems" element={<PoemsPage />} />
       <Route path='*' element={<NotFound />} />
       {/* <Route path='/MyGallery' element={<GalleryPage />} /> */}
     </Route>
@@ -22,7 +24,7 @@ const router = createBrowserRouter(
 )
 
 const App = () => {
-
+  scrollToTop();
   return (
   <div>
     <RouterProvider router={router} />

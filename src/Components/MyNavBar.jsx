@@ -5,23 +5,43 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container"
+import { Link } from "react-router-dom";
 import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Col } from "react-bootstrap";
+import { useRef, useEffect } from 'react';
+import scrolltoHref from "./Builds/ScrolltoHref";
+import { redirect } from "react-router-dom";
 
 function MyNavBar() {
   const [Colors, setColors] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
-  const history = useNavigate();
+  const myElementRef = useRef(null);
+  const navigate = useNavigate();
+  // const location = useLocation();
 
   const handleStateColor = () => {
 
     setColors(!Colors)
     buttonColor(Colors)
     changeButtontext(Colors)
-    console.log("colors in Nav",Colors)
     setInterval(window.location.reload(), 5000)
+  }  
+
+  const goToHomePage = () => {
+    navigate("/")
   }
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+  
+
   return (
     <Navbar
       className="custom-nav"
@@ -34,28 +54,33 @@ function MyNavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="button-place">
             <NavDropdown title="My Resume" id='resumeDropdown' >
-              <NavDropdown.Item onClick={() => history("")} href={"#WorkExperience"}>Work Experience</NavDropdown.Item >
-              <NavDropdown.Item onClick={() => history("")} href={"#VolunteerExperience"}>
+              <NavDropdown.Item 
+              onClick={()=>goToHomePage()}
+              href="#WorkExperience"
+              >
+                Work Experience </NavDropdown.Item>
+              <NavDropdown.Item 
+              onClick={()=>goToHomePage()}
+              href="#VolunteerExperience"
+              >
                 Volunteer Experience
               </NavDropdown.Item >
-              <NavDropdown.Item onClick={() => history("")} href={"#Projects"}>
-                Projects
-              </NavDropdown.Item >
-              <NavDropdown.Item
-                onClick={() => history("")}
-                href={"#Contact"}
+              <NavDropdown.Item 
+              onClick={()=>goToHomePage()}
+              href="#Projects"
               >
+                Projects
+              </NavDropdown.Item>
+              <NavDropdown.Item 
+              onClick={()=>goToHomePage()}
+              href="#Contact">
                 Contact
               </NavDropdown.Item >
             </NavDropdown>
-            {/* <Nav.Link
-              eventKey={1}
-              onClick={() => (history("/MyGallery"))}>My Gallery
-            </Nav.Link> */}
-            <Nav.Link
-              eventKey={1}
-              onClick={() => (history("/MyPoems"))}>Poem Of The Day
-            </Nav.Link>            
+            <Navbar.Text >
+                  <Link className="poem-link" to="mypoems">Poem Of The Day</Link>
+            </Navbar.Text>
+
           </Nav>
         </Navbar.Collapse>
         <button
