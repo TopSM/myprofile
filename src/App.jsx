@@ -6,8 +6,6 @@ import MainLayouts from './Layouts/MainLayout'
 // import GalleryPage from './Pages/GalleryPage'
 import './StylesCSS/Main.css'
 import PoemsPage from './Pages/PoemsPage'
-import ScrolltoHref from './Components/Builds/ScrolltoHref'
-import scrollToTop from './Components/Builds/scrolltoTop'
 // import basicColors from './Components/Builds/basicColors'
 
 const router = createBrowserRouter(
@@ -24,7 +22,6 @@ const router = createBrowserRouter(
 )
 
 const App = () => {
-  scrollToTop();
   return (
   <div>
     <RouterProvider router={router} />
