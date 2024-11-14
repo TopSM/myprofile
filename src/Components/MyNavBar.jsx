@@ -24,10 +24,6 @@ function MyNavBar() {
     setInterval(window.location.reload(), 5000)
   }  
 
-  const goToHomePage = () => {
-    navigate("/")
-  }
-
   useEffect(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.slice(1));
@@ -51,24 +47,24 @@ function MyNavBar() {
           <Nav className="button-place">
             <NavDropdown title="My Resume" id='resumeDropdown' >
               <NavDropdown.Item 
-              onClick={()=>goToHomePage()}
+              onClick={()=>navigate("/")}
               href="#WorkExperience"
               >
                 Work Experience </NavDropdown.Item>
               <NavDropdown.Item 
-              onClick={()=>goToHomePage()}
+              onClick={()=>navigate("/")}
               href="#VolunteerExperience"
               >
                 Volunteer Experience
               </NavDropdown.Item >
               <NavDropdown.Item 
-              onClick={()=>goToHomePage()}
+              onClick={()=>navigate("/")}
               href="#Projects"
               >
                 Projects
               </NavDropdown.Item>
               <NavDropdown.Item 
-              onClick={()=>goToHomePage()}
+              onClick={()=>navigate("/")}
               href="#Contact">
                 Contact
               </NavDropdown.Item >

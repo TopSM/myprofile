@@ -6,6 +6,7 @@ import MainLayouts from './Layouts/MainLayout'
 // import GalleryPage from './Pages/GalleryPage'
 import './StylesCSS/Main.css'
 import PoemsPage from './Pages/PoemsPage'
+import TicTacToePage from './Pages/TicTacToePage'
 // import basicColors from './Components/Builds/basicColors'
 
 const router = createBrowserRouter(
@@ -14,7 +15,8 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />      
       <Route path="mypoems" name="mypoems" element={<PoemsPage />} />
       <Route path='*' element={<NotFound />} />
-      {/* <Route path='/MyGallery' element={<GalleryPage />} /> */}
+      {/* <Route path='myGallery' element={<GalleryPage />} /> */}
+      <Route path='tic-tac-toe' element={<TicTacToePage/>}/>
     </Route>
 
   ),
@@ -24,7 +26,7 @@ const router = createBrowserRouter(
 const App = () => {
   return (
   <div>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} /> 
   </div>
   )
 }
