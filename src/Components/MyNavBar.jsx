@@ -74,9 +74,14 @@ function MyNavBar({color,setColor, experienceCard, setExperienceCard}) {
             </NavDropdown>
 
             <Nav.Link  
-              onClick={() => navigate("/mypoems")}>
-              Poem Of The Day
+            onClick={() => navigate("MyPoems")}
+            >Poem Of The Day
             </Nav.Link>
+            <Nav.Link  
+            onClick={() => navigate("Tic-Tac-Toe")}
+            >Tic-Tac-Toe!
+            </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
         <div className={buttonPlace} >

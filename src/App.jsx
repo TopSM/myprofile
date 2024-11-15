@@ -13,10 +13,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayouts />}>
       <Route index element={<HomePage />} />      
-      <Route path="mypoems" name="mypoems" element={<PoemsPage />} />
+      <Route path="mypoems" name="MyPoems" element={<PoemsPage />} />
       <Route path='*' element={<NotFound />} />
       {/* <Route path='myGallery' element={<GalleryPage />} /> */}
-      <Route path='tic-tac-toe' element={<TicTacToePage/>}/>
+      <Route path='Tic-Tac-Toe' element={<TicTacToePage/>}/>
     </Route>
 
   ),
