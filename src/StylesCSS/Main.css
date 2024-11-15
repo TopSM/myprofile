@@ -1,4 +1,11 @@
 
+.tic-tac-toe-page{
+  text-align:center;
+}
+.square{
+  width:100px;
+  height:100px;
+}
 .poem-page {
   text-align:center;
   font-family:"Comic Sans MS", Comic Sans, cursive	

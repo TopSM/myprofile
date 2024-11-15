@@ -70,8 +70,12 @@ function MyNavBar() {
               </NavDropdown.Item >
             </NavDropdown>
             <Nav.Link  
-            onClick={() => navigate("mypoems")}
+            onClick={() => navigate("MyPoems")}
             >Poem Of The Day
+            </Nav.Link>
+            <Nav.Link  
+            onClick={() => navigate("Tic-Tac-Toe")}
+            >Tic-Tac-Toe!
             </Nav.Link>
 
           </Nav>
