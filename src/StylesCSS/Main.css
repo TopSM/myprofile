@@ -1,4 +1,25 @@
+.score-board{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  padding:30px;
+}
+.board-style{
+  display:flex;
 
+<<<<<<< Updated upstream
+=======
+}
+.tic-tac-toe-page{
+  text-align:center;
+}
+.square{
+  width:100px;
+  height:100px;
+}
+>>>>>>> Stashed changes
 .poem-page {
   text-align:center;
   font-family:"Comic Sans MS", Comic Sans, cursive	
@@ -132,10 +153,20 @@
   max-height: 80vh;
   max-width: 100%;
   padding: 0px;
+  z-index:-2;
 }
-
-.Title {
+/* .my-name{
+  border:solid;
+  z-index:10;
+  position:absolute;
+  top:50%;
+  right:50%;
+  bottom:50%;
+  left:50%;
+} */
+.title {
   text-align: center;
+  position:relative;
 }
 
 .text {

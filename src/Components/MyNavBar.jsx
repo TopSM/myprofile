@@ -18,7 +18,7 @@ function MyNavBar() {
 
   const handleStateColor = () => {
 
-    setColors(!Colors)
+    setColors(() => !Colors)
     buttonColor(Colors)
     changeButtontext(Colors)
     setInterval(window.location.reload(), 5000)

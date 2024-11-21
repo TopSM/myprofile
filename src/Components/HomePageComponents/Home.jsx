@@ -10,85 +10,18 @@ import Button from "@mui/material/Button";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 //My Components
-import WorkExperience from "./WorkExperience";
-import VolunteerExperience from "./VolunteerExperiences";
-import ProjectExperience from "./ProjectExperience";
+import WorkExperience from "../WorkExperience";
+import VolunteerExperience from "../VolunteerExperiences";
+import ProjectExperience from "../ProjectExperience";
 //CSS
 import "animate.css/animate.min.css";
 
 import '../StylesCSS/Main.css'
 import { Link, useLocation } from "react-router-dom";
 import { useRef, useEffect } from 'react';
+import Contact from "./Contact";
+import ResumeCard from "./ResumeCard";
 
-function Contact() {
-  return (
-    <React.Fragment>
-      <AnimationOnScroll
-        className="title-fitting contact-fitting"
-        animateIn="animate__fadeInDown"
-        animateOnce={true}
-      >
-        <h2 className="sections">Contact</h2>
-        <div className="info-list title-fitting">
-          <ul className="no-bullets">
-            <li className="contact-list">
-            </li>
-            <li className="contact-list">
-              <span className="contact-list-name">LinkedIn</span>:&ensp;
-              <a href="https://www.linkedin.com/in/ostavo-palacios/">
-                https://www.linkedin.com/ostavo-palacios/
-              </a>
-            </li>
-            <li className="contact-list">
-              <span className="contact-list-name">Email</span>:
-              Ostavo.palacios@gmail.com
-            </li>
-          </ul>
-        </div>
-      </AnimationOnScroll>
-    </React.Fragment>
-  );
-}
-function Lists() {
-  return (
-    <React.Fragment>
-      <ul className="no-bullets resume-bullets">
-        <li className="contact-list">
-          <AnimationOnScroll
-            animateIn="animate__shakeX"
-            initiallyVisible={true}
-          >
-            <h4> <span className="contact-list-name">My Resume</span>:{" "}
-              <a href={Resume}>Ostavo Palacios</a></h4>
-          </AnimationOnScroll>
-        </li>
-        <li>
-          <span className="contact-list contact-list-name">Programming Languages:</span>
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>C/C++,</Link>{" "}
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Python,</Link>{" "}
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>React.Js,</Link>{" "}
-          <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Java</Link>
-        </li>
-        <li className="contact-list">
-          <span className="contact-list-name">Design Software</span>: Matlab,
-          MultiSim, Arduino, Android Studio, React, Git
-        </li>
-        <li className="contact-list">
-          <span className="contact-list-name">Languages</span>: English, Spanish
-        </li>
-        <li className="contact-list">
-          <span className="contact-list-name">Soft Skills</span>
-          :&ensp;Leadership, Communication, Creative, Persistent, Cooperative,
-          Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
-        </li>
-        <li className="contact-list">
-          <span className="contact-list-name">Hobbies</span>: Photography,
-          Guitar, Chess, Hiking, Running, Cycling, Kickboxing, Dancing
-        </li>
-      </ul>
-    </React.Fragment>
-  );
-}
 
 function Home() {
 
@@ -109,18 +42,20 @@ function Home() {
           </Button>
         </div>
 
-        <div className="Title" id="Title">
-          <AnimationOnScroll
-            animateIn="animate__zoomIn"
-            initiallyVisible={true}
-            animateOut="animate__zoomOut"
-            duration={3}
-            animateOnce={true}
-          >
-            <img src={SunsetParkBanner} alt="sunsetpark" className="banner" data-aos="zoom-out" offset={0} />
-          </AnimationOnScroll>
-        </div>
+        
         <header className="header">
+          <div className="title" id="Title">
+          {/* <h1 className="my-name">Ostavo Palacios</h1> */}
+            <AnimationOnScroll
+              animateIn="animate__zoomIn"
+              initiallyVisible={true}
+              animateOut="animate__zoomOut"
+              duration={3}
+              animateOnce={true}
+            >
+              <img src={SunsetParkBanner} alt="sunsetpark" className="banner" />
+            </AnimationOnScroll>
+          </div>
           <div>
             <div className="intro ">
               <div className="title-pic">
@@ -161,6 +96,9 @@ function Home() {
                 <Lists></Lists>
               </AnimationOnScroll>
             </div>
+            </div>
+        </header>
+
             <div className="my-info">
               <AnimationOnScroll
                 duration={2}
@@ -172,19 +110,8 @@ function Home() {
                   <br />
                   <Contact />
                 </section>
-              </AnimationOnScroll>
-              <section ref={myElementRef} id="WorkExperience">
-                <br />
-                <WorkExperience />
-              </section>
-              <section id="Projects">
-                <br />
-                <ProjectExperience ProgLang />
-              </section>
-              <section ref={myElementRef} id="VolunteerExperience">
-                <br />
-                <VolunteerExperience />
-              </section>
+              </AnimationOnScroll>   
+              <ResumeCard />      
               <div className="button" >
                 <Button
                   style={buttonColor(color)}
@@ -197,8 +124,6 @@ function Home() {
 
             </div>
           </div>
-        </header>
-      </div>
     </React.Fragment>
   );
 }
