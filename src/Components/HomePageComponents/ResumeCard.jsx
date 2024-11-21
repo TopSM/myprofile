@@ -3,8 +3,9 @@ import WorkExperience from '../WorkExperience'
 import ProjectExperience from '../ProjectExperience'
 import VolunteerExperience from '../VolunteerExperiences'
 
-function ResumeCard() {
-  return (
+function ResumeCard({language,setLanguage}) {
+    
+    return (
     <div>
         <section ref={myElementRef} id="WorkExperience">
         <br />
@@ -12,7 +13,7 @@ function ResumeCard() {
         </section>
         <section id="Projects">
         <br />
-        <ProjectExperience ProgLang />
+        <ProjectExperience language={language} setLanguage={setLanguage} />
         </section>
         <section ref={myElementRef} id="VolunteerExperience">
         <br />

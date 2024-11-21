@@ -26,6 +26,7 @@ import ResumeCard from "./ResumeCard";
 function Home() {
 
   const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
+  const [language, setLanguage] = useState("RJS")
   
   const myElementRef = useRef(null);
 

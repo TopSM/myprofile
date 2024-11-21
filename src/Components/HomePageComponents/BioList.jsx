@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BioList() {
+function BioList({language,setLanguage}) {
   return (
     <div>
         <React.Fragment>

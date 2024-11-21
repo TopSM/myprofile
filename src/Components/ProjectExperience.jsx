@@ -349,9 +349,9 @@ function showProject(choice) {
   }
 }
 
-function ProjectExperience(props) {
+function ProjectExperience({language,setLanguage}) {
 
-  const [language, setLanguage] = useState("RJS")
+  // const [language, setLanguage] = useState("RJS")
   return (
 
     <React.Fragment>
