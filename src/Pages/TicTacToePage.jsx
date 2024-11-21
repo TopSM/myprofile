@@ -1,9 +1,7 @@
 import React,{useState} from 'react'
-import TicTacToeBoard from '../Components/Builds/TicTacToeBoard'
-import Square from '../Components/Builds/Square';
+import TicTacToeBoard from '../Components/Builds/TicTacToeBoard/TicTacToeBoard.jsx'
 function TicTacToePage() {
     const [squares, setSquares] = useState(Array(9).fill(""));
-
    
     return (
         
