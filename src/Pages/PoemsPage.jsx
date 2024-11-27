@@ -1,5 +1,6 @@
 import React,  { useState } from 'react'
 import MyPoems from '../Components/MyPoems'
+import { useOutletContext } from 'react-router-dom';
 function getTodaysDay() {
 
     let today = new Date();
@@ -8,21 +9,19 @@ function getTodaysDay() {
 
     return todaysDay;
 }
-const basicColors = (colors) => {
-    return {
-      backgroundColor: colors ? "white" : "#282c34",
-      color: colors ? "black" : "aliceblue"
-    }
-  }
 
 function PoemsPage() {
-    const [color] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)
 
+    let [color] = useOutletContext()
+
+    console.log(color)
     return (
-        <div  style={basicColors(color)} className='poem-pad poem-pad2' >
-            <MyPoems todaysDay={getTodaysDay()} />            
-            <h3 className='poem-author'>- Ostavo R. Palacios</h3>
-        </div>
+        <div className={color?'color-toggle-white': "color-toggle-black"}>   
+            <div  className='poem-pad poem-pad2' >
+                <MyPoems todaysDay={getTodaysDay()} />            
+                <h3 className='poem-author'>- Ostavo R. Palacios</h3>
+            </div>
+        </div> 
     )
 }
 

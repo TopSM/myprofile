@@ -1,45 +1,75 @@
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+//PDF
+import Resume from "./../../MyDocuments/Ostavo-Palacios-Resume-2024.pdf";
+import { Link } from "react-router-dom";
 
+import { useEffect } from 'react';
 function BioList({language,setLanguage}) {
-  return (
-    <div>
+
+    useEffect(() => {
+        if (location.hash) {
+          const element = document.getElementById("Projects");
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, [language]);
+
+    const setProjectLanguage = (lang) =>{
+        console.log(lang)
+        setLanguage(()=>lang)
+        document.getElementById({lang})?.scrollIntoView();
+    }
+
+    return (
+    <div className="bio-list">
         <React.Fragment>
         <ul className="no-bullets resume-bullets">
+
             <li className="contact-list">
             <AnimationOnScroll
                 animateIn="animate__shakeX"
-                initiallyVisible={true}
-            >
-                <h4> <span className="contact-list-name">My Resume</span>:{" "}
-                <a href={Resume}>Ostavo Palacios</a></h4>
+                initiallyVisible={true} >
+                
+                <h4>
+                    <span className="contact-list-name">My Resume</span>:{" "}
+                    <a href={Resume} className='a-link'>Ostavo Palacios</a>
+                </h4>
+
             </AnimationOnScroll>
             </li>
+
             <li>
-            <span className="contact-list contact-list-name">Programming Languages:</span>
-            <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>C/C++,</Link>{" "}
-            <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Python,</Link>{" "}
-            <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>React.Js,</Link>{" "}
-            <Link onClick={() => document.getElementById('Projects')?.scrollIntoView()}>Java</Link>
+                <span className="contact-list contact-list-name">Programming Languages:</span>
+                <a className='a-link' onClick={() => setProjectLanguage('C')}>  C/C++,</a>{" "}
+                <a className='a-link' onClick={() => setProjectLanguage('Py')}> Python,</a>{" "}
+                <a className='a-link' onClick={() => setProjectLanguage('RJS')}>React.Js,</a>{" "}
+                <a className='a-link' onClick={() => setProjectLanguage('J')}>  Java</a>
             </li>
+
             <li className="contact-list">
-            <span className="contact-list-name">Design Software</span>: Matlab,
-            MultiSim, Arduino, Android Studio, React, Git
+                <span className="contact-list-name">Design Software</span>: Matlab,
+                    MultiSim, Arduino, Android Studio, React, Git
             </li>
+
             <li className="contact-list">
-            <span className="contact-list-name">Languages</span>: English, Spanish
+                <span className="contact-list-name">Languages</span>: English, Spanish
             </li>
+
             <li className="contact-list">
-            <span className="contact-list-name">Soft Skills</span>
-            :&ensp;Leadership, Communication, Creative, Persistent, Cooperative,
-            Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
+                <span className="contact-list-name">Soft Skills</span>
+                :&ensp;Leadership, Communication, Creative, Persistent, Cooperative,
+                Adapbatable, Self Motivated, Commited, Patient, Planning, Versatile,
             </li>
+
             <li className="contact-list">
-            <span className="contact-list-name">Hobbies</span>: Photography,
-            Guitar, Chess, Hiking, Running, Cycling, Kickboxing, Dancing
+                <span className="contact-list-name">Hobbies</span>: Photography,
+                Guitar, Chess, Hiking, Running, Cycling, Kickboxing, Dancing
             </li>
+            
         </ul>
-        </React.Fragment>
-        
+        </React.Fragment>        
       </div>
   )
 }

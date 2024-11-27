@@ -1,21 +1,21 @@
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
-function Contact() {
+function Contact({ref}) {
   return (
-    <div><React.Fragment>
-    <AnimationOnScroll
-      className="title-fitting contact-fitting"
-      animateIn="animate__fadeInDown"
-      animateOnce={true}
-    >
-      <h2 className="sections">Contact</h2>
+    <section  ref={ref} id="Contact" className="contact-s">
+      <React.Fragment>
+      <AnimationOnScroll
+        className="title-fitting contact-fitting"
+        animateIn="animate__fadeInDown"
+        animateOnce={true}
+      >
+      <h2 className="sections-color">Contact</h2>
       <div className="info-list title-fitting">
-        <ul className="no-bullets">
-          <li className="contact-list">
-          </li>
+        <ul className="no-bullets">          
           <li className="contact-list">
             <span className="contact-list-name">LinkedIn</span>:&ensp;
-            <a href="https://www.linkedin.com/in/ostavo-palacios/">
+            <a className="a-link" href="https://www.linkedin.com/in/ostavo-palacios/">
               https://www.linkedin.com/ostavo-palacios/
             </a>
           </li>
@@ -27,7 +27,7 @@ function Contact() {
       </div>
     </AnimationOnScroll>
   </React.Fragment>
-</div>
+</section>
   )
 }
 

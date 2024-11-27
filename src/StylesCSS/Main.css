@@ -1,3 +1,4 @@
+/* tic-tac-toe styles */
 .score-board{
   display:flex;
   flex-direction:row;
@@ -8,9 +9,6 @@
 }
 .board-style{
   display:flex;
-
-<<<<<<< Updated upstream
-=======
 }
 .tic-tac-toe-page{
   text-align:center;
@@ -19,7 +17,7 @@
   width:100px;
   height:100px;
 }
->>>>>>> Stashed changes
+/* poetry page */
 .poem-page {
   text-align:center;
   font-family:"Comic Sans MS", Comic Sans, cursive	
@@ -39,10 +37,15 @@
 .poem-pad{
   padding:40px;
 }
+
+/* Standard settings */
 .booking-standard {
   width: 50%;
   text-align: left;
   margin: auto;
+}
+.standard-opacity{
+  opacity:90%
 }
 
 #construction {
@@ -96,13 +99,7 @@
   padding: 10px;
 }
 
-.header {
-  margin: auto;
-  padding: 30px;
-  padding-bottom: 0px;
-  text-align: center;
-}
-
+/* footer */
 .footer {
   padding: 5px;
   border-top: solid;
@@ -113,16 +110,24 @@
 .social-icon {
   margin: 5px;
 }
+.social-icon-card{
+  position:absolute;
+  /* border:solid; */
+  color:blue;
+  top:90%;
+  left:70%;
+  
+}
 
 .project-btn {
   font-weight: bold;
   border-radius: 20%;
 }
 
-.project-btn:hover {
+.project-btn:hover, button {
   color: #ff3452;
 }
-.buttonPlace:hover{
+.buttonPlace:hover, button{
   color: #ff3452
 }
 
@@ -133,7 +138,7 @@
   border-width: 2px;
 }
 
-.sections {
+.sections-color {
   color: #00a9ea
 }
 
@@ -147,31 +152,81 @@
   padding: 5px;
 }
 
-.banner {
+.button-to-top{
   text-align: center;
-  width: 100%;
-  max-height: 80vh;
-  max-width: 100%;
-  padding: 0px;
-  z-index:-2;
 }
-/* .my-name{
-  border:solid;
-  z-index:10;
-  position:absolute;
-  top:50%;
-  right:50%;
-  bottom:50%;
-  left:50%;
-} */
-.title {
-  text-align: center;
-  position:relative;
+.color-toggle-white-button{
+  color: aliceblue;
+  background-color:#282c34;
+}
+.color-toggle-black-button{
+  color:black;
+  background-color:white
 }
 
-.text {
-  border-radius: 30px;
-  margin-bottom: 30px;
+.color-toggle-white{
+  color:black;
+  background-color:white  
+}
+.color-toggle-black{
+  color: aliceblue;
+  background-color:#282c34;
+}
+.btn-color-white{
+
+  background-color: #282c34  ;
+  color: aliceblue;  
+}
+.btn-color-black{
+  color: black;
+  background-color: white; 
+}
+
+
+/* header title */
+.header-title{
+  height:87.5vh
+}
+
+.banner {
+  position:absolute;
+  text-align:center;
+  width:100%;
+  max-height: 87.5vh;
+  max-width: 100%;
+}
+
+.profile-picture {
+  opacity:90%;
+  /* margin:auto; */
+}
+.intro-card-layout{
+  display:flex;
+  position:relative;
+  z-index:1;  
+  padding:20px;
+  border:solid;
+  opacity:90%;
+}
+.my-name{
+  border-bottom: solid;
+  border-color:white;
+  padding-bottom:10px;
+}
+
+.text-intro {
+  width:80%;
+  position:relative;
+  margin:auto;
+}
+
+.button-list{
+  display:block;
+  position:absolute;
+  z-index:4;
+  text-align:center;
+  bottom:100px;
+  width:100%;
 }
 
 .info-list h4 {
@@ -179,7 +234,7 @@
 }
 
 .info-list h3,
-h2, a:link, .poem-pad h3 {
+h2, .a-link, .poem-pad h3 {
   color: #ff3452;
 }
 
@@ -199,12 +254,12 @@ h2, a:link, .poem-pad h3 {
 .poem-link:hover{
   color:rgba(0,0,0,0.8);
 }
-a:hover {
+.a-link:hover {
   color: lightseagreen;
   text-decoration: none;
-}
+} 
 
-a:visited {
+.a-link:visited {
   color: #00a9ea;
 }
 
@@ -213,20 +268,6 @@ a:visited {
   padding: 30px;
   border-top: solid;
   clear: both;
-}
-
-.title {
-  float: left;
-}
-
-.profile-picture {
-  width: 30vh;
-  height: 35vh;
-  border-radius: 300px;
-}
-
-.intro {
-  height: 60%;
 }
 
 .about-text {
@@ -239,13 +280,9 @@ a:visited {
 }
 
 .my-info {
-  text-align: left;
+  /* text-align: left; */
   padding-top: 20px;
-  clear: both;
-}
-
-.header p {
-  padding-left: 40px;
+  /* clear: both; */
 }
 
 h3 {
@@ -255,10 +292,6 @@ h3 {
 
 h4 {
   font-style: italic;
-}
-
-.title-decoration {
-  border-top: solid;
 }
 
 .no-bullets {
@@ -290,11 +323,6 @@ h4 {
   width: 60%;
 }
 
-.button {
-  color: black;
-  text-align: center;
-}
-
 .fixed-button {
   border: solid;
   position: fixed;
@@ -302,19 +330,14 @@ h4 {
   right: 0;
   bottom: 0;
   margin: 20px;
+}
 
+.bio-list{
+  margin:auto;
+  /* padding-top:20%; */
 }
 
 @media screen and (min-width: 1089px) {
-  .header {
-    margin: auto;
-    padding: 30px;
-    text-align: center;
-  }
-
-  .standard-fitting {
-    padding: 20px;
-  }
 
   .title-fitting {
     margin: auto;
@@ -331,15 +354,11 @@ h4 {
     align-content: center;
   }
 
-  .profile-picture {
+  .pfp-resize {
 
     width: 40vh;
     height: 50vh;
     border-radius: 300px;
-  }
-
-  .intro {
-    height: 60%;
   }
 
   .about-text {
@@ -351,27 +370,15 @@ h4 {
     border-radius: 10px;
   }
 
-  .my-info {
+  /* .my-info {
     text-align: left;
     padding-top: 30px;
     clear: both;
-  }
-
-  .header p {
-    padding-left: 40px;
-  }
+  } */
 
   h3 {
     text-decoration: underline;
     font-style: italic;
-  }
-
-  h4 {
-    font-style: italic;
-  }
-
-  .title-decoration {
-    border-top: solid;
   }
 
   .no-bullets {
@@ -401,43 +408,66 @@ h4 {
     width: 60%;
   }
 
-  .button {
-    text-align: center;
-  }
-
   .cont-style {
     border: solid;
     margin: 0px;
     overflow: hidden;
   }
+  .banner {
+    position:absolute;
+    text-align:center;
+    max-height: 87.5vh;
+  }
+  .header-title {
+    /* margin: auto; */
+    /* padding: 10px; */
+    height:87.5vh
+  }
+
+  .intro-resize {
+    height:80%;
+    width:90%;
+    left:5%;
+    top:20px;
+
+  }
 }
 
-@media screen and (max-width: 1233px) {
-
+@media screen and (max-width: 1089px) {
+  .bio-list{
+    position:relative;
+    z-index:10;
+    margin-top:100px;
+    /* border:solid; */
+  }
   /* Large phone and tablet */
+  .banner {
+    position:absolute;
+    text-align:center;
+    /* max-height: 83.5vh; */
+  }
+  .header-title {
+    height:70.5vh
+  }
+
+  .intro-resize {
+    height:80%;
+    width:90%;
+    left:5%;
+    top:10%;
+    /* bottom:5%; */
+  }
+  .text-intro {
+    padding: 10px;
+    font-size: .9em;
+  }
+
   .title-pic {
     padding: 5px;
     width: 100%;
     height: 50vh;
     justify-content: center;
     align-content: center;
-  }
-
-  .banner {
-    width: 1000%;
-  }
-
-  .header {
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    border: none;
-  }
-
-  .intro {
-    margin: auto;
-    text-align: center;
-    height: auto;
   }
 
   /* start of phone styles */
@@ -447,18 +477,11 @@ h4 {
     float: none;
   }
 
-  .text {
-    padding: 10px;
-    font-size: 1.4em;
-
-  }
-
   .about-text {
     width: auto;
     padding: 5px;
     margin: auto;
     margin-top: 0px;
-
     border-radius: 10px;
   }
 
@@ -482,9 +505,9 @@ h4 {
     margin-bottom: 10px;
   }
 
-  .profile-picture {
-    width: 37vh;
-    height: 50vh;
+  .pfp-resize {
+    width: 27vh;
+    height: 33vh;
     padding: 10px;
     border-radius: 300px;
   }
@@ -500,23 +523,97 @@ h4 {
     padding-left: none;
 
   }
-
-
 }
+@media screen and (min-width: 480px) and (max-width: 843px){
 
-@media screen and (max-width: 480px) {
+  .intro-resize{
+    height:65%
+  }
+  
+  .banner{
+    height: 70.5vh;
+  }
+  .header-text-resize{
+    font-size:0.5em
+  }
+}
+@media screen and (max-width: 480px){
+  
+  .standard-fitting {
+    font-weight: 600;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 0.8em;
+  }
+
+  .pfp-portrait{
+    padding-top:20px;
+    padding-bottom:0px;
+    height:20vh;
+    width:15vh;
+    padding-bottom:0px;
+    border-radius:50px;
+  }
+
+  .social-icon-card{
+      position:absolute;
+      /* border:solid; */
+      color:blue;
+      top:80%;
+      left:50%;
+      /* margin:auto; */
+
+  }
+  .my-name-portrait{
+    position:relative;
+    right:110%;
+  }
+  .header-text-resize{
+    padding-top:5px;
+    /* padding:5px; */
+    font-size:0.8em
+  }
+  .banner{
+    height: 100.5vh;
+  }
   .resume-bullets {
     padding: 10px;
   }
-
+  .bio-list{
+    top:180px;
+    clear:both;    
+  }
+  .button-list{
+    
+    bottom:200px;
+  }
   /* Smaller screen size phones */
   .bullets-list {
     width: 100%;
     list-style-position: inside;
     padding: 0px;
   }
+  .header-title {
+    height:60.5vh;
+    margin:auto;
+  }
+  .intro-resize{
+    height:80vh;
+    width:90%;
+    left:0px
+  }
+  .social-icon-portrait{
+    width:10px;
+    margin:1px;
+  }
 
-  .text {
+  .banner{
+    height: 100vh;
+    margin:auto;
+    /* padding30px; */
+
+  }
+  .text-intro {
     border-radius: 15px;
     margin-bottom: 30px;
   }
@@ -531,26 +628,11 @@ h4 {
   .contact-list {
     padding: 5px;
     text-align: left;
-    font-size: .7em;
+    font-size: .8em;
   }
 
-  .header {
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .standard-fitting {
-    font-weight: 600;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-size: 0.8em;
-  }
-
-  .my-info {
-    text-align: center;
-    clear: both;
-    padding: 10px;
-  }
+  .contact-s
+ 
 
   .info-pic {
     clear: both;
@@ -563,10 +645,6 @@ h4 {
     border-top: solid;
   }
 
-  .header p {
-    padding-left: 10px;
-  }
-
   .title-fitting {
     margin: auto;
     border-top: solid;
@@ -576,13 +654,6 @@ h4 {
   .about-text {
     margin-top: 0px;
     font-size: .9em;
-  }
-
-  .profile-picture {
-    width: 20vh;
-    height: 27vh;
-    padding: 10px;
-    border-radius: 300px;
   }
 
   .col-style {
@@ -622,4 +693,18 @@ h4 {
   .poem-author{
     font-size:.8em;
   }
+  .intro-card-portait{
+    top:1%;
+    display:block;
+    padding:0px;
+    margin:auto;
+    text-align:center;
+  }
+  .text-intro-portrait{
+    padding:0px;
+    width:90%;
+    text-align:left;
+  }
 }
+
+  

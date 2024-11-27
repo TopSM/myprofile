@@ -1,4 +1,5 @@
 import React from 'react'
+import { useOutletContext } from "react-router-dom";
 
 const PoemsList = [
     {
@@ -149,7 +150,7 @@ const PoemsList = [
         DOW: "Saturday",
         id: 5,
         Poem:"The past is forever so haunting.\n\
-                It looms over of shoulders\n\
+                It looms over our shoulders\n\
                 Weighting heavily over our identities\n\
                 With trauma griping ever so tight.\n\
                 \n\
@@ -287,13 +288,12 @@ function GetPoem(props) {
         
 }
 
+function MyPoems({todaysDay}) {
+    const date = todaysDay;
 
-
-function MyPoems(props) {
-    const date = props.todaysDay;
     return (
         <div className ="poem-page">
-            <h2 className='sections'>Poem of the day</h2>
+            <h2 className='sections-color'>Poem of the day</h2>
             {PoemsList.map(pl => 
                 <GetPoem date={date} poem={pl} key ={pl.id}/>
             )}
