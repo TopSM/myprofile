@@ -33,30 +33,33 @@ export default function mapComponent(props) {
             className="info-list title-fitting"
             key={il.id}
           >
-            <AnimationOnScroll
-              animateIn="animate__zoomInUp"
-              animateOnce={true}
-            >
-              <a href={il.Link}>
-                <img className="info-pic"
-                  src={il.Picture}
-                  alt={il.Alt}
-                />
-              </a>
-            </AnimationOnScroll>
+            <div className="mobile-title-fitting">
+              <AnimationOnScroll
+                animateIn="animate__zoomInUp"
+                animateOnce={true}
+              >
+                <a href={il.Link}>
+                  <img className="info-pic"
+                    src={il.Picture}
+                    alt={il.Alt}
+                  />
+                </a>
+              </AnimationOnScroll>
 
-            <AnimationOnScroll
-              animateIn="animate__fadeInRight"
-              delay={100}
-              animateOnce={true}
-            >
-              <div>
-                <h3>{il.JobName}</h3>
-                <h4>{il.Title}</h4>
-                <h4>Year: {il.Year}</h4>
-                {checkLanguage(il.Language)}
-              </div>
-            </AnimationOnScroll>
+              <AnimationOnScroll
+                animateIn="animate__fadeInRight"
+                delay={100}
+                animateOnce={true}
+              >
+                <div className="">
+                  <h3>{il.JobName}</h3>
+                  <h4>{il.Title}</h4>
+                  <h4>Year: {il.Year}</h4>
+                  {checkLanguage(il.Language)}
+                
+                </div>
+              </AnimationOnScroll>
+            </div>
             <AnimationOnScroll
               className="text bullet-list standard-fitting"
               animateIn="animate__slideInUp"

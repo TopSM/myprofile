@@ -5,7 +5,7 @@ import Resume from "./../../MyDocuments/Ostavo-Palacios-Resume-2024.pdf";
 import { Link } from "react-router-dom";
 
 import { useEffect } from 'react';
-function BioList({language,setLanguage}) {
+function BioList({language,setLanguage,setExperienceCard}) {
 
     useEffect(() => {
         if (location.hash) {
@@ -17,21 +17,21 @@ function BioList({language,setLanguage}) {
       }, [language]);
 
     const setProjectLanguage = (lang) =>{
-        console.log(lang)
+
         setLanguage(()=>lang)
-        document.getElementById({lang})?.scrollIntoView();
+        setExperienceCard(() => "Projects")
+        document.getElementById("my-info")?.scrollIntoView();
     }
 
     return (
-    <div className="bio-list">
+    <div className="bio-list standard-fitting">
         <React.Fragment>
         <ul className="no-bullets resume-bullets">
 
             <li className="contact-list">
             <AnimationOnScroll
                 animateIn="animate__shakeX"
-                initiallyVisible={true} >
-                
+                initiallyVisible={true} >                
                 <h4>
                     <span className="contact-list-name">My Resume</span>:{" "}
                     <a href={Resume} className='a-link'>Ostavo Palacios</a>

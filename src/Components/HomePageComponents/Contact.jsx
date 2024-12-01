@@ -3,7 +3,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function Contact({ref}) {
   return (
-    <section  ref={ref} id="Contact" className="contact-s">
+    <div  ref={ref} id="Contact">
       <React.Fragment>
       <AnimationOnScroll
         className="title-fitting contact-fitting"
@@ -25,9 +25,9 @@ function Contact({ref}) {
           </li>
         </ul>
       </div>
-    </AnimationOnScroll>
-  </React.Fragment>
-</section>
+      </AnimationOnScroll>
+      </React.Fragment>
+    </div>
   )
 }
 

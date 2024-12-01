@@ -35,19 +35,19 @@ function Home() {
           experienceCard={experienceCard}
           setExperienceCard={setExperienceCard}/>
 
-        
+        <div className ="mobile-body" >
           <BioList 
             language={language} 
-            setLanguage={setLanguage}/>
+            setLanguage={setLanguage}
+            setExperienceCard={setExperienceCard}/>
           <ResumeCard 
             language={language}
             setLanguage={setLanguage}
-            myElementRef={myElementRef}                 
-            experienceCard={experienceCard}
-            setExperienceCard={setExperienceCard}/>  
-              
-          <br />
+            myElementRef={myElementRef}  
+            experienceCard={experienceCard}               
+            setExperienceCard={setExperienceCard}/>                
           <Contact ref={myElementRef}/>
+        </div>
         
       </div>
     </React.Fragment>

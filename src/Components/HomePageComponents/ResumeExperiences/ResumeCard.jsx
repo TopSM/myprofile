@@ -2,11 +2,14 @@ import React from 'react'
 import WorkExperience from './WorkExperience'
 import ProjectExperience from './ProjectExperience'
 import VolunteerExperience from './VolunteerExperiences'
-// import ResumerCardExperiences from './ResumerCardExperiences'
-function ResumeCard({language,setLanguage, myElementRef,experienceCard,setExperienceCard}) {
+function ResumeCard({
+  language,
+  setLanguage, 
+  myElementRef,
+  experienceCard,
+  setExperienceCard}) {
 
   let showMyExpriences =(ec)=>{
-    // console.log(ec)
       if(ec == "WorkExperience"){
         return (
           <React.Fragment>
@@ -22,7 +25,7 @@ function ResumeCard({language,setLanguage, myElementRef,experienceCard,setExperi
           <React.Fragment>
             <section ref={myElementRef} id="Projects">
               <br />
-              <ProjectExperience language={language} setLanguage={setLanguage}/>
+              <ProjectExperience language={language} setLanguage={setLanguage} setExperienceCard={setExperienceCard}/>
           </section>
           </React.Fragment>
         );

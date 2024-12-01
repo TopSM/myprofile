@@ -112,8 +112,6 @@
 }
 .social-icon-card{
   position:absolute;
-  /* border:solid; */
-  color:blue;
   top:90%;
   left:70%;
   
@@ -184,16 +182,12 @@
 
 
 /* header title */
-.header-title{
-  height:87.5vh
-}
-
 .banner {
   position:absolute;
   text-align:center;
   width:100%;
   max-height: 87.5vh;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .profile-picture {
@@ -207,6 +201,7 @@
   padding:20px;
   border:solid;
   opacity:90%;
+  border-radius:10px;
 }
 .my-name{
   border-bottom: solid;
@@ -279,12 +274,6 @@ h2, .a-link, .poem-pad h3 {
   border-radius: 10px;
 }
 
-.my-info {
-  /* text-align: left; */
-  padding-top: 20px;
-  /* clear: both; */
-}
-
 h3 {
   text-decoration: underline;
   font-style: italic;
@@ -331,14 +320,14 @@ h4 {
   bottom: 0;
   margin: 20px;
 }
-
-.bio-list{
-  margin:auto;
-  /* padding-top:20%; */
+.header-text-resize{
+  text-indent:20px;
 }
 
 @media screen and (min-width: 1089px) {
-
+  .header-text-resize{
+    padding-top:20px;
+  }
   .title-fitting {
     margin: auto;
     padding: 30px;
@@ -355,7 +344,6 @@ h4 {
   }
 
   .pfp-resize {
-
     width: 40vh;
     height: 50vh;
     border-radius: 300px;
@@ -369,12 +357,6 @@ h4 {
     text-align: left;
     border-radius: 10px;
   }
-
-  /* .my-info {
-    text-align: left;
-    padding-top: 30px;
-    clear: both;
-  } */
 
   h3 {
     text-decoration: underline;
@@ -398,12 +380,6 @@ h4 {
     clear: both;
   }
 
-  .info-pic {
-    float: right;
-    width: 40%;
-    padding: 20px;
-  }
-
   .bullet-list {
     width: 60%;
   }
@@ -418,36 +394,38 @@ h4 {
     text-align:center;
     max-height: 87.5vh;
   }
-  .header-title {
-    /* margin: auto; */
-    /* padding: 10px; */
-    height:87.5vh
-  }
 
   .intro-resize {
-    height:80%;
+    height:80vh;
     width:90%;
     left:5%;
     top:20px;
-
+  }
+  .mobile-body{
+    position:relative;
+    /* top:210px; */
   }
 }
+.header-title{
+    height:88vh;
+  }
 
 @media screen and (max-width: 1089px) {
-  .bio-list{
+  
+  .social-icon-card{
+    top:80%;
+    left:1%;
+  }
+  
+  .mobile-body{
     position:relative;
-    z-index:10;
-    margin-top:100px;
-    /* border:solid; */
+    /* top:210px; */
   }
   /* Large phone and tablet */
   .banner {
     position:absolute;
     text-align:center;
-    /* max-height: 83.5vh; */
-  }
-  .header-title {
-    height:70.5vh
+    height:100vh;
   }
 
   .intro-resize {
@@ -525,52 +503,60 @@ h4 {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 843px){
-
-  .intro-resize{
-    height:65%
-  }
   
+  .intro-resize{
+    height:85vh;
+    top:5%;
+    left:0%;
+  }  
   .banner{
-    height: 70.5vh;
+    height: 100.5vh;
   }
   .header-text-resize{
-    font-size:0.5em
+    font-size:0.9em;
+    text-align:left;
+  }
+  .intro-card-portait{
+    top:1%;
+    display:block;
+    padding:0px;
+    margin:auto;
+    text-align:center;
+  }
+  .pfp-portrait{
+    padding-top:20px;
+    height:22vh;
+    width:17vh;
+    padding-bottom:0px;
   }
 }
 @media screen and (max-width: 480px){
-  
+  .mobile-title-fitting{
+    text-align:center;
+  }
   .standard-fitting {
     font-weight: 600;
     padding-bottom: 30px;
     padding-top: 30px;
-    font-size: 0.8em;
   }
 
   .pfp-portrait{
     padding-top:20px;
+    height:22vh;
+    width:17vh;
     padding-bottom:0px;
-    height:20vh;
-    width:15vh;
-    padding-bottom:0px;
-    border-radius:50px;
   }
 
   .social-icon-card{
-      position:absolute;
-      /* border:solid; */
-      color:blue;
-      top:80%;
-      left:50%;
-      /* margin:auto; */
-
+    position:absolute;
+    top:80%;
+    left:50%;
   }
   .my-name-portrait{
     position:relative;
-    right:110%;
   }
   .header-text-resize{
     padding-top:5px;
-    /* padding:5px; */
     font-size:0.8em
   }
   .banner{
@@ -579,12 +565,7 @@ h4 {
   .resume-bullets {
     padding: 10px;
   }
-  .bio-list{
-    top:180px;
-    clear:both;    
-  }
-  .button-list{
-    
+  .button-list{    
     bottom:200px;
   }
   /* Smaller screen size phones */
@@ -592,10 +573,6 @@ h4 {
     width: 100%;
     list-style-position: inside;
     padding: 0px;
-  }
-  .header-title {
-    height:60.5vh;
-    margin:auto;
   }
   .intro-resize{
     height:80vh;
@@ -629,26 +606,18 @@ h4 {
     padding: 5px;
     text-align: left;
     font-size: .8em;
-  }
-
-  .contact-s
- 
+  } 
 
   .info-pic {
     clear: both;
     text-align: center;
     float: none;
+    margin:10px;
   }
 
   .title-fitting {
     padding: 5px;
     border-top: solid;
-  }
-
-  .title-fitting {
-    margin: auto;
-    border-top: solid;
-    clear: both;
   }
 
   .about-text {

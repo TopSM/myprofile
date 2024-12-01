@@ -21,7 +21,6 @@ function MyNavBar({color,setColor, experienceCard, setExperienceCard}) {
   const handleNavBarClick = (link="/",ec="RJS")=>{
     setExperienceCard(()=>ec)
     navigate(link)
-    console.log(experienceCard)
   }
 
   useEffect(() => {
@@ -32,6 +31,11 @@ function MyNavBar({color,setColor, experienceCard, setExperienceCard}) {
       }
     }
   }, [location]);
+
+  
+    // useEffect(() => {    
+    //     document.getElementById('my-info')?.scrollIntoView({ behavior: 'smooth' })    
+    // }, [experienceCard]);    
   
 
   return (

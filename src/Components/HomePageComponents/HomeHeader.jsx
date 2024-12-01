@@ -13,10 +13,10 @@ function HomeHeader({color,experienceCard,setExperienceCard}) {
     let introClassString = "intro-resize intro-card-layout intro-card-portait ";
 
     introClassString += color? "color-toggle-white":  "color-toggle-black" 
-    
     useEffect(() => {    
-        document.getElementById('my-info')?.scrollIntoView({ behavior: 'smooth' })    
-    }, [experienceCard]);    
+        document.getElementById('header-title')?.scrollIntoView({ behavior: 'smooth' })    
+        setExperienceCard(()=>"WorkExperience")
+    }, []);    
 
   return (
     <header className="header-title">
@@ -50,7 +50,7 @@ function HomeHeader({color,experienceCard,setExperienceCard}) {
             <AnimationOnScroll 
                 animateIn="animate__fadeInRight"
                 animateOnce={true}>
-                <div className="text-intro standard-fitting text-intro-portrait">
+                <div className="text-intro text-intro-portrait">
                     <h1 className="my-name my-name-portrait sections-color">Ostavo Palacios</h1>
                     <p className="header-text-resize">
                         Ostavo Palacios received his B.E. in Computer Engineering from the The City College 

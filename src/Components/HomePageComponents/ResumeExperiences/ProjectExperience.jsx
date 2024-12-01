@@ -310,6 +310,7 @@ const Java = [
   }
 ]
 
+
 function showProject(choice) {
   if (choice === "RJS") {
     return (
@@ -349,16 +350,16 @@ function showProject(choice) {
   }
 }
 
-function ProjectExperience({language,setLanguage}) {
+function ProjectExperience({language,setLanguage,experienceCard,setExperienceCard}) {
 
   return (
     <React.Fragment>
 
-      <div className="standard-fitting title-fitting"> 
-        <h2 className="sections" >Projects</h2>
+      <div className="title-fitting"> 
+        <h2 className="sections-color" >Projects</h2>
         
         <AnimationOnScroll
-          className="standard-fitting title-fitting"
+          className="standard-fitting"
           animateIn="animate__fadeInLeft"
           animateOnce={true}
           initiallyVisible={true}
