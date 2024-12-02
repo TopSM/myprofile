@@ -10,7 +10,7 @@ function Contact({color, ref}) {
     <div  ref={ref} id="Contact" className={contactClass}>
       <React.Fragment>
       <AnimationOnScroll
-        className="title-fitting contact-fitting"
+        className="contact-fitting"
         animateIn="animate__fadeInDown"
         animateOnce={true}
       >
