@@ -5,7 +5,7 @@ function MyUpButton() {
   return (
     <div className="fixed-button project-btn">
         <Button
-        className="buttonPlace"
+        className="button-place"
         onClick={() => document.getElementById('header-title')?.scrollIntoView()}
         >
         Up

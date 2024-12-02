@@ -1,9 +1,13 @@
 import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
-function Contact({ref}) {
+function Contact({color, ref}) {
+
+  let contactClass ="section-format ";
+  contactClass += color? "color-toggle-white":  "color-toggle-black"
+   
   return (
-    <div  ref={ref} id="Contact">
+    <div  ref={ref} id="Contact" className={contactClass}>
       <React.Fragment>
       <AnimationOnScroll
         className="title-fitting contact-fitting"

@@ -170,10 +170,9 @@ const ExperienceArray = [
 function WorkExperience() {
   return (
     <React.Fragment>
-      <div className="standard-fitting title-fitting">      
+      <div className="standard-fitting">      
       <h2 className="sections-color">Work Experience</h2>
       <AnimationOnScroll
-        className="title-fitting"
         animateIn="animate__fadeInLeft"
         animateOnce={true}
       >

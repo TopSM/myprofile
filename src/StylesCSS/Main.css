@@ -19,6 +19,10 @@
 }
 /* poetry page */
 .poem-page {
+  margin:50px;    
+  border:solid;
+  padding:60px;
+  border-radius:10px;
   text-align:center;
   font-family:"Comic Sans MS", Comic Sans, cursive	
 }
@@ -33,9 +37,7 @@
  right: 15%;
  font-family:"Brush Script MT", cursive ;
  text-decoration:none;
-}
-.poem-pad{
-  padding:40px;
+ color:#ff3452;
 }
 
 /* Standard settings */
@@ -122,10 +124,7 @@
   border-radius: 20%;
 }
 
-.project-btn:hover, button {
-  color: #ff3452;
-}
-.buttonPlace:hover, button{
+.button-place:hover, button{
   color: #ff3452
 }
 
@@ -140,7 +139,7 @@
   color: #00a9ea
 }
 
-.buttonPlace {
+.button-place {
   text-align: center;
   position: absolute;
   margin: auto;
@@ -164,20 +163,38 @@
 
 .color-toggle-white{
   color:black;
-  background-color:white  
+  background-color:#edf7fa;  
 }
 .color-toggle-black{
   color: aliceblue;
   background-color:#282c34;
 }
+.main-black{
+  background-color:black;
+  color: aliceblue;
+}
+.main-white{
+  background-color:white;
+  color:black;
+}
 .btn-color-white{
-
   background-color: #282c34  ;
   color: aliceblue;  
 }
 .btn-color-black{
   color: black;
   background-color: white; 
+}
+.toggle-nav-btn-black{
+  background-color:black;
+  color:white;
+}
+.toggle-nav-btn-white{
+  background-color:white;
+  color:black;
+}
+.toggle-nav-btn{
+  border-radius:10px;
 }
 
 
@@ -204,8 +221,6 @@
   border-radius:10px;
 }
 .my-name{
-  border-bottom: solid;
-  border-color:white;
   padding-bottom:10px;
 }
 
@@ -323,7 +338,11 @@ h4 {
 .header-text-resize{
   text-indent:20px;
 }
-
+.section-format{
+  margin:50px;
+  border-radius:10px;
+  padding:20px;
+}
 @media screen and (min-width: 1089px) {
   .header-text-resize{
     padding-top:20px;
@@ -652,12 +671,8 @@ h4 {
     font-size:.6em;
     padding:5px
   }
-  .poem-pad{
-    padding:10px;
-  }
-  .poem-pad2{
-    padding:25px 0px 40px 0px;
-  }
+  
+  
 
   .poem-author{
     font-size:.8em;

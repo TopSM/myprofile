@@ -5,7 +5,7 @@ import Resume from "./../../MyDocuments/Ostavo-Palacios-Resume-2024.pdf";
 import { Link } from "react-router-dom";
 
 import { useEffect } from 'react';
-function BioList({language,setLanguage,setExperienceCard}) {
+function BioList({color,language,setLanguage,setExperienceCard}) {
 
     useEffect(() => {
         if (location.hash) {
@@ -22,9 +22,11 @@ function BioList({language,setLanguage,setExperienceCard}) {
         setExperienceCard(() => "Projects")
         document.getElementById("my-info")?.scrollIntoView();
     }
+    let bodyClasses = "section-format "
 
+    bodyClasses += color? "color-toggle-white":  "color-toggle-black"
     return (
-    <div className="bio-list standard-fitting">
+    <div className={bodyClasses}>
         <React.Fragment>
         <ul className="no-bullets resume-bullets">
 

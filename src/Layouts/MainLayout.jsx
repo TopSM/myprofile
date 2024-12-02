@@ -8,12 +8,16 @@ function MainLayout() {
   const [color,setColor] = useState(typeof (Storage) != undefined ? localStorage.getItem("colorState") === "true" : true)  
   const [experienceCard, setExperienceCard] = useState("WorkExperience")
 
+  let colorClasses = ""
+
+  colorClasses += color? "main-white":  "main-black"
+    
   return (
-    <>
+    <div className={colorClasses}>
         <NavBar color={color} setColor={setColor} experienceCard={experienceCard} setExperienceCard={setExperienceCard}/>
         <Outlet context={[color,experienceCard, setExperienceCard]}/>
-        <Footer/>
-    </>
+        <Footer color={color}/>
+    </div>
   )
 }
 

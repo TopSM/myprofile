@@ -52,7 +52,7 @@ function HomeHeader({color,experienceCard,setExperienceCard}) {
                 animateOnce={true}>
                 <div className="text-intro text-intro-portrait">
                     <h1 className="my-name my-name-portrait sections-color">Ostavo Palacios</h1>
-                    <p className="header-text-resize">
+                    <p className="header-text-resize title-fitting">
                         Ostavo Palacios received his B.E. in Computer Engineering from the The City College 
                         of New York in 2021. He is Born and raised in NYC and is a first generation college 
                         graduate. He is currently employed at Lockheed Martin as an associate software engineer 

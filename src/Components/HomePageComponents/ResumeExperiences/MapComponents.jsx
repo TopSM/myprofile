@@ -23,7 +23,6 @@ export default function mapComponent(props) {
   return (
     <React.Fragment>
       <AnimationOnScroll
-        className="mobileCss"
         initiallyVisible={true}
         animateOnce={true}
       >
@@ -37,6 +36,7 @@ export default function mapComponent(props) {
               <AnimationOnScroll
                 animateIn="animate__zoomInUp"
                 animateOnce={true}
+                initiallyVisible={true}
               >
                 <a href={il.Link}>
                   <img className="info-pic"
@@ -50,6 +50,8 @@ export default function mapComponent(props) {
                 animateIn="animate__fadeInRight"
                 delay={100}
                 animateOnce={true}
+                initiallyVisible={true}
+
               >
                 <div className="">
                   <h3>{il.JobName}</h3>
@@ -64,6 +66,7 @@ export default function mapComponent(props) {
               className="text bullet-list standard-fitting"
               animateIn="animate__slideInUp"
               animateOnce={true}
+              initiallyVisible={true}
             >
               <ul className="bullets-list">
                 {props.infoList[il.id].About.map(a => (

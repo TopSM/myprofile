@@ -3,6 +3,7 @@ import WorkExperience from './WorkExperience'
 import ProjectExperience from './ProjectExperience'
 import VolunteerExperience from './VolunteerExperiences'
 function ResumeCard({
+  color,
   language,
   setLanguage, 
   myElementRef,
@@ -14,7 +15,6 @@ function ResumeCard({
         return (
           <React.Fragment>
             <section ref={myElementRef} id="WorkExperience">
-              <br />
               <WorkExperience />
           </section>
           </React.Fragment>
@@ -24,7 +24,6 @@ function ResumeCard({
         return (
           <React.Fragment>
             <section ref={myElementRef} id="Projects">
-              <br />
               <ProjectExperience language={language} setLanguage={setLanguage} setExperienceCard={setExperienceCard}/>
           </section>
           </React.Fragment>
@@ -34,15 +33,18 @@ function ResumeCard({
         return (
           <React.Fragment>
             <section ref={myElementRef} id="VolunteerExperience">
-              <br />
               <VolunteerExperience />
           </section>
           </React.Fragment>
         );
       }
     };
+
+    let infoClasses = "section-format "
+
+    infoClasses += color? "color-toggle-white":  "color-toggle-black"
     return (
-    <section  className="my-info" id="my-info">
+    <section  className={infoClasses} id="my-info">
         {showMyExpriences(experienceCard)}
     </section>
   )

@@ -8,10 +8,9 @@ function VolunteerExperience() {
 
   return (
     <React.Fragment>
-      <div className="standard-fitting title-fitting">
+      <div className="standard-fitting">
         <h2 className="sections-color">Volunteer Experience</h2>
         <AnimationOnScroll
-          className="standard-fitting title-fitting"
           animateIn="animate__fadeInLeft"
           animateOnce={true}
           initiallyVisible={true}

@@ -10,6 +10,7 @@ import '../StylesCSS/Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useNavigate } from 'react-router-dom';
 import { Col } from "react-bootstrap";
+import Button from "@mui/material/Button";
 import { useEffect } from 'react';
 // import Button from "@mui/material/Button";
 function MyNavBar({color,setColor, experienceCard, setExperienceCard}) {
@@ -30,25 +31,26 @@ function MyNavBar({color,setColor, experienceCard, setExperienceCard}) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, [location]);
-
+  }, [location]); 
   
-    // useEffect(() => {    
-    //     document.getElementById('my-info')?.scrollIntoView({ behavior: 'smooth' })    
-    // }, [experienceCard]);    
-  
+    let navClasses = "custom-nav "
 
+    navClasses += color? "navbar-light color-toggle-white":  "navbar-dark color-toggle-black"
+    
+    let buttonPlace = "toggle-nav-btn "
+    buttonPlace+= color? "toggle-nav-btn-white":  "toggle-nav-btn-black"
+     
   return (
     <Navbar
-      className="custom-nav"
+      className={navClasses}
       sticky="top"
       expand="sm"
       collapseOnSelect
     >
-      <Container className="container">
+      <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav>
+          <Nav >
             <NavDropdown title="My Resume" id='resumeDropdown' >
               <NavDropdown.Item 
                 onClick={()=> handleNavBarClick("/","WorkExperience")}
@@ -77,13 +79,16 @@ function MyNavBar({color,setColor, experienceCard, setExperienceCard}) {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <button
-          className={color? "btn-color-black": "btn-color-white"} 
+        <div className={buttonPlace} >
+        <Button
+          className={buttonPlace} 
           onClick={() => handleColorClick(color)}
           style={{padding:"10px"}}
+          color="inherit"
         >
           {color ?  "Dark Mode":"Light Mode" }
-        </button>
+        </Button>
+        </div>
       </Container>
     </Navbar >
   )

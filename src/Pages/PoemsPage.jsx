@@ -14,14 +14,13 @@ function PoemsPage() {
 
     let [color] = useOutletContext()
 
-    console.log(color)
+    let poemToggle = "poem-page "
+    poemToggle += color?'color-toggle-white': "color-toggle-black"
     return (
-        <div className={color?'color-toggle-white': "color-toggle-black"}>   
-            <div  className='poem-pad poem-pad2' >
-                <MyPoems todaysDay={getTodaysDay()} />            
-                <h3 className='poem-author'>- Ostavo R. Palacios</h3>
-            </div>
-        </div> 
+        <div className={poemToggle} >
+            <MyPoems color={color} todaysDay={getTodaysDay()} />            
+            <h3 className='poem-author'>- Ostavo R. Palacios</h3>
+        </div>
     )
 }
 

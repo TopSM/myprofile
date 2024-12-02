@@ -288,11 +288,11 @@ function GetPoem(props) {
         
 }
 
-function MyPoems({todaysDay}) {
+function MyPoems({color, todaysDay}) {
     const date = todaysDay;
 
     return (
-        <div className ="poem-page">
+        <div >
             <h2 className='sections-color'>Poem of the day</h2>
             {PoemsList.map(pl => 
                 <GetPoem date={date} poem={pl} key ={pl.id}/>

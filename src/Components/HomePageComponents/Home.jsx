@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <React.Fragment>
-      <div className={color? "color-toggle-white":  "color-toggle-black" }>
+      <div className={color? "main-white":  "main-black" }>
 
         <MyUpButton/>        
 
@@ -37,16 +37,18 @@ function Home() {
 
         <div className ="mobile-body" >
           <BioList 
+            color={color}
             language={language} 
             setLanguage={setLanguage}
             setExperienceCard={setExperienceCard}/>
           <ResumeCard 
+            color={color}
             language={language}
             setLanguage={setLanguage}
             myElementRef={myElementRef}  
             experienceCard={experienceCard}               
             setExperienceCard={setExperienceCard}/>                
-          <Contact ref={myElementRef}/>
+          <Contact color={color} ref={myElementRef}/>
         </div>
         
       </div>
