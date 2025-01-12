@@ -2,10 +2,36 @@ import React, {useState , useEffect} from 'react'
 import Square from './Square'
 import calculateWinner from './calculateWinner';
 
-function Board({xIsNext, setXIsNext, isWinner, setIsWinner, mySpot ,setMySpot}) {
+function Board({xIsNext, setXIsNext, 
+                isWinner, setIsWinner, 
+                mySpot, setMySpot,
+                scoreO, setScoreO,
+                scoreX, setScoreX }) {
 
     const [squaresArray, setSquaresArray] = useState(Array(9).fill(null));
     const [refresh, setRefresh] = useState(false);
+    const [wholeBoard,setWholeBoard] =useState(false);              
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8080//resetScores',{
+          method:'POST',
+          headers:{
+            'Content-Type': 'application/json',
+          },        
+          body: JSON.stringify(wholeBoard),
+        }).then(res =>
+          res.json())
+          .then(() =>{
+        }).catch(error => {
+          console.error('failed to reset:',error)
+        });
+        if(wholeBoard){
+          console.log("reseting scores");
+          setScoreO(0);
+          setScoreX(0);
+          setWholeBoard(false);        
+        }
+    },[wholeBoard])
 
     useEffect(() => {
     if(refresh){
@@ -23,8 +49,13 @@ function Board({xIsNext, setXIsNext, isWinner, setIsWinner, mySpot ,setMySpot}) 
       }).catch(error => {
         console.error('failed to refresh:',error)
       });
-      setRefresh(false)
-      setIsWinner(false)
+      setRefresh(false);
+      setIsWinner(false);
+      if(wholeBoard){
+        setScoreO(0);
+        setScoreX(0);
+        setWholeBoard(false);
+      }
     }
   },[refresh])
 
@@ -57,9 +88,7 @@ function Board({xIsNext, setXIsNext, isWinner, setIsWinner, mySpot ,setMySpot}) 
       .then((data) =>{
         if (data.winner){
           console.log('there is a winner', data.winner)
-          setIsWinner(() => data.winner )}
-        else{
-          setMySpot(prev => ({ ...prev, index: i , value:newSquares[i]}))
+          setIsWinner(() => data.winner )
         }
       }).catch(error => {
         console.error('error:',error)
@@ -67,15 +96,35 @@ function Board({xIsNext, setXIsNext, isWinner, setIsWinner, mySpot ,setMySpot}) 
     }
     }, [mySpot.index]); // The effect runs whenever mySpot.index changes
     
+    useEffect(() => {   
+      if(isWinner)  {
+      fetch('http://127.0.0.1:8080//sendScores',{
+            method:'GET',
+            headers:{
+            'Content-Type': 'application/json',
+            },        
+      }).then(res =>
+      res.json())
+      .then((data) =>{
+          setScoreO(() => data.scoreO);
+          setScoreX(() => data.scoreX);  
+      }).catch(error => {
+        console.error('error:',error)
+      });
+    }}, [isWinner]);
     
-    const refreshBoardClick = () => {
+    
+    const refreshBoardClick = (wb) => {
         const newSquaresArray = [...squaresArray];
         for (var i =0; i<9; i++){
             newSquaresArray[i] = "";
         }
+        wholeBoard ? console.log("restarting game") : console.log("restarting round")
         setSquaresArray(newSquaresArray);
         setXIsNext(true);
         setRefresh(true);
+        setWholeBoard(wb);
+        
         for(var i=0;i<9;i++){
             Square(newSquaresArray[i],null );
         }
@@ -110,8 +159,8 @@ function Board({xIsNext, setXIsNext, isWinner, setIsWinner, mySpot ,setMySpot}) 
                 <Square  value={squaresArray[7]} onClick={()=> handleSquareClick(7)} />
                 <Square  value={squaresArray[8]} onClick={()=> handleSquareClick(8)} />
             </div>
-            <button onClick={() => refreshBoardClick()}>Refresh Game</button>
-
+            <button onClick={() => refreshBoardClick(true)}>Refresh Game</button>
+            <button onClick={() => refreshBoardClick(false)}>New Game</button>
         </div>
     )
 }
